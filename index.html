@@ -121,16 +121,6 @@ header p {
   opacity: 0.85;
 }
 
-  <section>
-  <h2>Arte generativo</h2>
-  <p>
-    Experimento con sistemas generativos donde el código define
-    formas, ritmo y composición. Cada ejecución produce una
-    variación única.
-  </p>
-
-  </section>
-
     main {
       max-width: 1100px;
       margin: auto;
@@ -220,6 +210,19 @@ header p {
   50% { transform: scale(1.06); }
   100% { transform: scale(1); }
 }
+
+    .code-gallery {
+  perspective: 900px;
+}
+
+.code-gallery .code-item {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease;
+}
+
+.code-gallery .item:hover {
+  transform: none;
+}
   </style>
 </head>
 
@@ -266,21 +269,6 @@ header p {
 
 </div>
     </section>
-
-    <section>
-  <h2>Exploraciones con código</h2>
-  <p>
-    Utilizo programación y herramientas digitales como medios creativos.
-    Me interesa explorar la relación entre código, arte visual e interfaces,
-    experimentando con sistemas, patrones y formas generativas.
-  </p>
-
-  <div class="gallery">
-    <div class="item code-item">Arte generativo</div>
-    <div class="item code-item">Interfaces experimentales</div>
-    <div class="item code-item">Visuales con Python</div>
-  </div>
-
   
 </section>
     
