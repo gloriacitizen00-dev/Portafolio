@@ -145,21 +145,21 @@ footer{
 
   <div class="gallery">
 
-    <a href="https://tusitio.com/arte-generativo" target="_blank" class="card-link">
+    <a href="arte-generativo.html" class="card-link">
       <div class="item">
         <h3>Arte generativo</h3>
         <p>Exploraciones visuales creadas con código y algoritmos.</p>
       </div>
     </a>
 
-    <a href="https://tusitio.com/interfaces" target="_blank" class="card-link">
+    <a href="interfaces.html" class="card-link">
       <div class="item">
         <h3>Interfaces experimentales</h3>
         <p>Diseño interactivo, UX creativo y narrativas visuales.</p>
       </div>
     </a>
 
-    <a href="https://tusitio.com/python-visuales" target="_blank" class="card-link">
+    <a href="python-visuales.html" class="card-link">
       <div class="item">
         <h3>Visuales con Python</h3>
         <p>Data art, visualización y experimentación computacional.</p>
@@ -173,6 +173,7 @@ footer{
 
 <footer>© 2026 · Portafolio de Arte</footer>
 
+<script>
 /* CANVAS CORAZONES */
 const canvas = document.getElementById("artCanvas");
 const ctx = canvas.getContext("2d");
@@ -213,7 +214,7 @@ function drawHeart(x, y, s) {
 
     ctx.save();
     ctx.translate(h.x, h.y);
-    ctx.scale(scale, scale); // 👈 FIX CRÍTICO
+    ctx.scale(scale, scale);
     ctx.globalAlpha = 0.6;
     ctx.fillStyle = h.c;
     drawHeart(0, 0, h.s);
@@ -228,5 +229,6 @@ function drawHeart(x, y, s) {
   requestAnimationFrame(animate);
 })();
 </script>
+
 </body>
 </html>
