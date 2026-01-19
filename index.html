@@ -204,7 +204,7 @@
   const canvas = document.getElementById("artCanvas");
   const ctx = canvas.getContext("2d");
 
-  const colors = ["#ff6f91", "#ffc75f", "#f9f871", "#ff9671"];
+  const colors = ["#ff8dcf", "#7fd8ff"];
 
   const hearts = [];
 
@@ -212,7 +212,7 @@
     return {
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      size: Math.random() * 20 + 10,
+      size: Math.random() * 35 + 25,
       speed: Math.random() * 0.5 + 0.2,
       color: colors[Math.floor(Math.random() * colors.length)]
     };
