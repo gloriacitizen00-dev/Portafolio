@@ -312,6 +312,52 @@ header p {
   from { left: -120px; }
   to { left: 100vw; }
 }
+
+    #cat {
+  position: absolute;
+  bottom: 90px;
+  left: -160px;
+  width: 140px;
+  height: 60px;
+  border-radius: 60px 60px 40px 40px;
+  background: #5e548e;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#cat::before {
+  content: "";
+  position: absolute;
+  width: 34px;
+  height: 28px;
+  background: #5e548e;
+  border-radius: 50%;
+  left: -20px;
+  top: 10px;
+}
+
+#cat::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 10px;
+  border-radius: 20px;
+  background: #5e548e;
+  right: -50px;
+  top: 28px;
+  transform-origin: left center;
+  animation: tail 1.4s ease-in-out infinite;
+}
+
+@keyframes tail {
+  0%, 100% { transform: rotate(12deg); }
+  50% { transform: rotate(-12deg); }
+}
+
+@keyframes walk {
+  from { left: -160px; }
+  to { left: 110vw; }
+}
     
   </style>
 </head>
@@ -323,13 +369,7 @@ header p {
 
   <div class="hero-content">
     <h1>Gloria Martínez</h1>
-    <div id="cat">
-  <div class="cat-body"></div>
-  <div class="cat-head"></div>
-  <div class="cat-ear left"></div>
-  <div class="cat-ear right"></div>
-  <div class="cat-tail"></div>
-</div>
+    <div id="cat"></div>
     <p class="signature">Portafolio experimental</p>
     <p>Arte visual · Tecnología · Interfaces</p>
   </div>
@@ -479,8 +519,8 @@ header p {
 const cat = document.getElementById("cat");
 
 nameTitle.addEventListener("mouseenter", () => {
-  cat.style.opacity = "1";
-  cat.style.animation = "walk 6s linear forwards";
+  cat.style.opacity = "0.85";
+  cat.style.animation = "walk 7s linear forwards";
 });
 
 nameTitle.addEventListener("mouseleave", () => {
