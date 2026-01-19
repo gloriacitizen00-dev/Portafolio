@@ -223,6 +223,20 @@ header p {
 .code-gallery .item:hover {
   transform: none;
 }
+
+.hint {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  letter-spacing: 0.4px;
+}
+
+    .signature {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+    
   </style>
 </head>
 
@@ -233,6 +247,7 @@ header p {
 
   <div class="hero-content">
     <h1>Gloria Martínez</h1>
+    <p class="signature">Portafolio experimental</p>
     <p>Arte visual · Tecnología · Interfaces</p>
   </div>
 </header>
@@ -253,19 +268,22 @@ header p {
       <div class="gallery code-gallery">
 
   <div class="item code-item" data-effect="pulse">
-    <h3>Arte generativo</h3>
-    <p>Formas y patrones creados con lógica y azar.</p>
-  </div>
+  <h3>Arte generativo</h3>
+  <p>Formas y patrones creados con lógica y azar.</p>
+  <p class="hint">Sistema generativo · azar controlado</p>
+</div>
 
-  <div class="item code-item" data-effect="tilt">
-    <h3>Interfaces experimentales</h3>
-    <p>Exploración visual e interacción no tradicional.</p>
-  </div>
+<div class="item code-item" data-effect="tilt">
+  <h3>Interfaces experimentales</h3>
+  <p>Exploración visual e interacción no tradicional.</p>
+  <p class="hint">Interacción · percepción · experiencia</p>
+</div>
 
-  <div class="item code-item" data-effect="glow">
-    <h3>Visuales con Python</h3>
-    <p>Datos y algoritmos convertidos en imágenes.</p>
-  </div>
+<div class="item code-item" data-effect="glow">
+  <h3>Visuales con Python</h3>
+  <p>Datos y algoritmos convertidos en imágenes.</p>
+  <p class="hint">Datos · visualización · estructura</p>
+</div>
 
 </div>
     </section>
@@ -355,6 +373,16 @@ header p {
     }
   });
 
+      document.querySelectorAll(".code-item").forEach(item => {
+  item.addEventListener("mouseenter", () => {
+    hearts.forEach(h => h.speed += 0.4);
+  });
+
+  item.addEventListener("mouseleave", () => {
+    hearts.forEach(h => h.speed -= 0.4);
+  });
+});
+   
   item.addEventListener("mouseleave", () => {
     item.style.transform = "none";
   });
