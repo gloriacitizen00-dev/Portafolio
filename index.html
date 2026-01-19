@@ -24,6 +24,20 @@
     padding: 20px;
    }
 
+     .item {
+     transition: transform 0.35s ease, box-shadow 0.35s ease;
+   }
+
+    .item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+   }
+
+    .code-item:hover {
+   background: linear-gradient(135deg, #f6d365, #fda085);
+   color: #111;
+   }
+
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: linear-gradient(135deg, #fdfbfb, #ebedee);
