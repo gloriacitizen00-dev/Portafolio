@@ -1,10 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>DEPLOY OK</title>
+  <meta charset="UTF-8" />
+  <title>Portafolio de Arte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .item {
+      background: #ddd;
+      height: 240px;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      opacity: 0.6;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-<body style="background:black; color:lime; font-size:40px;">
-  <h1>DEPLOY FUNCIONANDO</h1>
-  <p>Este index.html está en la raíz</p>
+
+<body>
+
+  <header>
+    <h1>Portafolio de Arte</h1>
+    <p>Arte · Tecnología · Interfaces</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Sobre mí</h2>
+      <p>
+        Artista visual interesada en la intersección entre creatividad, tecnología
+        e interfaces digitales. Exploro ideas a través del diseño limpio y la
+        experimentación visual.
+      </p>
+    </section>
+
+    <section>
+      <h2>Obras</h2>
+      <div class="gallery">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 · Portafolio de Arte
+  </footer>
+
 </body>
 </html>
