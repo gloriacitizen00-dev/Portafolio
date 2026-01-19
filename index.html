@@ -173,53 +173,60 @@ footer{
 
 <footer>© 2026 · Portafolio de Arte</footer>
 
-<script>
 /* CANVAS CORAZONES */
-const canvas=document.getElementById("artCanvas"),
-ctx=canvas.getContext("2d");
+const canvas = document.getElementById("artCanvas");
+const ctx = canvas.getContext("2d");
 
-function resize(){
-  canvas.width=innerWidth;
-  canvas.height=innerHeight;
+function resize() {
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
 }
 resize();
-addEventListener("resize",resize);
+addEventListener("resize", resize);
 
-const colors=["#ff8dcf","#7fd8ff"];
-const hearts=[...Array(18)].map(()=>({
-  x:Math.random()*canvas.width,
-  y:Math.random()*canvas.height,
-  s:Math.random()*28+22,
-  v:Math.random()*.6+.4,
-  c:colors[Math.random()*2|0],
-  p:Math.random()*Math.PI*2
+const colors = ["#ff8dcf", "#7fd8ff"];
+const hearts = Array.from({ length: 18 }, () => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  s: Math.random() * 28 + 22,
+  v: Math.random() * 0.6 + 0.4,
+  c: colors[Math.random() * colors.length | 0],
+  p: Math.random() * Math.PI * 2
 }));
 
-function heart(x,y,s){
+function drawHeart(x, y, s) {
   ctx.beginPath();
-  ctx.moveTo(x,y);
-  ctx.bezierCurveTo(x-s,y-s,x-s*1.4,y+s/3,x,y+s);
-  ctx.bezierCurveTo(x+s*1.4,y+s/3,x+s,y-s,x,y);
+  ctx.moveTo(x, y);
+  ctx.bezierCurveTo(x - s, y - s, x - s * 1.4, y + s / 3, x, y + s);
+  ctx.bezierCurveTo(x + s * 1.4, y + s / 3, x + s, y - s, x, y);
   ctx.fill();
 }
 
-(function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  hearts.forEach(h=>{
-    h.y-=h.v;
-    h.p+=.04;
+(function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  hearts.forEach(h => {
+    h.y -= h.v;
+    h.p += 0.04;
+
+    const scale = 1 + Math.sin(h.p) * 0.08;
+
     ctx.save();
-    ctx.translate(h.x,h.y);
-    ctx.scale(1+Math.sin(h.p)*.08);
-    ctx.globalAlpha=.6;
-    ctx.fillStyle=h.c;
-    heart(0,0,h.s);
+    ctx.translate(h.x, h.y);
+    ctx.scale(scale, scale); // 👈 FIX CRÍTICO
+    ctx.globalAlpha = 0.6;
+    ctx.fillStyle = h.c;
+    drawHeart(0, 0, h.s);
     ctx.restore();
-    if(h.y<-50) h.y=canvas.height+50;
+
+    if (h.y < -60) {
+      h.y = canvas.height + 60;
+      h.x = Math.random() * canvas.width;
+    }
   });
+
   requestAnimationFrame(animate);
 })();
 </script>
-
 </body>
 </html>
