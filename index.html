@@ -7,6 +7,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{
   font-family:system-ui,sans-serif;
   background:linear-gradient(135deg,#fdfbfb,#ebedee);
@@ -47,35 +48,36 @@ body{
 .hero-content p{font-size:1.3rem;opacity:.85}
 .signature{margin-top:14px;font-size:.95rem;opacity:.7}
 
-/* ===== GATO ASISTENTE (estilo Word 2000) ===== */
+/* ===== GATO ASISTENTE ELEGANTE ===== */
 #assistant-cat{
   position:absolute;
-  bottom:80px;
-  left:-220px;
-  width:180px;
-  pointer-events:none;
+  bottom:130px;
+  left:50%;
+  transform:translateX(120px);
   opacity:0;
+  pointer-events:none;
+  transition:opacity .4s ease;
   z-index:5;
 }
 
 #assistant-cat.show{
   opacity:1;
-  animation:walkIn 6s linear forwards;
+  animation:greet .8s ease-out;
 }
 
-@keyframes walkIn{
-  from{left:-220px}
-  to{left:105vw}
+@keyframes greet{
+  from{transform:translateX(120px) translateY(10px) scale(.95)}
+  to{transform:translateX(120px) translateY(0) scale(1)}
 }
 
 /* cola */
-#tail{
-  transform-origin:right center;
-  animation:tailWag 1.2s ease-in-out infinite;
+#cat-tail{
+  transform-origin:top left;
+  animation:tail 1.2s ease-in-out infinite;
 }
 
-@keyframes tailWag{
-  0%,100%{transform:rotate(10deg)}
+@keyframes tail{
+  0%,100%{transform:rotate(15deg)}
   50%{transform:rotate(-15deg)}
 }
 
@@ -126,17 +128,41 @@ footer{text-align:center;padding:50px;opacity:.7}
 
     <!-- GATO ASISTENTE -->
     <div id="assistant-cat">
-      <svg viewBox="0 0 220 160" width="180">
-        <path id="tail" d="M30 110 q-30 20 -10 40"
-          fill="none" stroke="#5e548e" stroke-width="6" stroke-linecap="round"/>
-        <ellipse cx="110" cy="115" rx="70" ry="35" fill="#cdb4db"/>
-        <circle cx="165" cy="85" r="30" fill="#cdb4db"/>
-        <polygon points="145,60 155,35 165,60" fill="#bfa2d6"/>
-        <polygon points="175,60 185,35 195,60" fill="#bfa2d6"/>
-        <ellipse class="eye" cx="158" cy="85" rx="4" ry="6" fill="#222"/>
-        <ellipse class="eye" cx="172" cy="85" rx="4" ry="6" fill="#222"/>
-        <circle cx="165" cy="93" r="2.5" fill="#333"/>
-        <path d="M160 98 q5 4 10 0" stroke="#333" stroke-width="1.5" fill="none"/>
+      <svg viewBox="0 0 200 200" width="140" aria-hidden="true">
+        <!-- cola -->
+        <path id="cat-tail"
+          d="M40 130 q-30 10 -20 40"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="6"
+          stroke-linecap="round"/>
+
+        <!-- cuerpo -->
+        <ellipse cx="110" cy="140" rx="55" ry="30" fill="#ffffff"/>
+
+        <!-- patas -->
+        <rect x="75" y="155" width="10" height="18" rx="4" fill="#f2f2f2"/>
+        <rect x="95" y="155" width="10" height="18" rx="4" fill="#f2f2f2"/>
+        <rect x="115" y="155" width="10" height="18" rx="4" fill="#f2f2f2"/>
+        <rect x="135" y="155" width="10" height="18" rx="4" fill="#f2f2f2"/>
+
+        <!-- cabeza -->
+        <circle cx="150" cy="95" r="30" fill="#ffffff"/>
+
+        <!-- orejas -->
+        <polygon points="130,70 140,40 150,70" fill="#f2d7e6"/>
+        <polygon points="160,70 170,40 180,70" fill="#f2d7e6"/>
+
+        <!-- ojos -->
+        <ellipse class="eye" cx="142" cy="95" rx="4" ry="6" fill="#333"/>
+        <ellipse class="eye" cx="158" cy="95" rx="4" ry="6" fill="#333"/>
+
+        <!-- nariz -->
+        <circle cx="150" cy="103" r="2.5" fill="#d48aa2"/>
+
+        <!-- boca -->
+        <path d="M145 108 q5 4 10 0"
+              stroke="#555" stroke-width="1.5" fill="none"/>
       </svg>
     </div>
 
@@ -164,7 +190,7 @@ footer{text-align:center;padding:50px;opacity:.7}
 <footer>© 2026 · Portafolio de Arte</footer>
 
 <script>
-/* CANVAS CORAZONES */
+/* CORAZONES */
 const canvas=document.getElementById("artCanvas"),
 ctx=canvas.getContext("2d");
 
@@ -214,15 +240,8 @@ function heart(x,y,s){
 const title=document.getElementById("nameTitle");
 const cat=document.getElementById("assistant-cat");
 
-title.addEventListener("mouseenter",()=>{
-  cat.classList.remove("show");
-  void cat.offsetWidth;
-  cat.classList.add("show");
-});
-
-title.addEventListener("mouseleave",()=>{
-  cat.classList.remove("show");
-});
+title.addEventListener("mouseenter",()=>cat.classList.add("show"));
+title.addEventListener("mouseleave",()=>cat.classList.remove("show"));
 </script>
 
 </body>
