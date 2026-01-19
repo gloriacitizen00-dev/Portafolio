@@ -358,6 +358,73 @@ header p {
   from { left: -160px; }
   to { left: 110vw; }
 }
+
+    #cat {
+  position: absolute;
+  bottom: 85px;
+  left: -180px;
+  width: 140px;
+  height: 50px;
+  border: 2.5px solid #5e548e;
+  border-radius: 40px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* cabeza */
+#cat::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 24px;
+  border: 2.5px solid #5e548e;
+  border-radius: 50%;
+  left: 110px;
+  top: 10px;
+}
+
+/* orejas */
+.ear {
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  border-left: 2.5px solid #5e548e;
+  border-top: 2.5px solid #5e548e;
+  transform: rotate(45deg);
+}
+
+.ear.left {
+  left: 122px;
+  top: 4px;
+}
+
+.ear.right {
+  left: 138px;
+  top: 4px;
+}
+
+/* cola */
+.tail {
+  position: absolute;
+  width: 40px;
+  height: 12px;
+  border-bottom: 2.5px solid #5e548e;
+  border-radius: 0 0 20px 20px;
+  left: -38px;
+  top: 24px;
+  transform-origin: right center;
+  animation: tail 1.2s ease-in-out infinite;
+}
+
+@keyframes tail {
+  0%, 100% { transform: rotate(8deg); }
+  50% { transform: rotate(-8deg); }
+}
+
+@keyframes walk {
+  from { left: -180px; }
+  to { left: 110vw; }
+}
     
   </style>
 </head>
@@ -369,7 +436,11 @@ header p {
 
   <div class="hero-content">
     <h1>Gloria Martínez</h1>
-    <div id="cat"></div>
+    <div id="cat">
+  <span class="ear left"></span>
+  <span class="ear right"></span>
+  <span class="tail"></span>
+</div>
     <p class="signature">Portafolio experimental</p>
     <p>Arte visual · Tecnología · Interfaces</p>
   </div>
@@ -520,6 +591,19 @@ const cat = document.getElementById("cat");
 
 nameTitle.addEventListener("mouseenter", () => {
   cat.style.opacity = "0.85";
+  cat.style.animation = "walk 7s linear forwards";
+});
+
+nameTitle.addEventListener("mouseleave", () => {
+  cat.style.opacity = "0";
+  cat.style.animation = "none";
+});
+
+    const nameTitle = document.querySelector(".hero-content h1");
+const cat = document.getElementById("cat");
+
+nameTitle.addEventListener("mouseenter", () => {
+  cat.style.opacity = "1";
   cat.style.animation = "walk 7s linear forwards";
 });
 
