@@ -190,6 +190,36 @@ header p {
       font-size: 0.9rem;
       opacity: 0.7;
     }
+
+    .code-gallery .code-item {
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.code-item h3 {
+  font-size: 1.3rem;
+}
+
+.code-item p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* efectos */
+.code-item[data-effect="pulse"]:hover {
+  animation: pulse 1.2s infinite;
+}
+
+.code-item[data-effect="glow"]:hover {
+  box-shadow: 0 0 25px rgba(255, 141, 207, 0.7);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
   </style>
 </head>
 
@@ -217,12 +247,24 @@ header p {
 
     <section>
       <h2>Obras</h2>
-      <div class="gallery">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-      </div>
+      <div class="gallery code-gallery">
+
+  <div class="item code-item" data-effect="pulse">
+    <h3>Arte generativo</h3>
+    <p>Formas y patrones creados con lógica y azar.</p>
+  </div>
+
+  <div class="item code-item" data-effect="tilt">
+    <h3>Interfaces experimentales</h3>
+    <p>Exploración visual e interacción no tradicional.</p>
+  </div>
+
+  <div class="item code-item" data-effect="glow">
+    <h3>Visuales con Python</h3>
+    <p>Datos y algoritmos convertidos en imágenes.</p>
+  </div>
+
+</div>
     </section>
 
     <section>
@@ -313,6 +355,23 @@ header p {
   }
 
   animate();
+
+    document.querySelectorAll(".code-item").forEach(item => {
+  item.addEventListener("mousemove", e => {
+    if (item.dataset.effect === "tilt") {
+      const rect = item.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      item.style.transform = `rotateX(${ -y / 20 }deg) rotateY(${ x / 20 }deg)`;
+    }
+  });
+
+  item.addEventListener("mouseleave", () => {
+    item.style.transform = "none";
+  });
+});
+    
 </script>
 
 </body>
