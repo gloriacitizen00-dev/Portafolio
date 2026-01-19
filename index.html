@@ -242,6 +242,76 @@ header p {
   color: inherit;
   display: block;
 }
+    #cat {
+  position: absolute;
+  bottom: 80px;
+  left: -120px;
+  width: 120px;
+  height: 60px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.cat-body {
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  border-radius: 20px;
+  background: #5e548e;
+  left: 25px;
+  top: 20px;
+}
+
+.cat-head {
+  position: absolute;
+  width: 26px;
+  height: 22px;
+  border-radius: 50%;
+  background: #5e548e;
+  left: 0;
+  top: 16px;
+}
+
+.cat-ear {
+  position: absolute;
+  width: 8px;
+  height: 10px;
+  background: #5e548e;
+  top: 8px;
+}
+
+.cat-ear.left {
+  left: 4px;
+  transform: rotate(-15deg);
+}
+
+.cat-ear.right {
+  left: 14px;
+  transform: rotate(15deg);
+}
+
+.cat-tail {
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  border-radius: 10px;
+  background: #5e548e;
+  right: -20px;
+  top: 28px;
+  transform-origin: left center;
+  animation: tail 1.2s infinite ease-in-out;
+}
+
+@keyframes tail {
+  0%, 100% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+}
+
+    @keyframes walk {
+  from { left: -120px; }
+  to { left: 100vw; }
+}
     
   </style>
 </head>
@@ -253,6 +323,13 @@ header p {
 
   <div class="hero-content">
     <h1>Gloria Martínez</h1>
+    <div id="cat">
+  <div class="cat-body"></div>
+  <div class="cat-head"></div>
+  <div class="cat-ear left"></div>
+  <div class="cat-ear right"></div>
+  <div class="cat-tail"></div>
+</div>
     <p class="signature">Portafolio experimental</p>
     <p>Arte visual · Tecnología · Interfaces</p>
   </div>
@@ -396,6 +473,19 @@ header p {
   item.addEventListener("mouseleave", () => {
     item.style.transform = "none";
   });
+});
+
+    const nameTitle = document.querySelector(".hero-content h1");
+const cat = document.getElementById("cat");
+
+nameTitle.addEventListener("mouseenter", () => {
+  cat.style.opacity = "1";
+  cat.style.animation = "walk 6s linear forwards";
+});
+
+nameTitle.addEventListener("mouseleave", () => {
+  cat.style.opacity = "0";
+  cat.style.animation = "none";
 });
     
 </script>
