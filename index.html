@@ -202,29 +202,60 @@
 
   <script>
   const canvas = document.getElementById("artCanvas");
+  const ctx = canvas.getContext("2d");
 
-  if (!canvas) {
-    console.log("❌ Canvas no encontrado");
-  } else {
-    console.log("✅ Canvas encontrado");
+  const colors = ["#ff6f91", "#ffc75f", "#f9f871", "#ff9671"];
 
-    const ctx = canvas.getContext("2d");
-    const colors = ["#89f7fe", "#66a6ff", "#f6d365", "#fda085"];
+  const hearts = [];
 
-    for (let i = 0; i < 40; i++) {
-      const x = Math.random() * canvas.width;
-      const y = Math.random() * canvas.height;
-      const size = Math.random() * 40 + 10;
-
-      ctx.beginPath();
-      ctx.arc(x, y, size, 0, Math.PI * 2);
-      ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
-      ctx.globalAlpha = 0.6;
-      ctx.fill();
-    }
-
-    ctx.globalAlpha = 1;
+  function createHeart() {
+    return {
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 20 + 10,
+      speed: Math.random() * 0.5 + 0.2,
+      color: colors[Math.floor(Math.random() * colors.length)]
+    };
   }
+
+  for (let i = 0; i < 30; i++) {
+    hearts.push(createHeart());
+  }
+
+  function drawHeart(x, y, size, color) {
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.bezierCurveTo(
+      x - size / 2, y - size / 2,
+      x - size, y + size / 3,
+      x, y + size
+    );
+    ctx.bezierCurveTo(
+      x + size, y + size / 3,
+      x + size / 2, y - size / 2,
+      x, y
+    );
+    ctx.fill();
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    hearts.forEach(heart => {
+      drawHeart(heart.x, heart.y, heart.size, heart.color);
+      heart.y -= heart.speed;
+
+      if (heart.y < -20) {
+        heart.y = canvas.height + 20;
+        heart.x = Math.random() * canvas.width;
+      }
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
 </script>
 
 </body>
