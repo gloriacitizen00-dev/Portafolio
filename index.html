@@ -7,7 +7,6 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-
 body{
   font-family:system-ui,sans-serif;
   background:linear-gradient(135deg,#fdfbfb,#ebedee);
@@ -41,136 +40,60 @@ body{
 
 .hero-content h1{
   font-size:3.5rem;
-  text-shadow:0 6px 20px rgba(0,0,0,.25)
+  text-shadow:0 6px 20px rgba(0,0,0,.25);
+  cursor:pointer
 }
 
 .hero-content p{font-size:1.3rem;opacity:.85}
+.signature{margin-top:14px;font-size:.95rem;opacity:.7}
 
-.signature{
-  margin-top:14px;
-  font-size:.95rem;
-  opacity:.7;
-  letter-spacing:1px
-}
-
-/* ================== GATO CUTE ================== */
-#cat{
+/* ===== GATO ASISTENTE (estilo Word 2000) ===== */
+#assistant-cat{
   position:absolute;
-  bottom:95px;
-  left:-160px;
-  width:140px;
-  height:70px;
-  opacity:0;
+  bottom:80px;
+  left:-220px;
+  width:180px;
   pointer-events:none;
-  z-index:3;
+  opacity:0;
+  z-index:5;
 }
 
-/* cuerpo */
-.cat-body{
-  position:absolute;
-  width:90px;
-  height:42px;
-  background:#6d5dfc;
-  border-radius:40px;
-  left:30px;
-  top:24px;
+#assistant-cat.show{
+  opacity:1;
+  animation:walkIn 6s linear forwards;
 }
 
-/* cabeza */
-.cat-head{
-  position:absolute;
-  width:44px;
-  height:40px;
-  background:#6d5dfc;
-  border-radius:50%;
-  left:0;
-  top:16px;
+@keyframes walkIn{
+  from{left:-220px}
+  to{left:105vw}
 }
-
-/* orejas */
-.cat-ear{
-  position:absolute;
-  width:14px;
-  height:14px;
-  background:#6d5dfc;
-  top:6px;
-  transform:rotate(45deg);
-}
-
-.cat-ear.left{left:6px}
-.cat-ear.right{left:22px}
-
-/* ojos */
-.eye{
-  position:absolute;
-  width:6px;
-  height:6px;
-  background:#111;
-  border-radius:50%;
-  top:30px;
-}
-
-.eye.left{left:14px}
-.eye.right{left:26px}
-
-/* nariz */
-.nose{
-  position:absolute;
-  width:6px;
-  height:4px;
-  background:#ff8dcf;
-  border-radius:50%;
-  top:36px;
-  left:20px;
-}
-
-/* patas */
-.leg{
-  position:absolute;
-  width:12px;
-  height:8px;
-  background:#5a4de0;
-  border-radius:0 0 6px 6px;
-  bottom:-4px;
-}
-
-.leg.one{left:40px}
-.leg.two{left:60px}
-.leg.three{left:80px}
 
 /* cola */
-.tail{
-  position:absolute;
-  width:34px;
-  height:10px;
-  background:#6d5dfc;
-  border-radius:10px;
-  left:100px;
-  top:36px;
-  transform-origin:left center;
-  animation:tail 1.2s ease-in-out infinite;
+#tail{
+  transform-origin:right center;
+  animation:tailWag 1.2s ease-in-out infinite;
 }
 
-@keyframes tail{
-  0%,100%{transform:rotate(18deg)}
-  50%{transform:rotate(-18deg)}
+@keyframes tailWag{
+  0%,100%{transform:rotate(10deg)}
+  50%{transform:rotate(-15deg)}
 }
 
-/* caminar */
-@keyframes walk{
-  from{left:-160px}
-  to{left:110vw}
+/* parpadeo */
+.eye{
+  transform-origin:center;
+  animation:blink 4s infinite;
+}
+
+@keyframes blink{
+  0%,95%,100%{transform:scaleY(1)}
+  97%{transform:scaleY(.1)}
 }
 
 /* MAIN */
 main{max-width:1100px;margin:auto;padding:80px 20px}
 section{margin-bottom:100px}
-
-h2{
-  font-size:2.2rem;
-  margin-bottom:25px;
-  color:#6a5acd
-}
+h2{font-size:2.2rem;margin-bottom:25px;color:#6a5acd}
 
 .gallery{
   display:grid;
@@ -188,14 +111,8 @@ h2{
 }
 
 .item:hover{transform:translateY(-8px)}
-
 .card-link{text-decoration:none;color:inherit}
-
-footer{
-  text-align:center;
-  padding:50px;
-  opacity:.7
-}
+footer{text-align:center;padding:50px;opacity:.7}
 </style>
 </head>
 
@@ -207,23 +124,20 @@ footer{
   <div class="hero-content">
     <h1 id="nameTitle">Gloria Martínez</h1>
 
-    <!-- GATO -->
-    <div id="cat">
-      <div class="cat-head">
-        <span class="cat-ear left"></span>
-        <span class="cat-ear right"></span>
-        <span class="eye left"></span>
-        <span class="eye right"></span>
-        <span class="nose"></span>
-      </div>
-
-      <div class="cat-body">
-        <span class="leg one"></span>
-        <span class="leg two"></span>
-        <span class="leg three"></span>
-      </div>
-
-      <span class="tail"></span>
+    <!-- GATO ASISTENTE -->
+    <div id="assistant-cat">
+      <svg viewBox="0 0 220 160" width="180">
+        <path id="tail" d="M30 110 q-30 20 -10 40"
+          fill="none" stroke="#5e548e" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="110" cy="115" rx="70" ry="35" fill="#cdb4db"/>
+        <circle cx="165" cy="85" r="30" fill="#cdb4db"/>
+        <polygon points="145,60 155,35 165,60" fill="#bfa2d6"/>
+        <polygon points="175,60 185,35 195,60" fill="#bfa2d6"/>
+        <ellipse class="eye" cx="158" cy="85" rx="4" ry="6" fill="#222"/>
+        <ellipse class="eye" cx="172" cy="85" rx="4" ry="6" fill="#222"/>
+        <circle cx="165" cy="93" r="2.5" fill="#333"/>
+        <path d="M160 98 q5 4 10 0" stroke="#333" stroke-width="1.5" fill="none"/>
+      </svg>
     </div>
 
     <p class="signature">Portafolio experimental</p>
@@ -250,6 +164,7 @@ footer{
 <footer>© 2026 · Portafolio de Arte</footer>
 
 <script>
+/* CANVAS CORAZONES */
 const canvas=document.getElementById("artCanvas"),
 ctx=canvas.getContext("2d");
 
@@ -295,18 +210,19 @@ function heart(x,y,s){
   requestAnimationFrame(animate)
 })();
 
-const title=document.getElementById("nameTitle"),
-cat=document.getElementById("cat");
+/* GATO */
+const title=document.getElementById("nameTitle");
+const cat=document.getElementById("assistant-cat");
 
-title.onmouseenter=()=>{
-  cat.style.opacity=1;
-  cat.style.animation="walk 6s linear forwards"
-};
+title.addEventListener("mouseenter",()=>{
+  cat.classList.remove("show");
+  void cat.offsetWidth;
+  cat.classList.add("show");
+});
 
-title.onmouseleave=()=>{
-  cat.style.opacity=0;
-  cat.style.animation="none"
-};
+title.addEventListener("mouseleave",()=>{
+  cat.classList.remove("show");
+});
 </script>
 
 </body>
