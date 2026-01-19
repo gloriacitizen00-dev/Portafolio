@@ -62,7 +62,7 @@ main{
   padding:80px 20px;
 }
 
-section{margin-bottom:100px}
+section{margin-bottom:110px}
 
 h2{
   font-size:2.2rem;
@@ -70,28 +70,46 @@ h2{
   color:#6a5acd;
 }
 
+/* OBRAS */
 .gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
 }
-
-.item{
-  height:260px;
-  padding:20px;
-  border-radius:16px;
-  background:linear-gradient(135deg,#ffecd2,#fcb69f);
-  box-shadow:0 10px 25px rgba(0,0,0,.15);
-  transition:.3s;
-}
-
-.item:hover{transform:translateY(-8px)}
 
 .card-link{
   text-decoration:none;
   color:inherit;
 }
 
+.item{
+  height:280px;
+  padding:22px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#ffecd2,#fcb69f);
+  box-shadow:0 14px 30px rgba(0,0,0,.15);
+  transition:.35s;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+
+.item h3{
+  font-size:1.4rem;
+  margin-bottom:8px;
+}
+
+.item p{
+  font-size:.95rem;
+  opacity:.75;
+}
+
+.item:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 18px 40px rgba(0,0,0,.2);
+}
+
+/* FOOTER */
 footer{
   text-align:center;
   padding:50px;
@@ -113,19 +131,44 @@ footer{
 </header>
 
 <main>
+
 <section>
   <h2>Sobre mí</h2>
-  <p>Artista visual interesada en la intersección entre creatividad y tecnología.</p>
+  <p>
+    Artista visual interesada en la intersección entre creatividad, tecnología
+    e interfaces experimentales.
+  </p>
 </section>
 
 <section>
   <h2>Obras</h2>
+
   <div class="gallery">
-    <a href="#" class="card-link"><div class="item">Arte generativo</div></a>
-    <a href="#" class="card-link"><div class="item">Interfaces experimentales</div></a>
-    <a href="#" class="card-link"><div class="item">Visuales con Python</div></a>
+
+    <a href="https://tusitio.com/arte-generativo" target="_blank" class="card-link">
+      <div class="item">
+        <h3>Arte generativo</h3>
+        <p>Exploraciones visuales creadas con código y algoritmos.</p>
+      </div>
+    </a>
+
+    <a href="https://tusitio.com/interfaces" target="_blank" class="card-link">
+      <div class="item">
+        <h3>Interfaces experimentales</h3>
+        <p>Diseño interactivo, UX creativo y narrativas visuales.</p>
+      </div>
+    </a>
+
+    <a href="https://tusitio.com/python-visuales" target="_blank" class="card-link">
+      <div class="item">
+        <h3>Visuales con Python</h3>
+        <p>Data art, visualización y experimentación computacional.</p>
+      </div>
+    </a>
+
   </div>
 </section>
+
 </main>
 
 <footer>© 2026 · Portafolio de Arte</footer>
@@ -167,7 +210,7 @@ function heart(x,y,s){
     h.p+=.04;
     ctx.save();
     ctx.translate(h.x,h.y);
-    ctx.scale(1+Math.sin(h.p)*.08,1+Math.sin(h.p)*.08);
+    ctx.scale(1+Math.sin(h.p)*.08);
     ctx.globalAlpha=.6;
     ctx.fillStyle=h.c;
     heart(0,0,h.s);
