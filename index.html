@@ -4,249 +4,41 @@
   <meta charset="UTF-8">
   <title>Portafolio de Arte</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-
-    body{
-      font-family:system-ui,sans-serif;
-      background:linear-gradient(135deg,#fdfbfb,#ebedee);
-      color:#222;
-    }
-
-    /* HERO */
-    .hero{
-      position:relative;
-      height:100vh;
-      overflow:hidden;
-      background:linear-gradient(135deg,#cdb4db,#bde0fe);
-    }
-
-    #artCanvas{
-      position:absolute;
-      inset:0;
-      pointer-events:none;
-    }
-
-    .hero-content{
-      position:relative;
-      z-index:2;
-      height:100%;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-    }
-
-    .hero-content h1{
-      font-size:3.5rem;
-      text-shadow:0 6px 20px rgba(0,0,0,.25);
-    }
-
-    .hero-content p{
-      font-size:1.3rem;
-      opacity:.85;
-    }
-
-    .signature{
-      margin-top:14px;
-      font-size:.95rem;
-      opacity:.7;
-    }
-
-    /* MAIN */
-    main{
-      max-width:1100px;
-      margin:auto;
-      padding:80px 20px;
-    }
-
-    section{margin-bottom:110px}
-
-    h2{
-      font-size:2.2rem;
-      margin-bottom:25px;
-      color:#6a5acd;
-    }
-
-    /* OBRAS */
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:28px;
-    }
-
-    .card-link{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    .item{
-      height:280px;
-      padding:22px;
-      border-radius:18px;
-      background:linear-gradient(135deg,#ffecd2,#fcb69f);
-      box-shadow:0 14px 30px rgba(0,0,0,.15);
-      transition:.35s;
-      display:flex;
-      flex-direction:column;
-      justify-content:flex-end;
-    }
-
-    .item h3{
-      font-size:1.4rem;
-      margin-bottom:8px;
-    }
-
-    .item p{
-      font-size:.95rem;
-      opacity:.75;
-    }
-
-    .item:hover{
-      transform:translateY(-10px) scale(1.02);
-      box-shadow:0 18px 40px rgba(0,0,0,.2);
-    }
-
-    /* FOOTER */
-    footer{
-      text-align:center;
-      padding:50px;
-      opacity:.7;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header class="hero">
-  <canvas id="artCanvas"></canvas>
-  <div class="hero-content">
-    <h1>Gloria Martínez</h1>
-    <p class="signature">Portafolio experimental</p>
-    <p>Arte visual · Tecnología · Interfaces</p>
-  </div>
-</header>
-
-<main>
-  <section>
-    <h2>Sobre mí</h2>
-    <p>
-      Artista visual interesada en la intersección entre creatividad, tecnología
-      e interfaces experimentales.
-    </p>
-  </section>
-
-  <section>
-    <h2>Obras</h2>
-    <div class="gallery">
-      <a href="arte-generativo.html" class="card-link">
-        <div class="item">
-          <h3>Arte generativo</h3>
-          <p>Exploraciones visuales creadas con código y algoritmos.</p>
-        </div>
-      </a>
-
-      <a href="interfaces.html" class="card-link">
-        <div class="item">
-          <h3>Interfaces experimentales</h3>
-          <p>Diseño interactivo, UX creativo y narrativas visuales.</p>
-        </div>
-      </a>
-
-      <a href="python-visuales.html" class="card-link">
-        <div class="item">
-          <h3>Visuales con Python</h3>
-          <p>Data art, visualización y experimentación computacional.</p>
-        </div>
-      </a>
-
-      <!-- Aquí puedes enlazar tu demo de estados emocionales -->
-      <a href="estados-emocionales.html" class="card-link">
-        <div class="item">
-          <h3>Estados emocionales</h3>
-          <p>Animación interactiva con estados de ánimo.</p>
-        </div>
-      </a>
+  <header class="hero">
+    <canvas id="artCanvas"></canvas>
+    <div class="hero-content">
+      <h1>Gloria Martínez</h1>
+      <p class="signature">Portafolio experimental</p>
+      <p>Arte visual · Tecnología · Interfaces</p>
     </div>
-  </section>
+  </header>
 
-  <section>
-    <h2>Libro Digital</h2>
-    <a 
-      href="https://gloriacitizen00-dev.github.io/living-storybook/" 
-      target="_blank"
-      rel="noopener"
-      class="card-link">
-      <div class="item">
-        <h3>Libro digital</h3>
-        <p>
-          Living Storybook — proyecto de libro digital interactivo,
-          narrativa experimental y exploración creativa.
-        </p>
+  <main>
+    <section>
+      <h2>Obras</h2>
+      <div class="gallery">
+        <a href="estados-emocionales.html" class="card-link">
+          <div class="item">
+            <h3>Estados emocionales</h3>
+            <p>Animación interactiva con estados de ánimo.</p>
+          </div>
+        </a>
+
+        <a href="estados-emocionales-generativos.html" class="card-link">
+          <div class="item">
+            <h3>Generativos automáticos</h3>
+            <p>Animaciones que cambian en cada recarga.</p>
+          </div>
+        </a>
       </div>
-    </a>
-  </section>
-</main>
+    </section>
+  </main>
 
-<footer>© 2026 · Portafolio de Arte</footer>
+  <footer>© 2026 · Portafolio de Arte</footer>
 
-<script>
-/* CANVAS CORAZONES */
-const canvas = document.getElementById("artCanvas");
-const ctx = canvas.getContext("2d");
-
-function resize() {
-  canvas.width = innerWidth;
-  canvas.height = innerHeight;
-}
-resize();
-addEventListener("resize", resize);
-
-const colors = ["#ff8dcf", "#7fd8ff"];
-const hearts = Array.from({ length: 18 }, () => ({
-  x: Math.random() * canvas.width,
-  y: Math.random() * canvas.height,
-  s: Math.random() * 28 + 22,
-  v: Math.random() * 0.6 + 0.4,
-  c: colors[Math.random() * colors.length | 0],
-  p: Math.random() * Math.PI * 2
-}));
-
-function drawHeart(x, y, s) {
-  ctx.beginPath();
-  ctx.moveTo(x, y);
-  ctx.bezierCurveTo(x - s, y - s, x - s * 1.4, y + s / 3, x, y + s);
-  ctx.bezierCurveTo(x + s * 1.4, y + s / 3, x + s, y - s, x, y);
-  ctx.fill();
-}
-
-(function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  hearts.forEach(h => {
-    h.y -= h.v;
-    h.p += 0.04;
-
-    const scale = 1 + Math.sin(h.p) * 0.08;
-
-    ctx.save();
-    ctx.translate(h.x, h.y);
-    ctx.scale(scale, scale);
-    ctx.globalAlpha = 0.6;
-    ctx.fillStyle = h.c;
-    drawHeart(0, 0, h.s);
-    ctx.restore();
-
-    if (h.y < -60) {
-      h.y = canvas.height + 60;
-      h.x = Math.random() * canvas.width;
-    }
-  });
-
-  requestAnimationFrame(animate);
-})();
-</script>
+  <script src="js/corazones.js"></script>
 </body>
 </html>
