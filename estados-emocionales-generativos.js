@@ -6,13 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: system-ui, sans-serif;
       background: radial-gradient(circle at top, #2b1055, #000);
       color: #fff;
       overflow: hidden;
+      transition: background 0.6s ease; /* transición suave */
     }
 
     header {
@@ -38,19 +43,22 @@
     canvas {
       position: fixed;
       inset: 0;
+      display: block;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Estados emocionales generativos</h1>
-  <p>Cada recarga genera una emoción distinta</p>
-</header>
+  <header>
+    <h1>Estados emocionales generativos</h1>
+    <p>Cada recarga genera una emoción distinta</p>
+  </header>
 
-<canvas id="canvas"></canvas>
+  <main>
+    <canvas id="canvas" aria-label="Animación generativa de estados emocionales"></canvas>
+  </main>
 
-<script src="estados-emocionales-generativos.js"></script>
+  <script src="estados-emocionales-generativos.js"></script>
 </body>
 </html>
