@@ -1,19 +1,45 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Demo Estados Emocionales</title>
-</head>
-<body>
-  <div class="controls">
-    <button data-mood="calm">Calma</button>
-    <button data-mood="joy">Alegría</button>
-    <button data-mood="sadness">Tristeza</button>
-    <button data-mood="chaos">Caos</button>
-  </div>
+const canvas = document.getElementById("art");
+const ctx = canvas.getContext("2d");
 
-  <canvas id="art"></canvas>
+let mood = "calm";
 
-  <script src="estados-emocionales.js"></script>
-</body>
-</html>
+const moods = {
+  calm: { colors: ["#bde0fe", "#cdb4db"], speed: 0.3 },
+  joy: { colors: ["#ffbe0b", "#fb5607"], speed: 0.8 },
+  sadness: { colors: ["#4361ee", "#4cc9f0"], speed: 0.2 },
+  chaos: { colors: ["#ff006e", "#8338ec", "#3a86ff"], speed: 1.4 }
+};
+
+document.querySelectorAll("button").forEach(btn=>{
+  btn.addEventListener("click",()=>{ mood = btn.dataset.mood; });
+});
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resize);
+resize();
+
+let t = 0;
+
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const { colors, speed } = moods[mood];
+  const cx = canvas.width/2, cy = canvas.height/2;
+  const r = Math.min(canvas.width, canvas.height)/2 - 40;
+
+  for(let i=0;i<60;i++){
+    const x = Math.sin(t*0.01+i)*r + cx;
+    const y = Math.cos(t*0.013+i)*r + cy;
+    ctx.fillStyle = colors[i % colors.length];
+    ctx.globalAlpha = 0.7;
+    ctx.beginPath();
+    ctx.arc(x,y,6,0,Math.PI*2);
+    ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+  t += speed;
+  requestAnimationFrame(draw);
+}
+draw();
