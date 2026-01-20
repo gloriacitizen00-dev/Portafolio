@@ -2,74 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Estados emocionales generativos</title>
+  <title>Estados emocionales</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      min-height: 100vh;
-      font-family: system-ui, sans-serif;
-      background: #111;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-    }
-
-    h1 {
-      font-weight: 500;
-      font-size: 2rem;
-      text-align: center;
-    }
-
-    .controls {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    button {
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: .9rem;
-      background: #fff;
-      color: #111;
-      transition: .3s;
-    }
-
-    button:hover {
-      transform: translateY(-2px);
-      opacity: .85;
-    }
-
-    canvas {
-      border-radius: 18px;
-      background: #000;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    header p {
-      opacity: 0.8;
-      margin-top: 8px;
-      font-size: 1rem;
-    }
-  </style>
 </head>
-
 <body>
   <header>
-    <h1>Estados emocionales generativos</h1>
+    <h1>Estados emocionales</h1>
     <p>Elige un estado de ánimo y observa la animación</p>
   </header>
 
@@ -80,8 +18,8 @@
     <button data-mood="chaos">Caos</button>
   </div>
 
-  <canvas id="art" width="420" height="420"></canvas>
+  <canvas id="art"></canvas>
 
-  <script src="estados-emocionales.js"></script>
+  <script src="js/estados-emocionales.js"></script>
 </body>
 </html>
