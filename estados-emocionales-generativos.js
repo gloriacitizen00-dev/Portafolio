@@ -49,15 +49,12 @@
 </head>
 
 <body>
-
   <header>
     <h1>Estados emocionales generativos</h1>
     <p>Cada recarga genera una emoción distinta</p>
   </header>
 
-  <main>
-    <canvas id="canvas" aria-label="Animación generativa de estados emocionales"></canvas>
-  </main>
+  <canvas id="canvas" aria-label="Animación generativa de estados emocionales"></canvas>
 
   <script src="estados-emocionales-generativos.js"></script>
 </body>
