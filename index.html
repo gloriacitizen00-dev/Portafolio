@@ -115,10 +115,32 @@ footer{
   padding:50px;
   opacity:.7;
 }
+
+/* BOTÓN REGRESAR */
+.back-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  background: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  z-index: 999;
+}
+
+.back-link:hover {
+  background: #ddd;
+}
 </style>
 </head>
 
 <body>
+
+<!-- Link fijo en esquina superior izquierda -->
+<a href="https://gloriacitizen00-dev.github.io/" class="back-link">← Regresar a portafolio</a>
 
 <header class="hero">
   <canvas id="artCanvas"></canvas>
@@ -146,13 +168,14 @@ footer{
   <div class="gallery">
 
     <a href="https://gloriacitizen00-dev.github.io/green_circles/" class="card-link" target="_blank">
-  <div class="item">
-    <h3>Arte generativo</h3>
-    <p>Exploraciones visuales creadas con código y algoritmos.</p>
-  </div>
-</a>
+      <div class="item">
+        <h3>Arte generativo</h3>
+        <p>Exploraciones visuales creadas con código y algoritmos.</p>
+      </div>
+    </a>
 
-    <a href="interfaces.html" class="card-link">
+    <!-- Aquí cambiamos el enlace de Interfaces experimentales -->
+    <a href="https://gloriacitizen00-dev.github.io/Portafolio_interfaces/" class="card-link" target="_blank">
       <div class="item">
         <h3>Interfaces experimentales</h3>
         <p>Diseño interactivo, UX creativo y narrativas visuales.</p>
@@ -167,25 +190,23 @@ footer{
     </a>
 
     <section>
-  <h2>Libro Digital</h2>
-      
-  <a 
-    href="https://gloriacitizen00-dev.github.io/living-storybook/" 
-    target ="blank"
-    rel="noopener"
-    class="card-link">
-    
-    
-  <div class="item">
-    <h3>Libro digital</h3>
-      
-    
-        <p>
-          Living Storybook — proyecto de libro digital interactivo,
-          narrativa experimental y exploración creativa.
-        </p>
-      </div>
-    </a>
+      <h2>Libro Digital</h2>
+      <a 
+        href="https://gloriacitizen00-dev.github.io/living-storybook/" 
+        target="_blank"
+        rel="noopener"
+        class="card-link">
+        <div class="item">
+          <h3>Libro digital</h3>
+          <p>
+            Living Storybook — proyecto de libro digital interactivo,
+            narrativa experimental y exploración creativa.
+          </p>
+        </div>
+      </a>
+    </section>
+
+  </div>
 </section>
 
 </main>
