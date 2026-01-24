@@ -77,6 +77,14 @@ h2{
   gap:28px;
 }
 
+/* SOLO MANGA */
+.gallery-left{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+  justify-items:start; /* 👈 solo Manga se alinea a la izquierda */
+}
+
 .card-link{
   text-decoration:none;
   color:inherit;
@@ -144,7 +152,6 @@ footer{
   <h2>Obras</h2>
 
   <div class="gallery">
-    
     <a href="https://gloriacitizen00-dev.github.io/green_circles/" class="card-link" target="_blank" rel="noopener">
       <div class="item">
         <h3>Arte generativo</h3>
@@ -165,15 +172,17 @@ footer{
         <p>Data art, visualización y experimentación computacional.</p>
       </div>
     </a>
+  </div>
 
- <h2>Manga</h2>
-  <a href="https://gloriacitizen00-dev.github.io/living-storybook/" class="card-link" target="_blank" rel="noopener">
-    <div class="item">
-      <h3>Remodelando</h3>
-      <p>Proyecto de manga — espacio creativo en desarrollo.</p>
-    </div>
-  </a>
-  </div>  
+  <h2>Manga</h2>
+  <div class="gallery-left">
+    <a href="https://gloriacitizen00-dev.github.io/living-storybook/" class="card-link" target="_blank" rel="noopener">
+      <div class="item">
+        <h3>Remodelando</h3>
+        <p>Proyecto de manga — espacio creativo en desarrollo.</p>
+      </div>
+    </a>
+  </div>
 </section>
 
 </main>
