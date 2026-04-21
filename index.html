@@ -23,6 +23,7 @@ body{
 }
 
 #artCanvas{
+  background:transparent;
   position:absolute;
   inset:0;
   pointer-events:none;
@@ -263,7 +264,14 @@ function drawHeart(x, y, s) {
     ctx.translate(h.x, h.y);
     ctx.scale(scale, scale);
     ctx.globalAlpha = 0.8;
-    ctx.fillStyle = h.c;
+    const gradient = ctx.createRadialGradient(0, 0, h.s * 0.2, 0, 0, h.s);
+
+gradient.addColorStop(0, "#fff6cc");   // brillo
+gradient.addColorStop(0.3, "#ffd700"); // dorado claro
+gradient.addColorStop(0.6, "#d4af37"); // dorado clásico
+gradient.addColorStop(1, "#a67c00");   // sombra dorada
+
+ctx.fillStyle = gradient;
     drawHeart(0, 0, h.s);
     ctx.restore();
 
