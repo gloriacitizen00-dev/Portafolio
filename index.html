@@ -10,7 +10,7 @@
 
 body{
   font-family:system-ui,sans-serif;
-  background:linear-gradient(135deg,#fdfbfb,#ebedee);
+  background:#ffffff;
   color:#222;
 }
 
@@ -19,7 +19,7 @@ body{
   position:relative;
   height:100vh;
   overflow:hidden;
-  background:linear-gradient(135deg,#cdb4db,#bde0fe);
+  background:#ffffff;
 }
 
 #artCanvas{
@@ -103,8 +103,9 @@ h2{
   height:280px;
   padding:22px;
   border-radius:18px;
-  background:linear-gradient(135deg,#ffecd2,#fcb69f);
-  box-shadow:0 14px 30px rgba(0,0,0,.15);
+  background:#ffffff;
+  border:2px solid #d4af37;
+  box-shadow:0 14px 30px rgba(0,0,0,.08);
   transition:.35s;
   display:flex;
   flex-direction:column;
@@ -123,7 +124,7 @@ h2{
 
 .item:hover{
   transform:translateY(-10px) scale(1.02);
-  box-shadow:0 18px 40px rgba(0,0,0,.2);
+  box-shadow:0 25px rgba(212,175,55,0.4);
 }
 
 /* FOOTER */
@@ -231,7 +232,7 @@ function resize() {
 resize();
 addEventListener("resize", resize);
 
-const colors = ["#ff8dcf", "#7fd8ff"];
+const colors = ["#d4af37", "#ffd700"];
 const hearts = Array.from({ length: 18 }, () => ({
   x: Math.random() * canvas.width,
   y: Math.random() * canvas.height,
@@ -261,7 +262,7 @@ function drawHeart(x, y, s) {
     ctx.save();
     ctx.translate(h.x, h.y);
     ctx.scale(scale, scale);
-    ctx.globalAlpha = 0.6;
+    ctx.globalAlpha = 0.8;
     ctx.fillStyle = h.c;
     drawHeart(0, 0, h.s);
     ctx.restore();
