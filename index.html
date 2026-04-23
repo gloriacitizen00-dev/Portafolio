@@ -111,6 +111,68 @@ h2{
   color: gold;
 }
 
+.about-me {
+  background-color: #1a1a1a; /* deep charcoal */
+  padding: 60px 40px;
+  border-radius: 12px;
+}
+
+.about-me h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.8rem;
+  color: #d4af37; /* gold */
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-row {
+  display: grid;
+  grid-template-columns: 60px 1fr; /* emoji left, text right */
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.about-row p {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.emoji {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.gold-box {
+  background-color: #d4af37;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.gold-box p {
+  color: #1a1a1a; /* dark text inside gold box */
+  font-weight: bold;
+}
+
+.name-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid #d4af37;
+  border-radius: 6px;
+  color: #d4af37;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.name-btn:hover {
+  background-color: #d4af37;
+  color: #1a1a1a;
+  box-shadow: 0 0 12px rgba(212,175,55,0.8);
+}
+
+
 /* OBRAS */
 .gallery{
   display:grid;
@@ -191,24 +253,38 @@ footer{
 
 <main>
 
-<section>
+<section class="about-me">
   <h2>About me</h2>
 
-  <p>🚀 This site is my little launchpad to drop ideas in pre‑launch, let people try my games before they’re out, and show how digital science + creativity can actually vibe together.</p>
+ <div class="about-row">
+    <span class="emoji">🚀</span>
+    <p>This site is my little launchpad to drop ideas in pre‑launch, let people try my games before they’re out, and show how digital science + creativity can actually vibe together.</p>
+  </div>
+  
+   <div class="about-row">
+    <span class="emoji">🔮</span>
+    <p>And honestly, what’s coming next excites me even more: new features that get closer to the real experience of reading cards, mixing technology with intuition in ways that feel alive.</p>
+  </div>
+  
+  <div class="about-row gold-box">
+    <span class="emoji">🎨</span>
+    <p>Every design here is my own creation and belongs entirely to me.</p>
+  </div>
 
-  <p>🧠 The first game I’m building is like a deep learning workout: it tries to memorize images, avoid repeating patterns, and learn the meaning of each card so the readings feel sharper and more real.</p>
+  <div class="about-row">
+    <span class="emoji">🌱</span>
+    <p>Plus, I care about preserving nature—because innovation should respect the world we live in.</p>
+  </div>
 
-  <p>🔮 And honestly, what’s coming next excites me even more: new features that get closer to the real experience of reading cards, mixing technology with intuition in ways that feel alive.</p>
-
-  <p>🎨 Every design here is my own creation and belongs entirely to me.</p>
-
-  <p>🌱 Plus, I care about preserving nature—because innovation should respect the world we live in.</p>
-
-  <p>👉 My name is 
-    <a href="https://savenatureincr.my.canva.site/gloriabio" target="_blank" style="color:#4CAF50; font-weight:bold; text-decoration:none;">
-      Gloria Martínez
-    </a>, and you can check more of my info by clicking my name.
-  </p>
+  <div class="about-row">
+    <span class="emoji">📇</span>
+    <p>
+      My name is 
+      <a href="https://savenatureincr.my.canva.site/gloriabio" target="_blank" class="name-btn">
+        Gloria Martínez
+      </a>, and you can check more of my info by clicking my name.
+    </p>
+  </div>
 </section>
   
   <h2>Obras</h2>
