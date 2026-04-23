@@ -90,7 +90,11 @@ main{
   padding:80px 20px;
 }
 
-section{margin-bottom:110px}
+section {
+  margin-bottom:110px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
 
 section p {
   font-size: 18px;
@@ -184,7 +188,7 @@ h2{
 .gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
+  gap:35px;
 }
 
 .gallery-title {
@@ -212,7 +216,8 @@ h2{
   }
 }
 
-.item{
+.item {
+  min-height: 280px;
   height:280px;
   padding:22px;
   border-radius:18px;
@@ -223,6 +228,7 @@ h2{
   display:flex;
   flex-direction:column;
   justify-content:flex-end;
+  aspect-ratio: 4 / 3;
 }
 
 .item h3{
@@ -337,56 +343,49 @@ h2{
   100% { transform: scale(1) translateY(0); }
 }
 
-.python-art::before,
-.python-art::after {
-  animation: floatFire 5s ease-in-out infinite;
-}
 
-.studio-title {
-  color: #d4af37;
-  letter-spacing: 2px;
-}
-
-.studio-art {
+.sketch-art {
   position: relative;
+  background: #fffdf7;
   overflow: hidden;
-  background: #ffffff;
 }
 
-/* soft ink shape */
-.studio-art::before {
+/* pencil-like texture */
+.sketch-art::before {
   content: "";
   position: absolute;
-  width: 160px;
-  height: 160px;
-  background: radial-gradient(circle, rgba(212,175,55,0.25), transparent 70%);
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0,0,0,0.03),
+    rgba(0,0,0,0.03) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+}
+
+/* hand-drawn circle */
+.sketch-art::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 2px dashed rgba(0,0,0,0.2);
   border-radius: 50%;
-  top: 10px;
-  left: 20px;
-  filter: blur(6px);
-}
-
-/* subtle brush stroke */
-.studio-art::after {
-  content: "";
-  position: absolute;
-  width: 140px;
-  height: 60px;
-  background: linear-gradient(90deg, rgba(0,0,0,0.15), transparent);
-  border-radius: 50px;
   bottom: 20px;
   right: 20px;
-  transform: rotate(-15deg);
-  opacity: 0.3;
+  transform: rotate(-10deg);
+  opacity: 0.6;
 }
 
-/* keep text above */
-.studio-art h3,
-.studio-art p {
+.sketch-art h3,
+.sketch-art p {
   position: relative;
   z-index: 1;
 }
 
+
+  
 /* FOOTER */
 footer{
   text-align:center;
