@@ -236,6 +236,25 @@ h2{
   box-shadow:0 25px rgba(212,175,55,0.4);
 }
 
+.generative-art {
+  position: relative;
+  overflow: hidden;
+}
+
+/* green circle */
+.generative-art::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #00ff88, #00aa55);
+  border-radius: 50%;
+  top: 20px;
+  right: 20px;
+  opacity: 0.9;
+  filter: blur(2px);
+}
+
 /* FOOTER */
 footer{
   text-align:center;
@@ -287,8 +306,8 @@ footer{
   <div class="gallery">
     <a href="https://gloriacitizen00-dev.github.io/green_circles/" class="card-link" target="_blank" rel="noopener">
       <div class="item">
-        <h3>Arte generativo</h3>
-        <p>Exploraciones visuales creadas con código y algoritmos.</p>
+        <h3>Generative Art</h3>
+        <p>Visual explorations created with code and algorithms.</p>
       </div>
     </a>
 
