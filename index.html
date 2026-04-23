@@ -255,6 +255,36 @@ h2{
   filter: blur(2px);
 }
 
+.interfaces-art {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* subtle grid pattern */
+.interfaces-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* accent shape (data node) */
+.interfaces-art::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #2f6fed;
+  border-radius: 12px;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.15;
+}
+
 /* FOOTER */
 footer{
   text-align:center;
@@ -314,8 +344,8 @@ footer{
   
     <a href="https://gloriacitizen00-dev.github.io/Portafolio_interfaces/" class="card-link" target="_blank" rel="noopener">
       <div class="item">
-        <h3>Interfaces experimentales</h3>
-        <p>Diseño interactivo, UX creativo y narrativas visuales.</p>
+        <h3>Experimental Interfaces</h3>
+        <p>Interactive design, creative UX, and visual storytelling.</p>
       </div>
     </a>
     
