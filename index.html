@@ -369,11 +369,32 @@ h2{
   z-index: 1;
 }
   
+.card {
+  width: 300px;        /* same as gallery cards */
+  min-height: 400px;   /* forces equal height */
+  border: 2px solid gold;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .card img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;        /* makes link fill the card */
+}
+
   
 /* FOOTER */
 footer{
@@ -450,19 +471,20 @@ footer{
   </section>
 
   
-  <section>
-  <section class="studio">
+ <section class="studio">
   <h2>Studio</h2>
   <div class="card">
-  <img src="studio-image.jpg" alt="Studio preview">
-    <a href="https://gloriacitizen00-dev.github.io/living-storybook/" class="card-link" target="_blank" rel="noopener">
+    <a href="https://gloriacitizen00-dev.github.io/living-storybook/" 
+       class="card-link" target="_blank" rel="noopener">
+      <img src="letters.jpg" alt="Studio preview">
       <div class="item studio-art">
         <h3>Redesigning</h3>
         <p>Creative space in development</p>
       </div>
     </a>
-    </div> 
-  </section>
+  </div>
+</section>
+
   
  <section>
   <h2>Costa Rica</h2>
