@@ -342,6 +342,51 @@ h2{
   animation: floatFire 5s ease-in-out infinite;
 }
 
+.studio-title {
+  color: #d4af37;
+  letter-spacing: 2px;
+}
+
+.studio-art {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* soft ink shape */
+.studio-art::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(212,175,55,0.25), transparent 70%);
+  border-radius: 50%;
+  top: 10px;
+  left: 20px;
+  filter: blur(6px);
+}
+
+/* subtle brush stroke */
+.studio-art::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 60px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.15), transparent);
+  border-radius: 50px;
+  bottom: 20px;
+  right: 20px;
+  transform: rotate(-15deg);
+  opacity: 0.3;
+}
+
+/* keep text above */
+.studio-art h3,
+.studio-art p {
+  position: relative;
+  z-index: 1;
+}
+
 /* FOOTER */
 footer{
   text-align:center;
@@ -416,13 +461,14 @@ footer{
     </div> 
   </section>
 
-   <section>
-  <h2>Manga</h2>
+  
+  <section>
+  <h2 class="studio-title">Studio</h2>
   <div class="gallery-left">
     <a href="https://gloriacitizen00-dev.github.io/living-storybook/" class="card-link" target="_blank" rel="noopener">
-      <div class="item">
-        <h3>Remodelando</h3>
-        <p>Proyecto de manga — espacio creativo en desarrollo.</p>
+      <div class="item studio-art">
+        <h3>Redesigning</h3>
+        <p>Creative space in development</p>
       </div>
     </a>
     </div> 
