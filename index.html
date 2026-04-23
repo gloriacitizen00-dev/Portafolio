@@ -289,6 +289,59 @@ h2{
   opacity: 0.15;
 }
 
+.python-art {
+  position: relative;
+  overflow: hidden;
+  background: #000; /* dark base for contrast */
+  color: white;
+}
+
+/* main burst */
+.python-art::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, #ff4d00, #ffcc00, transparent 70%);
+  border-radius: 50%;
+  top: 20px;
+  left: 30px;
+  opacity: 0.8;
+  filter: blur(4px);
+}
+
+/* secondary burst */
+.python-art::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #00cfff, #0066ff, transparent 70%);
+  border-radius: 50%;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.7;
+  filter: blur(4px);
+}
+
+/* keep text visible */
+.python-art h3,
+.python-art p {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes floatFire {
+  0% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.1) translateY(-10px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+.python-art::before,
+.python-art::after {
+  animation: floatFire 5s ease-in-out infinite;
+}
+
 /* FOOTER */
 footer{
   text-align:center;
@@ -355,9 +408,9 @@ footer{
     
 
     <a href="https://gloriacitizen00-dev.github.io/Visuales-Python/" class="card-link" target="_blank" rel="noopener">
-      <div class="item">
-        <h3>Visuales con Python</h3>
-        <p>Data art, visualización y experimentación computacional.</p>
+      <div class="item python-art">
+        <h3>Python Visuals</h3>
+        <p>Data art, visualization, and computational experimentation.</p>
       </div>
     </a>
     </div> 
