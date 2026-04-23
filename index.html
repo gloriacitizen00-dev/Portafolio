@@ -344,38 +344,25 @@ h2{
 
 .studio-art {
   position: relative;
-  background: #fffdf7;
+  background: #ffffff;
   overflow: hidden;
 }
 
-/* pencil-like texture */
-.studio-art::before {
-  content: "";
+/* image centered */
+.studio-img {
   position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(0,0,0,0.03),
-    rgba(0,0,0,0.03) 1px,
-    transparent 1px,
-    transparent 6px
-  );
-}
-
-/* hand-drawn circle */
-.studio-art::after {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  border: 2px dashed rgba(0,0,0,0.2);
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
   border-radius: 50%;
-  bottom: 20px;
-  right: 20px;
-  transform: rotate(-10deg);
-  opacity: 0.6;
+  transform: translate(-50%, -55%);
+  opacity: 0.9;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+/* keep text above image */
 .studio-art h3,
 .studio-art p {
   position: relative;
