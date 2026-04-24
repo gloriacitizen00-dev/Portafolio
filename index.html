@@ -406,6 +406,66 @@ h2{
   height: 100%;        /* makes link fill the card */
 }
 
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+  padding: 80px 20px;
+}
+
+/* LEFT TEXT PANEL */
+.workspace-text {
+  border: 3px solid #d4af37;
+  border-radius: 14px;
+  padding: 30px;
+  background: #ffffff;
+}
+
+.workspace-text h2 {
+  color: #d4af37;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 20px;
+}
+
+.workspace-text p {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* RIGHT SIDE */
+.workspace-preview {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  gap: 20px;
+}
+
+/* IMAGE (GameBoy feel) */
+.workspace-image {
+  border: 3px solid #d4af37;
+  border-radius: 14px;
+  overflow: hidden;
+  background: black;
+}
+
+.workspace-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* STORY BOX */
+.workspace-story {
+  border: 3px solid #d4af37;
+  border-radius: 14px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.workspace-story p {
+  font-size: 16px;
+  line-height: 1.6;
+}
   
 /* FOOTER */
 footer{
@@ -431,27 +491,33 @@ footer{
 
 <main>
 
-<section class="about-me">
-  <h2>About</h2>
+  <section class="workspace">
 
-  <p>🔬This site is my little launchpad to drop ideas in pre‑launch, let people try my games before they’re out, and show how digital science + creativity can actually vibe together.</p>
+  <div class="workspace-text">
+    <h2>Workspace</h2>
 
-  <p>🎮The first game I’m building is like a deep learning workout: it tries to memorize images, avoid repeating patterns, and learn the meaning of each card so the readings feel sharper and more real.</p>
+    <p>🎮 This is my beta pre-launch game space.</p>
 
-  <p>💞And honestly, what’s coming next excites me even more: new features that get closer to the real experience of reading cards, mixing technology with intuition in ways that feel alive.</p>
+    <p>🔬 Try the game before release and explore how it learns patterns, memory, and symbolic card interpretation.</p>
 
-  <p><strong>🎨Every design here is my own creation and belongs entirely to me.</strong></p>
+    <p>💡 This is an evolving system — every interaction helps shape its logic.</p>
+  </div>
 
-  <p>🌱Plus, I care about preserving nature—because innovation should respect the world we live in.</p>
+  <div class="workspace-preview">
 
-  <p>
-    🌌My name is 
-    <a href="https://savenatureincr.my.canva.site/gloriabio" target="_blank" class="name-btn">
-      Gloria Martínez
-    </a>, and you can check more of my info by clicking my name.
-  </p>
+    <div class="workspace-image">
+      <img src="cats.jpg" alt="Beta game preview">
+    </div>
+
+    <div class="workspace-story">
+      <p>
+        Inspired by Game Boy aesthetics, this project merges learning systems with interactive storytelling and experimental design.
+      </p>
+    </div>
+
+  </div>
+
 </section>
-
   
  <h2 class="gallery-title">Gallery</h2>
 
@@ -496,7 +562,27 @@ footer{
   </div>
 </section>
 
-  
+<section class="about-me">
+  <h2>About</h2>
+
+  <p>🔬This site is my little launchpad to drop ideas in pre‑launch, let people try my games before they’re out, and show how digital science + creativity can actually vibe together.</p>
+
+  <p>🎮The first game I’m building is like a deep learning workout: it tries to memorize images, avoid repeating patterns, and learn the meaning of each card so the readings feel sharper and more real.</p>
+
+  <p>💞And honestly, what’s coming next excites me even more: new features that get closer to the real experience of reading cards, mixing technology with intuition in ways that feel alive.</p>
+
+  <p><strong>🎨Every design here is my own creation and belongs entirely to me.</strong></p>
+
+  <p>🌱Plus, I care about preserving nature—because innovation should respect the world we live in.</p>
+
+  <p>
+    🌌My name is 
+    <a href="https://savenatureincr.my.canva.site/gloriabio" target="_blank" class="name-btn">
+      Gloria Martínez
+    </a>, and you can check more of my info by clicking my name.
+  </p>
+</section>
+ 
  <section>
   <h2>Costa Rica</h2>
   <div class="gallery-left">
