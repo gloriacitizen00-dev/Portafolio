@@ -19,6 +19,7 @@ body{
   background:#f8f8f8;
   color:#111;
   -webkit-font-smoothing: antialiased;
+   background: radial-gradient(circle at top, #ffffff, #f3f3f3);
 }
 
 /* HERO */
@@ -572,6 +573,30 @@ h2{
   line-height: 1.8;
   margin-bottom: 20px;
   color: #222;
+}
+
+.item, .about-box, .workspace-text {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+  
+.about-box, .workspace-text {
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.85);
+}
+
+.item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(212,175,55,0.25);
+}
+
+a, .item, .btn-yellow {
+  transition: all 0.25s ease;
+}
+
+.btn-yellow:hover {
+  transform: scale(1.05);
+  letter-spacing: 1px;
 }
 
 /* SIGNATURE */
