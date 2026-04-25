@@ -529,6 +529,106 @@ h2{
   background: #ffffff;
   color: #d4af37;
 }
+
+.about-me {
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TITLE */
+.about-me h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  color: #d4af37;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+/* GOLD BOX */
+.about-box {
+  max-width: 800px;
+  border: 2px solid #d4af37;
+  border-radius: 16px;
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+}
+
+/* TEXT */
+.about-box p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* SIGNATURE */
+.about-signature {
+  margin-top: 30px;
+  font-style: italic;
+  color: #d4af37;
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+.about-box {
+  max-width: 800px;
+  border: 2px solid #d4af37;
+  border-radius: 16px;
+  padding: 40px;
+  background: #fdfcf7; /* slightly warm screen tone */
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* SCREEN TEXTURE */
+.about-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.03) 0px,
+      rgba(0,0,0,0.03) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0.02) 0px,
+      rgba(0,0,0,0.02) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.about-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 50% 40%,
+    rgba(212,175,55,0.12),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.about-box * {
+  position: relative;
+  z-index: 1;
+}
   
 /* FOOTER */
 footer{
@@ -646,6 +746,7 @@ footer{
 
 <section class="about-me">
   <h2>About</h2>
+<div class="about-box">
 
   <p>🔬This site is my little launchpad to drop ideas in pre‑launch, let people try my games before they’re out, and show how digital science + creativity can actually vibe together.</p>
 
@@ -658,7 +759,8 @@ footer{
   <p>🌱Plus, I care about preserving nature—because innovation should respect the world we live in.</p>
 
   <p>
-    🌌My name is 
+    <p class="about-signature">
+    🌌My name is
     <a href="https://savenatureincr.my.canva.site/gloriabio" target="_blank" class="name-btn">
       Gloria Martínez
     </a>, and you can check more of my info by clicking my name.
