@@ -886,11 +886,16 @@ footer{
 
     <div class="footer-links">
 
-      <!-- Privacy Policy -->
-      <a href="1.png" target="_blank">
-        Privacy Policy
-        <img src="3.png" alt="Privacy Policy Image" style="width:40px; height:auto; vertical-align:middle;">
-      </a>
+    <a href="1.png" target="_blank" id="privacyLink">
+  Privacy Policy
+</a>
+
+<script>
+document.getElementById("privacyLink").addEventListener("click", function(e) {
+  window.open("1.png", "_blank");
+  window.open("3.png", "_blank");
+});
+</script>
 
       <!-- Contact -->
       <a href="Thepicture1.png" target="_blank">
