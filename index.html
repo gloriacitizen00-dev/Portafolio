@@ -724,15 +724,24 @@ footer{
   font-size: 15px;
 }
 
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
 .footer-links a {
-  margin-bottom: 12px;
   font-size: 15px;
   cursor: pointer;
   transition: 0.2s;
+  color: #666;
+  text-decoration: none;
 }
 
 .footer-links a:hover {
   color: #d4af37;
+  transform: translateX(4px);
 }
 
 @media (max-width: 800px) {
