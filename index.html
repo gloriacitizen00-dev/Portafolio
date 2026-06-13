@@ -873,34 +873,27 @@ footer{
 <footer class="site-footer">
   <div class="footer-inner">
 
+    <!-- BRAND -->
     <div class="footer-brand">
       <h3>SkyCortex</h3>
       <p>Creative Systems · Digital Experiments · Interactive Design</p>
     </div>
 
+    <!-- INFO -->
     <div class="footer-info">
       <p>San José, Costa Rica</p>
       <p>All content, systems, and brands presented in this platform are intellectual property of the creator.</p>
       <p>© 2026 Gloria Martínez. All rights reserved.</p> 
     </div>
 
+    <!-- LINKS -->
     <div class="footer-links">
 
-    <a href="1.png" target="_blank" id="privacyLink">
-  Privacy Policy
-</a>
-
-<script>
-document.getElementById("privacyLink").addEventListener("click", function(e) {
-  window.open("1.png", "_blank");
-  window.open("3.png", "_blank");
-});
-</script>
+      <!-- Privacy Policy (opens 2 images) -->
+      <a href="#" id="privacyLink">Privacy Policy</a>
 
       <!-- Contact -->
-      <a href="Thepicture1.png" target="_blank">
-        Contact
-      </a>
+      <a href="Thepicture1.png" target="_blank">Contact</a>
 
       <!-- Brand Portfolio -->
       <a href="#">Brand Portfolio</a>
@@ -909,6 +902,16 @@ document.getElementById("privacyLink").addEventListener("click", function(e) {
 
   </div>
 </footer>
+
+<!-- SCRIPT: Privacy Policy opens 2 images -->
+<script>
+document.getElementById("privacyLink").addEventListener("click", function(e) {
+  e.preventDefault();
+
+  window.open("1.png", "_blank"); // Español
+  window.open("3.png", "_blank"); // Inglés
+});
+</script>
 
 <script>
 /* CANVAS CORAZONES */
