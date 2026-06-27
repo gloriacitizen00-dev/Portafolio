@@ -73,7 +73,10 @@ body{
   cursor:pointer;
   font-size:14px;
 }
-
+.menu-item:hover .dropdown{
+  display:flex;
+  flex-direction:column;
+}
 .dropdown{
   display:none;
   position:absolute;
@@ -81,21 +84,13 @@ body{
   left:0;
   background:#fff;
   border:1px solid #eee;
-  min-width:200px;
+  min-width:220px;
   box-shadow:0 10px 30px rgba(0,0,0,0.1);
-}
-
-.menu-item:hover .dropdown{
-  display:flex;
   flex-direction:column;
-}
-
-.dropdown a{
+  gap:10px;
   padding:10px;
-  text-decoration:none;
-  color:#111;
 }
-
+  
 .dropdown a:hover{
   background:#f5f5f5;
   color:#d4af37;
