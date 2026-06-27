@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Art Gallery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=New+Rocker&family=Protest+Revolution&family=Satisfy&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Protest+Revolution&family=Satisfy&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Cinzel:wght@400..900&family=New+Amsterdam&family=New+Rocker&family=Protest+Revolution&family=Satisfy&display=swap" rel="stylesheet">
+    <meta name="description"
+      content="SkyCortex – Creative Systems, Interactive Design, Digital Experiments, Portfolio and Games.">
+    <meta name="theme-color" content="#d4af37">
+    <meta property="og:title" content="SkyCortex">
+<meta property="og:description" content="Creative Systems · Digital Experiments · Interactive Design">
+<meta property="og:image"
+content="https://gloriacitizen00-dev.github.io/brain1.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gloriacitizen00-dev.github.io/">
+<meta name="twitter:image"
+content="https://gloriacitizen00-dev.github.io/brain1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SkyCortex">
+<meta name="twitter:description" content="Creative Systems · Digital Experiments · Interactive Design">
+<meta name="author" content="Gloria Martínez">
+<meta name="robots" content="index,follow">
+<link rel="canonical"
+href="https://gloriacitizen00-dev.github.io/">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="brain1.jpg">
+<link rel="manifest" href="manifest.json">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
@@ -155,12 +169,6 @@ h2{
 .studio-art p{
   line-height:1.8;
 }
-
-.about-me {
-  padding: 60px 20px 80px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
   
 .about-me h2 {
   align-self: flex-start;  /* 🔥 esto lo saca del centro */
@@ -289,7 +297,7 @@ h2{
 
 .item:hover{
   transform:translateY(-10px) scale(1.02);
-  box-shadow:0 25px rgba(212,175,55,0.4);
+  box-shadow:0 25px 60px rgba(212,175,55,.4);
 }
 
 .generative-art {
@@ -441,8 +449,8 @@ h2{
 }
   
 .card {
-  width: 300px;        /* same as gallery cards */
-  min-height: 400px;   /* forces equal height */
+  width:100%;
+  max-width:320px;
   border: 2px solid gold;
   padding: 20px;
   display: flex;
@@ -534,33 +542,17 @@ h2{
   font-size: 16px;
   line-height: 1.6;
 }
+  .workspace-preview {
+    grid-template-rows: auto;
+  }
 
-.workspace-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 @media (max-width: 900px) {
   .workspace {
     grid-template-columns: 1fr;
   }
-
-  .workspace-preview {
-    grid-template-rows: auto;
   }
-}
-
-@media (max-width: 900px) {
-  .workspace {
-    grid-template-columns: 1fr;
-  }
-
-  .workspace-preview {
-    grid-template-rows: auto;
-  }
-}
-
+  
 .workspace-buttons {
   display: flex;
   gap: 15px;
@@ -620,6 +612,14 @@ h2{
   color: #222;
 }
 
+ .about-box{
+
+    position:relative;
+    overflow:hidden;
+
+} 
+  
+  
 .item, .about-box, .workspace-text {
   box-shadow: 0 20px 60px rgba(0,0,0,0.08);
   transition: 0.3s ease;
@@ -651,18 +651,6 @@ a, .item, .btn-yellow {
   color: #d4af37;
   text-align: right;
   letter-spacing: 1px;
-}
-
-.about-box {
-  max-width: 800px;
-  border: 2px solid #d4af37;
-  border-radius: 16px;
-  padding: 40px;
-  background: #fdfcf7; /* slightly warm screen tone */
-  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
-
-  position: relative;
-  overflow: hidden;
 }
 
 /* SCREEN TEXTURE */
@@ -780,6 +768,21 @@ footer{
     text-align: center;
   }
 }
+
+<meta name="author" content="Gloria Martínez">
+<meta name="robots" content="index,follow">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Gloria Martínez",
+  "url":"https://gloriacitizen00-dev.github.io/",
+  "jobTitle":"Creative Developer"
+}
+</script>
+
+</head>
 </style>
 </head>
 
@@ -789,7 +792,12 @@ footer{
   <canvas id="artCanvas"></canvas>
 
   <div class="hero-content">
-    <img src="brain1.jpg" alt="NeuroCinema Logo" class="logo">
+    <img
+  src="brain1.jpg"
+  alt="SkyCortex logo"
+  class="logo"
+  loading="eager"
+  fetchpriority="high">
      <h1 class="signature">SkyCortex</h1>
      <p>Gallery · Studio · Workspace · Projects</p>
 </div>
@@ -815,13 +823,19 @@ footer{
     
 
     <div class="workspace-buttons">
-      <a href="https://gloriacitizen00-dev.github.io/Tarot_guide/" class="btn-yellow" target="_blank">
-        Try the beta
-      </a>
+  <a href="https://gloriacitizen00-dev.github.io/Tarot_guide/"
+   class="btn-yellow"
+   target="_blank"
+   rel="noopener">
+  Try the beta
+</a>
 
-      <a href="Logo.png" class="btn-yellow" target="_blank">
-        Scan QR Code
-      </a>
+      <a href="Logo.png"
+   class="btn-yellow"
+   target="_blank"
+   rel="noopener">
+  Scan QR Code
+</a>
     </div>
   </div>
 
@@ -829,7 +843,10 @@ footer{
   <div class="workspace-preview">
 
     <div class="workspace-image">
-      <img src="cats.jpg" alt="Beta game preview">
+      <img
+  src="cats.jpg"
+  alt="Beta game preview"
+  loading="lazy">
     </div>
 
     <div class="workspace-story">
@@ -845,7 +862,7 @@ footer{
 </section>
   
  <h2 class="gallery-title">Gallery</h2>
-
+  
   <div class="gallery">
     <a href="https://gloriacitizen00-dev.github.io/green_circles/" class="card-link" target="_blank" rel="noopener">
       <div class="item generative-art">
@@ -853,7 +870,6 @@ footer{
         <p>Visual explorations created with code and algorithms.</p>
       </div>
     </a>
-
   
     <a href="https://gloriacitizen00-dev.github.io/Portafolio_interfaces/" class="card-link" target="_blank" rel="noopener">
       <div class="item interfaces-art">
@@ -870,7 +886,7 @@ footer{
       </div>
     </a>
     </div> 
-  </section>
+
 
   
 <section class="studio">
@@ -878,7 +894,10 @@ footer{
     <div class="card">
       <a href="https://gloriacitizen00-dev.github.io/living-storybook/" 
          class="card-link" target="_blank" rel="noopener">
-        <img src="mariposa.jpg" alt="Nacimos para ser Héroes preview">
+        <img
+  src="mariposa.jpg"
+  alt="Nacimos para ser Héroes preview"
+  loading="lazy">
         <div class="item studio-art">
           <h3>Nacimos para ser Héroes</h3>
           <p>Más que una historia, una promesa de que la luz siempre vence.</p>
@@ -901,15 +920,19 @@ footer{
   <p><strong>🎨Every design here is my own creation and belongs entirely to me.</strong></p>
 
   <p>🌱Plus, I care about preserving nature—because innovation should respect the world we live in.</p>
+</div>
+    
+<div class="about-signature">
+  🌌My name is
+  <a href="https://savenatureincr.my.canva.site/gloriabio"
+   target="_blank"
+   class="name-btn"
+   rel="noopener">
+   Gloria Martínez
+</a>
+</div>
 
-  <p>
-    <div class="about-signature">
-    🌌My name is
-    <a href="https://savenatureincr.my.canva.site/gloriabio" target="_blank" class="name-btn">
-      Gloria Martínez
-    </a>, and you can check more of my info by clicking my name.
-  </p>
-</section>
+  </section>
 
 <section class="studio">
   <h2>Macramé</h2>
@@ -920,7 +943,10 @@ footer{
        target="_blank"
        rel="noopener">
 
-      <img src="blue1.GIF" alt="Macramé preview">
+     <img
+  src="blue1.GIF"
+  alt="Macramé preview"
+  loading="lazy">
 
       <div class="item studio-art">
         <h3>Arte en Macramé</h3>
@@ -929,9 +955,10 @@ footer{
 
     </a>
   </div>
-</section>
  
-<section>
+</section>
+  
+  <section>
   <h2 class="gallery-title">Costa Rica</h2>
   <div class="gallery-left">
     <a href="https://gloriacitizen00-dev.github.io/Docs/" class="card-link" target="_blank" rel="noopener">
@@ -941,7 +968,7 @@ footer{
       </div>
     </a>
     </div>
-  </section>
+    </section>
 
 </main>
 
@@ -963,15 +990,21 @@ footer{
 
     <!-- LINKS -->
     <div class="footer-links">
+      
+<!-- Privacy Policy -->
+<a href="123.png" id="privacyLink" rel="noopener">
+  Privacy Policy
+</a>
 
-      <!-- Privacy Policy -->
-      <a href="123.png" id="privacyLink">Privacy Policy</a>
+<!-- Contact -->
+<a href="Thepicture1.jpg" target="_blank" rel="noopener">
+  Contact
+</a>
 
-      <!-- Contact -->
-      <a href="Thepicture1.jpg" target="_blank">Contact</a>
-
-      <!-- Brand Portfolio -->
-      <a href="portada.jpg" target="_blank">Brand Portfolio</a>
+<!-- Brand Portfolio -->
+<a href="portada.jpg" target="_blank" rel="noopener">
+  Brand Portfolio
+</a>
 
     </div>
 
