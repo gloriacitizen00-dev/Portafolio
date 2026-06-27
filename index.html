@@ -178,6 +178,29 @@ body{
   display:block;
 }
 
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dropdown-button {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.dropdown-button:hover {
+  background: #555;
+  transform: scale(1.03);
+}
+
 </style>
 </head>
 
@@ -190,41 +213,87 @@ body{
 
   <nav class="menu">
 
-    <!-- WORKSPACE -->
-    <div class="menu-item">
-      <button class="menu-button">Workspace</button>
-      <div class="dropdown">
-        <a href="https://gloriacitizen00-dev.github.io/Tarot_guide/" target="_blank">Play the Game</a>
-      </div>
-    </div>
+  <div class="menu-item">
+  <button class="menu-button">Game</button>
 
-    <!-- GALLERY -->
-    <div class="menu-item">
-      <button class="menu-button">Gallery</button>
-      <div class="dropdown">
-        <a href="https://gloriacitizen00-dev.github.io/green_circles/" target="_blank">Generative Art</a>
-        <a href="https://gloriacitizen00-dev.github.io/Portafolio_interfaces/" target="_blank">Experimental Interfaces</a>
-        <a href="https://gloriacitizen00-dev.github.io/Visuales-Python/" target="_blank">Python Visuals</a>
-      </div>
-    </div>
+  <div class="dropdown">
+    <a 
+      class="dropdown-button"
+      href="https://gloriacitizen00-dev.github.io/Tarot_guide/" 
+      target="_blank"
+    >
+      Maneko Neki Tarot
+    </a>
+  </div>
+</div>
 
-    <!-- STUDIO -->
-    <div class="menu-item">
-      <button class="menu-button">Studio</button>
-      <div class="dropdown">
-        <a href="https://gloriacitizen00-dev.github.io/living-storybook/" target="_blank">Original Manga</a>
-      </div>
-    </div>
+   <!-- GALLERY -->
+<div class="menu-item">
+  <button class="menu-button">Gallery</button>
 
-    <!-- COSTA RICA -->
-    <div class="menu-item">
-      <button class="menu-button">Costa Rica</button>
-      <div class="dropdown">
-        <a href="https://gloriacitizen00-dev.github.io/macrame/" target="_blank">Macramé</a>
-        <a href="https://gloriacitizen00-dev.github.io/Docs/" target="_blank">Atlas Costa Rica</a>
-      </div>
-    </div>
+  <div class="dropdown">
+    <a 
+      class="dropdown-button"
+      href="https://gloriacitizen00-dev.github.io/green_circles/" 
+      target="_blank"
+    >
+      Generative Art
+    </a>
 
+    <a 
+      class="dropdown-button"
+      href="https://gloriacitizen00-dev.github.io/Portafolio_interfaces/" 
+      target="_blank"
+    >
+      Experimental Interfaces
+    </a>
+
+    <a 
+      class="dropdown-button"
+      href="https://gloriacitizen00-dev.github.io/Visuales-Python/" 
+      target="_blank"
+    >
+      Python Visuals
+    </a>
+  </div>
+</div>
+ <!-- STUDIO -->
+<div class="menu-item">
+  <button class="menu-button">Manga</button>
+
+  <div class="dropdown">
+    <a 
+      class="dropdown-button"
+      href="https://gloriacitizen00-dev.github.io/living-storybook/" 
+      target="_blank"
+    >
+      Nacimos para ser Heroes
+    </a>
+  </div>
+</div>
+
+<!-- COSTA RICA -->
+<div class="menu-item">
+  <button class="menu-button">Costa Rican Artisan Crafts</button>
+
+  <div class="dropdown">
+    <a 
+      class="dropdown-button"
+      href="https://gloriacitizen00-dev.github.io/macrame/" 
+      target="_blank"
+    >
+      Handmade Macrame Store
+    </a>
+
+    <a 
+      class="dropdown-button"
+      href="https://gloriacitizen00-dev.github.io/Docs/" 
+      target="_blank"
+    >
+      Atlas Costa Rica
+    </a>
+  </div>
+</div>
     <a class="menu-link" href="#about">About</a>
     <a class="menu-link" href="#news">News</a>
 
