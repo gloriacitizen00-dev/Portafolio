@@ -14,7 +14,6 @@
 
 <meta name="theme-color" content="#d4af37">
 
-<!-- OPEN GRAPH -->
 <meta property="og:title" content="SkyCortex | Creative Digital Lab">
 <meta property="og:description" content="Generative Art · Interactive Systems · Experimental Design · Digital Experiences">
 <meta property="og:image" content="https://gloriacitizen00-dev.github.io/brain1.jpg">
@@ -22,7 +21,6 @@
 <meta property="og:url" content="https://gloriacitizen00-dev.github.io/">
 <meta property="og:site_name" content="SkyCortex">
 
-<!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SkyCortex | Creative Digital Lab">
 <meta name="twitter:description" content="Generative Art · Interactive Systems · Experimental Design">
@@ -30,20 +28,18 @@
 
 <meta name="author" content="Gloria Martínez">
 
-<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" href="favicon.png">
 <link rel="preload" href="brain1.jpg" as="image">
 
-<!-- FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400..900&family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
 
-<!-- STRUCTURED DATA (SEO PRO) -->
+<!-- SEO STRUCTURED DATA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "Person",
       "@id": "https://gloriacitizen00-dev.github.io/#person",
@@ -56,7 +52,6 @@
         "https://github.com/gloriacitizen00-dev"
       ]
     },
-
     {
       "@type": "WebSite",
       "@id": "https://gloriacitizen00-dev.github.io/#website",
@@ -68,7 +63,6 @@
       },
       "inLanguage": "en"
     },
-
     {
       "@type": "CreativeWork",
       "@id": "https://gloriacitizen00-dev.github.io/#brand",
@@ -89,4 +83,166 @@
 }
 </script>
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Bodoni Moda',serif;
+  background:#f8f8f8;
+  color:#111;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  flex-direction:column;
+  background:#fff;
+}
+
+.logo{
+  width:260px;
+  border-radius:20px;
+}
+
+h1{
+  font-size:4rem;
+  color:#d4af37;
+}
+
+nav a{
+  margin:10px;
+  color:#d4af37;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* SECTIONS */
+section{
+  max-width:1000px;
+  margin:80px auto;
+  padding:20px;
+}
+
+h2{
+  font-size:2.5rem;
+  margin-bottom:20px;
+  color:#111;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  border:2px solid #d4af37;
+  padding:20px;
+  border-radius:12px;
+  background:#fff;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  opacity:0.6;
+}
+</style>
+
 </head>
+
+<body>
+
+<header class="hero">
+
+  <img src="brain1.jpg" class="logo" alt="SkyCortex">
+
+  <h1>SkyCortex</h1>
+  <p>Creative Digital Lab</p>
+
+  <nav>
+    <a href="#workspace">Workspace</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+  </nav>
+
+</header>
+
+<main>
+
+<section id="workspace">
+<h2>Workspace</h2>
+<p>Interactive digital system exploring space, symbols, and real-time data.</p>
+
+<div class="card">
+  <p>🎮 Beta game experience</p>
+  <a href="https://gloriacitizen00-dev.github.io/Tarot_guide/">Enter Beta</a>
+</div>
+</section>
+
+<section id="gallery">
+<h2>Gallery</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Generative Art</h3>
+<p>Code-based visual experiments.</p>
+</div>
+
+<div class="card">
+<h3>Interfaces</h3>
+<p>Interactive UX systems.</p>
+</div>
+
+<div class="card">
+<h3>Python Visuals</h3>
+<p>Data-driven art experiments.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="studio">
+<h2>Studio</h2>
+
+<div class="card">
+<h3>Story Project</h3>
+<p>Experimental storytelling universe.</p>
+</div>
+
+</section>
+
+<section id="about">
+<h2>About SkyCortex</h2>
+
+<p>
+SkyCortex is a Creative Digital Lab created by Gloria Martínez focused on generative art, experimental interfaces, interactive systems, and digital storytelling.
+</p>
+
+</section>
+
+<section id="projects">
+<h2>Subprojects</h2>
+
+<div class="card">
+<p>Macramé · Costa Rica · Experimental side missions</p>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+© 2026 SkyCortex · Gloria Martínez
+</footer>
+
+</body>
+</html>
