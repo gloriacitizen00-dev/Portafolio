@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SkyCortex OS</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>SkyCortex OS | Creative Digital System</title>
+
+<meta name="description" content="SkyCortex OS is a creative digital system with interactive art, generative visuals, games, and experimental interfaces. Built by Gloria Martínez.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://gloriacitizen00-dev.github.io/">
+
+<meta property="og:title" content="SkyCortex OS">
+<meta property="og:description" content="Creative System · Interactive Art · Digital Experiments">
+<meta property="og:image" content="brain1.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Bodoni+Moda:wght@400..900&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  background: radial-gradient(circle at top, #ffffff, #f3f3f3);
+  font-family:'Bodoni Moda',serif;
+  background:#f6f6f6;
   color:#111;
-  overflow:hidden;
 }
 
-/* TOP BAR (OS STYLE) */
-.topbar{
+/* TOP BAR OS */
+.os-bar{
   position:fixed;
   top:0;
-  left:0;
   width:100%;
-  height:60px;
   background:#fff;
-  border-bottom:1px solid rgba(0,0,0,0.1);
+  border-bottom:1px solid #ddd;
+  z-index:9999;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  padding:0 20px;
-  z-index:1000;
+  align-items:center;
+  padding:12px 20px;
 }
 
-.brand{
-  font-weight:bold;
-  letter-spacing:2px;
+.os-title{
+  font-family:'Cinzel',serif;
   color:#d4af37;
+  font-size:18px;
 }
 
 /* MENU */
@@ -51,6 +55,7 @@ body{
   position:relative;
   cursor:pointer;
   font-size:14px;
+  padding:6px 10px;
 }
 
 .menu-item:hover{
@@ -60,14 +65,17 @@ body{
 /* DROPDOWN */
 .dropdown{
   position:absolute;
-  top:40px;
+  top:30px;
   left:0;
-  background:white;
-  border:1px solid rgba(0,0,0,0.1);
+  background:#fff;
+  border:1px solid #ddd;
   min-width:180px;
   display:none;
   flex-direction:column;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.menu-item:hover .dropdown{
+  display:flex;
 }
 
 .dropdown a{
@@ -78,141 +86,176 @@ body{
 }
 
 .dropdown a:hover{
-  background:#f5f5f5;
+  background:#f2f2f2;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding-top:60px;
+}
+
+.hero h1{
+  font-family:'Cinzel',serif;
+  font-size:3rem;
   color:#d4af37;
 }
 
-.menu-item:hover .dropdown{
-  display:flex;
+.hero p{
+  margin-top:10px;
+  opacity:.7;
 }
 
-/* MAIN AREA */
-.app{
-  display:none;
-  height:100vh;
-  padding-top:80px;
-  padding:100px 40px;
+/* SECTIONS */
+section{
+  padding:100px 20px;
+  max-width:1000px;
+  margin:auto;
 }
 
-.app.active{
-  display:block;
-  animation:fadeIn .3s ease;
-}
-
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(10px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
-h1{
-  font-size:40px;
+h2{
+  font-family:'Cinzel',serif;
   margin-bottom:20px;
   color:#d4af37;
 }
 
-p{
-  max-width:700px;
-  line-height:1.6;
+/* CARDS */
+.card{
+  background:#fff;
+  border:1px solid #ddd;
+  padding:20px;
+  border-radius:10px;
+  margin-top:20px;
+  transition:.3s;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-  .menu{
-    gap:10px;
-    font-size:12px;
-  }
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#d4af37;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:60px;
+  opacity:.6;
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <div class="brand">SKYCORTEX OS</div>
+<!-- OS TOP BAR -->
+<div class="os-bar">
+  <div class="os-title">SKYCORTEX OS</div>
 
   <div class="menu">
 
     <div class="menu-item">Workspace
       <div class="dropdown">
-        <a onclick="openApp('workspace')">Play the Game</a>
+        <a href="#workspace">Play the Game</a>
       </div>
     </div>
 
     <div class="menu-item">Gallery
       <div class="dropdown">
-        <a onclick="openApp('gallery')">Generative Art</a>
-        <a onclick="openApp('gallery')">Interfaces</a>
-        <a onclick="openApp('gallery')">Python Visuals</a>
+        <a href="#gallery">Generative Art</a>
+        <a href="#gallery">Interfaces</a>
+        <a href="#gallery">Python Visuals</a>
       </div>
     </div>
 
     <div class="menu-item">Studio
       <div class="dropdown">
-        <a onclick="openApp('studio')">Story Project</a>
+        <a href="#studio">Original Manga</a>
       </div>
     </div>
 
     <div class="menu-item">Costa Rica
       <div class="dropdown">
-        <a onclick="openApp('cr')">Macramé</a>
-        <a onclick="openApp('cr')">Atlas</a>
+        <a href="#cr">Atlas Costa Rica</a>
       </div>
     </div>
 
-    <div class="menu-item">
-      <a onclick="openApp('about')" style="cursor:pointer;">About</a>
+    <div class="menu-item">About
+      <div class="dropdown">
+        <a href="#about">Identity</a>
+      </div>
     </div>
 
-    <div class="menu-item">
-      <a onclick="openApp('news')" style="cursor:pointer;">News</a>
+    <div class="menu-item">News
+      <div class="dropdown">
+        <a href="#news">Updates</a>
+      </div>
     </div>
 
   </div>
 </div>
 
-<!-- APPS -->
+<!-- HERO -->
+<header class="hero">
+  <h1>SkyCortex OS</h1>
+  <p>Creative System · Interactive Art · Digital Experiments</p>
+</header>
 
-<div id="workspace" class="app active">
-  <h1>Workspace</h1>
-  <p>Interactive system with tarot engine, moon phases and experimental gameplay.</p>
-</div>
+<!-- WORKSPACE -->
+<section id="workspace">
+  <h2>Workspace</h2>
+  <div class="card">
+    <p>Interactive beta game with tarot systems, moon phases, and real-time symbolic logic.</p>
+    <a href="https://gloriacitizen00-dev.github.io/Tarot_guide/" target="_blank">Play Beta Game</a>
+  </div>
+</section>
 
-<div id="gallery" class="app">
-  <h1>Gallery</h1>
-  <p>Generative art, interfaces and computational visuals.</p>
-</div>
+<!-- GALLERY -->
+<section id="gallery">
+  <h2>Gallery</h2>
 
-<div id="studio" class="app">
-  <h1>Studio</h1>
-  <p>Storytelling space and narrative experiments.</p>
-</div>
+  <div class="card">Generative Art Systems</div>
+  <div class="card">Experimental Interfaces</div>
+  <div class="card">Python Visual Visuals</div>
+</section>
 
-<div id="cr" class="app">
-  <h1>Costa Rica</h1>
-  <p>Macramé, nature atlas and environmental projects.</p>
-</div>
+<!-- STUDIO -->
+<section id="studio">
+  <h2>Studio</h2>
+  <div class="card">
+    <p>Story-driven manga & narrative systems.</p>
+  </div>
+</section>
 
-<div id="about" class="app">
-  <h1>About</h1>
-  <p>Creative digital system built by Gloria Martínez.</p>
-</div>
+<!-- COSTA RICA -->
+<section id="cr">
+  <h2>Costa Rica</h2>
+  <div class="card">
+    <p>Atlas / nature preservation / documentation projects.</p>
+  </div>
+</section>
 
-<div id="news" class="app">
-  <h1>News</h1>
-  <p>Updates, new features and system logs.</p>
-</div>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About SkyCortex</h2>
+  <div class="card">
+    <p>Creative developer building interactive systems, generative art and experimental digital worlds.</p>
+  </div>
+</section>
 
-<script>
-function openApp(id){
+<!-- NEWS -->
+<section id="news">
+  <h2>News</h2>
+  <div class="card">
+    <p>Latest updates, experiments, and new system releases.</p>
+  </div>
+</section>
 
-  document.querySelectorAll(".app").forEach(app=>{
-    app.classList.remove("active");
-  });
-
-  document.getElementById(id).classList.add("active");
-}
-</script>
+<footer>
+  SkyCortex OS © 2026 · Gloria Martínez
+</footer>
 
 </body>
 </html>
