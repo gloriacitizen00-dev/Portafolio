@@ -3,148 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SkyCortex</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+<title>SkyCortex OS</title>
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
+  font-family: Arial, sans-serif;
 }
 
 body{
-  font-family:'Cinzel', serif;
-  background: radial-gradient(circle at top, #fff, #f3f3f3);
+  background: radial-gradient(circle at top, #ffffff, #f3f3f3);
   color:#111;
+  overflow:hidden;
 }
 
-/* =========================
-   TOP BAR
-========================= */
-.sc-topbar{
+/* TOP BAR (OS STYLE) */
+.topbar{
   position:fixed;
   top:0;
   left:0;
   width:100%;
-  padding:18px 24px;
+  height:60px;
+  background:#fff;
+  border-bottom:1px solid rgba(0,0,0,0.1);
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  background:rgba(255,255,255,0.75);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(212,175,55,0.3);
-  z-index:10000;
+  justify-content:space-between;
+  padding:0 20px;
+  z-index:1000;
 }
 
-.sc-brand{
-  color:#d4af37;
-  letter-spacing:2px;
+.brand{
   font-weight:bold;
-}
-
-.sc-btn{
-  border:1px solid #d4af37;
-  background:none;
+  letter-spacing:2px;
   color:#d4af37;
-  padding:8px 14px;
-  border-radius:8px;
-  cursor:pointer;
-  transition:0.3s;
 }
 
-.sc-btn:hover{
-  background:#d4af37;
-  color:white;
-}
-
-/* =========================
-   OVERLAY
-========================= */
-.sc-overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.4);
-  display:none;
-  z-index:9998;
-}
-
-/* =========================
-   MENU PANEL
-========================= */
-.sc-panel{
-  position:fixed;
-  top:80px;
-  right:20px;
-  width:320px;
-  background:rgba(255,255,255,0.9);
-  backdrop-filter:blur(15px);
-  border:1px solid rgba(212,175,55,0.4);
-  border-radius:16px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.15);
-  padding:20px;
-  display:none;
-  z-index:9999;
-}
-
-/* VIEWS */
-.view{
+/* MENU */
+.menu{
   display:flex;
-  flex-direction:column;
-  gap:10px;
+  gap:20px;
 }
 
-.hidden{
-  display:none;
-}
-
-/* ITEMS */
-.item, .link, .back{
-  background:none;
-  border:none;
-  text-align:left;
-  padding:10px;
+.menu-item{
+  position:relative;
   cursor:pointer;
   font-size:14px;
-  transition:0.2s;
+}
+
+.menu-item:hover{
+  color:#d4af37;
+}
+
+/* DROPDOWN */
+.dropdown{
+  position:absolute;
+  top:40px;
+  left:0;
+  background:white;
+  border:1px solid rgba(0,0,0,0.1);
+  min-width:180px;
+  display:none;
+  flex-direction:column;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.dropdown a{
+  padding:10px;
+  text-decoration:none;
   color:#111;
+  font-size:13px;
 }
 
-.item:hover,
-.link:hover{
+.dropdown a:hover{
+  background:#f5f5f5;
   color:#d4af37;
-  transform:translateX(5px);
 }
 
-.back{
-  color:#d4af37;
-  font-weight:bold;
+.menu-item:hover .dropdown{
+  display:flex;
 }
 
-/* =========================
-   MAIN CONTENT (demo)
-========================= */
-main{
-  padding:120px 20px;
-  text-align:center;
+/* MAIN AREA */
+.app{
+  display:none;
+  height:100vh;
+  padding-top:80px;
+  padding:100px 40px;
+}
+
+.app.active{
+  display:block;
+  animation:fadeIn .3s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
 h1{
+  font-size:40px;
+  margin-bottom:20px;
   color:#d4af37;
-  font-size:3rem;
 }
+
 p{
-  margin-top:10px;
-  opacity:0.7;
+  max-width:700px;
+  line-height:1.6;
 }
 
 /* MOBILE */
-@media(max-width:600px){
-  .sc-panel{
-    width:90%;
-    right:5%;
+@media(max-width:768px){
+  .menu{
+    gap:10px;
+    font-size:12px;
   }
 }
 </style>
@@ -152,115 +127,91 @@ p{
 
 <body>
 
-<!-- =========================
-     TOP BAR
-========================= -->
-<div class="sc-topbar">
-  <div class="sc-brand">SKY CORTEX</div>
-  <button class="sc-btn" onclick="toggleMenu()">☰ MENU</button>
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="brand">SKYCORTEX OS</div>
+
+  <div class="menu">
+
+    <div class="menu-item">Workspace
+      <div class="dropdown">
+        <a onclick="openApp('workspace')">Play the Game</a>
+      </div>
+    </div>
+
+    <div class="menu-item">Gallery
+      <div class="dropdown">
+        <a onclick="openApp('gallery')">Generative Art</a>
+        <a onclick="openApp('gallery')">Interfaces</a>
+        <a onclick="openApp('gallery')">Python Visuals</a>
+      </div>
+    </div>
+
+    <div class="menu-item">Studio
+      <div class="dropdown">
+        <a onclick="openApp('studio')">Story Project</a>
+      </div>
+    </div>
+
+    <div class="menu-item">Costa Rica
+      <div class="dropdown">
+        <a onclick="openApp('cr')">Macramé</a>
+        <a onclick="openApp('cr')">Atlas</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <a onclick="openApp('about')" style="cursor:pointer;">About</a>
+    </div>
+
+    <div class="menu-item">
+      <a onclick="openApp('news')" style="cursor:pointer;">News</a>
+    </div>
+
+  </div>
 </div>
 
-<!-- OVERLAY -->
-<div class="sc-overlay" id="overlay" onclick="closeMenu()"></div>
+<!-- APPS -->
 
-<!-- MENU -->
-<div class="sc-panel" id="panel">
-
-  <!-- MAIN -->
-  <div class="view" id="mainView">
-    <button class="item" onclick="openView('workspace')">WORKSPACE ▸</button>
-    <button class="item" onclick="openView('gallery')">GALLERY ▸</button>
-    <button class="item" onclick="openView('studio')">STUDIO ▸</button>
-    <button class="item" onclick="openView('costa')">COSTA RICA ▸</button>
-    <button class="item" onclick="openView('news')">NEWS ▸</button>
-    <button class="item" onclick="openView('about')">ABOUT</button>
-  </div>
-
-  <!-- WORKSPACE -->
-  <div class="view hidden" id="workspace">
-    <button class="back" onclick="back()">← BACK</button>
-    <a class="link" href="#">Play the Game 🎮</a>
-  </div>
-
-  <!-- GALLERY -->
-  <div class="view hidden" id="gallery">
-    <button class="back" onclick="back()">← BACK</button>
-    <a class="link" href="#">Generative Art</a>
-    <a class="link" href="#">Experimental Interfaces</a>
-    <a class="link" href="#">Python Visuals</a>
-  </div>
-
-  <!-- STUDIO -->
-  <div class="view hidden" id="studio">
-    <button class="back" onclick="back()">← BACK</button>
-    <a class="link" href="#">Original Storybook</a>
-  </div>
-
-  <!-- COSTA RICA -->
-  <div class="view hidden" id="costa">
-    <button class="back" onclick="back()">← BACK</button>
-    <a class="link" href="#">Macramé</a>
-    <a class="link" href="#">Atlas Costa Rica</a>
-  </div>
-
-  <!-- NEWS -->
-  <div class="view hidden" id="news">
-    <button class="back" onclick="back()">← BACK</button>
-    <a class="link" href="#">Updates</a>
-    <a class="link" href="#">Releases</a>
-    <a class="link" href="#">New Projects</a>
-  </div>
-
-  <!-- ABOUT -->
-  <div class="view hidden" id="about">
-    <button class="back" onclick="back()">← BACK</button>
-    <a class="link" href="#">About SkyCortex</a>
-    <a class="link" href="#">Gloria Martínez</a>
-  </div>
-
+<div id="workspace" class="app active">
+  <h1>Workspace</h1>
+  <p>Interactive system with tarot engine, moon phases and experimental gameplay.</p>
 </div>
 
-<!-- =========================
-     MAIN CONTENT (example)
-========================= -->
-<main>
-  <h1>SkyCortex</h1>
-  <p>Creative Digital Lab · Interactive Systems · Generative Art</p>
-</main>
+<div id="gallery" class="app">
+  <h1>Gallery</h1>
+  <p>Generative art, interfaces and computational visuals.</p>
+</div>
 
-<!-- =========================
-     JS
-========================= -->
+<div id="studio" class="app">
+  <h1>Studio</h1>
+  <p>Storytelling space and narrative experiments.</p>
+</div>
+
+<div id="cr" class="app">
+  <h1>Costa Rica</h1>
+  <p>Macramé, nature atlas and environmental projects.</p>
+</div>
+
+<div id="about" class="app">
+  <h1>About</h1>
+  <p>Creative digital system built by Gloria Martínez.</p>
+</div>
+
+<div id="news" class="app">
+  <h1>News</h1>
+  <p>Updates, new features and system logs.</p>
+</div>
+
 <script>
-const panel = document.getElementById("panel");
-const overlay = document.getElementById("overlay");
-const mainView = document.getElementById("mainView");
+function openApp(id){
 
-function toggleMenu(){
-  const open = panel.style.display === "block";
-  panel.style.display = open ? "none" : "block";
-  overlay.style.display = open ? "none" : "block";
-  showMain();
+  document.querySelectorAll(".app").forEach(app=>{
+    app.classList.remove("active");
+  });
+
+  document.getElementById(id).classList.add("active");
 }
-
-function closeMenu(){
-  panel.style.display = "none";
-  overlay.style.display = "none";
-}
-
-function openView(id){
-  document.querySelectorAll(".view").forEach(v => v.classList.add("hidden"));
-  document.getElementById(id).classList.remove("hidden");
-}
-
-function back(){
-  document.querySelectorAll(".view").forEach(v => v.classList.add("hidden"));
-  mainView.classList.remove("hidden");
-}
-
-document.addEventListener("keydown", e=>{
-  if(e.key === "Escape") closeMenu();
-});
 </script>
 
 </body>
