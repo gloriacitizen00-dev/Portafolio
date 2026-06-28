@@ -217,7 +217,7 @@ body {
 }
 
 .reel-wrapper {
-  overflow-x: auto;
+  overflow:hidden;
   padding: 30px 0;
   background: radial-gradient(circle at center, #fff, #f7f7f7);
   border-top: 1px solid rgba(212,175,55,0.3);
@@ -237,7 +237,7 @@ body {
   animation-play-state: paused;
 }
 
-.game-reel:hover .reel-track{
+.reel-wrapper:hover .reel-track{
     animation-play-state: running;
 }
 
@@ -257,6 +257,18 @@ body {
 
 .reel-cta {
   margin-top: 40px;
+}
+
+   @keyframes scrollGallery {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
 }
 
 /* =========================
@@ -338,6 +350,22 @@ body {
   color: #666;
 }
 
+   .btn-yellow{
+    display:inline-block;
+    padding:14px 28px;
+    background:#d4af37;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-yellow:hover{
+    background:#111;
+    transform:translateY(-2px);
+}
+
 /* =========================
    ABOUT
 ========================= */
@@ -386,19 +414,6 @@ body {
   .desktop {
     padding-top: 180px;
   }
-
-   @keyframes scrollGallery {
-
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-
-}
-
 }
    
 </style>
