@@ -1,472 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
+<title>Cosmic Console</title>
 
-<title>SkyCortex OS | Creative Systems, Generative Art & Interactive Design</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="SkyCortex OS is a creative digital system featuring generative art, interactive systems, manga, experimental interfaces and digital experiences.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=New+Rocker&family=Pirata+One&family=Protest+Revolution&family=Satisfy&display=swap" rel="stylesheet">
 
 <style>
-
-/* RESET */
-*{
+body {
   margin:0;
-  padding:0;
-  box-sizing:border-box;
+  font-family:'New Amsterdam', serif; /* Fuente aplicada */
+  color:#c58cff; /* violeta claro */
+  text-align:center;
+  overflow:auto;
+  background:black;
 }
 
-body{
-  background:#f5f5f5;
-  font-family:Arial,sans-serif;
-  color:#111;
-}
-
-/* TOPBAR */
-.topbar{
+#stars {
   position:fixed;
   top:0;
   left:0;
   width:100%;
-  height:70px;
-
-  background:#fff;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  padding:0 25px;
-
-  border-bottom:1px solid #eee;
-
-  z-index:1000;
+  height:100%;
+  z-index:-1;
 }
 
-/* BRAND */
-.brand{
-  font-family:"Cinzel", serif;
-  font-size:22px;
-  font-weight:bold;
-  color:#d4af37;
-  letter-spacing:2px;
-}
-
-/* MENU */
-.menu{
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
-
-/* MENU ITEM */
-.menu-item{
-  position:relative;
-}
-
-/* BUTTONS */
-.menu-button{
-  background:none;
-  border:none;
-  cursor:pointer;
-
-  font-size:14px;
-  font-weight:bold;
-
-  color:#111;
-
-  padding:10px;
-
-  transition:0.3s;
-}
-
-.menu-button:hover{
-  color:#d4af37;
-}
-
-/* DROPDOWN */
-.dropdown{
-  position:absolute;
-
-  top:100%;
-  left:0;
-
-  display:none;
-  flex-direction:column;
-
-  gap:10px;
-
-  min-width:250px;
-
-  padding:12px;
-
-  background:#fff;
-
-  border:1px solid #eee;
-  border-radius:14px;
-
-  box-shadow:0 10px 25px rgba(0,0,0,0.12);
-
-  z-index:999;
-}
-
-/* SHOW DROPDOWN */
-.menu-item:hover .dropdown{
-  display:flex;
-}
-
-/* DROPDOWN BUTTON */
-.dropdown-button{
-  display:block;
-
-  width:100%;
-
-  padding:12px 16px;
-
-  background:#333;
-
-  color:white;
-
-  text-decoration:none;
-
-  border-radius:10px;
-
-  font-weight:bold;
-
-  text-align:center;
-
-  transition:0.3s;
-}
-
-.dropdown-button:hover{
-  background:#555;
-  transform:translateY(-2px);
-}
-
-/* NORMAL LINKS */
-.menu-link{
-  text-decoration:none;
-  color:#111;
-  font-size:14px;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.menu-link:hover{
-  color:#d4af37;
-}
-
-/* MAIN */
-.desktop{
-  max-width:1200px;
-  margin:auto;
-  padding:120px 20px 60px;
-}
-
-/* HERO */
-.hero{
-  text-align:center;
-  margin-bottom:50px;
-}
-
-.hero h1{
-  font-family:"Cinzel", serif;
-  font-size:48px;
-  color:#d4af37;
-  margin-bottom:10px;
-}
-
-.hero p{
-  opacity:0.7;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+.console {
   margin-top:40px;
-}
-
-/* CARDS */
-.card{
-  background:#fff;
-
-  padding:24px;
-
+  padding:25px;
+  width:460px;
+  background:rgba(20,30,40,0.85);
   border-radius:14px;
-
-  border:1px solid #eee;
-
-  transition:0.3s;
+  box-shadow:0 0 25px #45a29e;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+h1 { color:#c58cff;font-size:2.2em}
+
+.message {
+  font-size:1.6em;
+  margin-bottom:15px;
+  color:#c58cff;
 }
 
-.card h3{
-  margin-bottom:10px;
+  .banner {
+  width:100%;
+  max-width:420px;
+  border-radius:12px;
+  margin:15px auto;
+  box-shadow:0 0 25px rgba(197,140,255,0.6);
 }
 
-/* SECTIONS */
-.news,
-.status{
-  margin-top:50px;
+.data {
+  margin-top:10px;
+  color:#c58cff;
+  font-size:1.2em;
 }
 
-.status-box{
-  background:#fff;
-
-  padding:24px;
-
-  border-radius:14px;
-
-  border:1px solid #eee;
+.subtitle {
+  font-size:1.8em;
+  color:#c58cff; /* violeta claro */
+  font-family:'Pirata One', cursive; /* fuente con aire místico */
+  margin-top:-10px;
+  margin-bottom:20px;
+  text-shadow:0 0 8px rgba(197,140,255,0.6);
 }
 
-/* MOBILE */
-@media(max-width:768px){
-
-  .topbar{
-    flex-direction:column;
-    height:auto;
-    padding:15px;
-    gap:15px;
-  }
-
-  .menu{
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  .desktop{
-    padding-top:180px;
-  }
-
-  .hero h1{
-    font-size:34px;
-  }
-
-  .dropdown{
-    position:static;
-    margin-top:10px;
-  }
+.earth {
+  filter: brightness(1.5) contrast(1.3) saturate(1.4) drop-shadow(0 0 15px #66fcf1);
 }
 
+.planet-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  margin-top: 8px;
+  font-size: 0.85em;
+  color: #c58cff;
+  text-shadow: 0 0 5px rgba(102,252,241,0.6);
+}
+
+.planet-box {
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
+  grid-gap: 20px;
+  background: rgba(20,30,40,0.7);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #45a29e;
+  text-align: center;
+  color: #66fcf1;
+  font-size: 0.9em;
+}
+
+.planet {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: inset -5px -5px 10px rgba(0,0,0,0.4),
+              inset 5px 5px 10px rgba(255,255,255,0.2),
+              0 0 15px rgba(102,252,241,0.4);
+}
+
+.earth-planets {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+
+.bar {
+  height:10px;
+  background:#222;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.fill {
+  height:100%;
+  background:#c58cff;
+  width:0%;
+  transition:width 1s;
+}
+
+.footer {
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+
+.footer a {
+  text-decoration:none;
+}
+
+.footer button {
+  padding:10px 16px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.2);
+  background:rgba(255,255,255,0.08);
+  color:white;
+  cursor:pointer;
+  font-size:1.1em;
+}
+
+.footer button:hover {
+  background:rgba(102,252,241,0.3);
+}
+
+.btn-facebook {
+  display:inline-block;
+  background-color:#c58cff; /* violeta claro */
+  color:#fff;
+  font-size:1.1em;
+  font-weight:bold;
+  padding:10px 20px;
+  text-decoration:none;
+  border-radius:8px;
+  transition:background-color 0.3s ease;
+}
+.btn-facebook:hover {
+  background-color:#a86fe0;
+}
 </style>
 </head>
-
 <body>
 
-<!-- TOPBAR -->
-<header class="topbar">
+<canvas id="stars"></canvas>
+
+<div class="console">
+  <h1>Cosmic Console</h1>
+  <h2 class="subtitle">Northern Lights Console</h2>
+  <img src="northern%20lights.PNG" alt="Northern Lights" class="banner">
+  <p class="message" id="oracleMessage">Scanning cosmic environment...</p>
+  <div class="data" id="oracleData">Loading space weather...</div>
+
+  <div class="data">Solar Wind Speed</div>
+  <div class="bar"><div id="speedBar" class="fill"></div></div>
+</div>
+
+<div class="earth-planets">
+  <img class="earth"
+       src="https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/latest.jpg"
+       width="300"
+       style="margin-top:10px;border-radius:10px;">
+</div>
+</div>
+<script>
+// STARFIELD
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const stars = [];
+for (let i = 0; i < 300; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 1.5
+  });
+}
+
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "white";
+
+  stars.forEach(star => {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+    ctx.fill();
+    star.y += 0.1;
+    if (star.y > canvas.height) star.y = 0;
+  });
+
+  requestAnimationFrame(drawStars);
+}
+drawStars();
+
+// SPACE WEATHER (SIMPLIFIED)
+async function loadSpaceWeather() {
+  try {
+    const response = await fetch("https://services.swpc.noaa.gov/products/solar-wind/plasma-1-day.json");
+
+    if (!response.ok) throw new Error("Fetch failed");
+
+    const data = await response.json();
+
+    let speed = 0;
+    let density = 0;
+
+    for (let i = data.length - 1; i > 0; i--) {
+      const d = parseFloat(data[i][1]);
+      const s = parseFloat(data[i][2]);
+
+      if (!isNaN(d) && !isNaN(s)) {
+        density = d;
+        speed = s;
+        break;
+      }
+    }
+
+    document.getElementById("oracleMessage").textContent = "✨ Space weather online";
+
+    document.getElementById("oracleData").innerHTML =
+      `Solar Wind Speed: ${speed} km/s<br>
+       Plasma Density: ${density} p/cm³`;
+
+    document.getElementById("speedBar").style.width =
+      Math.min(100, speed / 10) + "%";
+
+  } catch (error) {
+    document.getElementById("oracleMessage").textContent = "❌ Unable to load data";
+    document.getElementById("oracleData").textContent = error.message;
+  }
+}
+
+// Run
+loadSpaceWeather();
+setInterval(loadSpaceWeather, 300000);
+</script>
+
+<div class="footer">
+  <a href="index.html"><button>🏠 Home</button></a>
+  <a href="shopping.html"><button>🛍 Shopping</button></a>
+  <a href="AuroraCalendar.html"><button>🌌 Cosmic Calendar</button></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://gloriacitizen00-dev.github.io/Tarot_guide/Cosmic_console.html" 
+     target="_blank" class="btn-facebook">
+     📤 Compartir en Facebook
+  </a>
+</div>
 
-  <div class="brand">SKYCORTEX OS</div>
-
-  <nav class="menu">
-
-    <!-- GAME -->
-    <div class="menu-item">
-
-      <button class="menu-button">
-        Game
-      </button>
-
-      <div class="dropdown">
-
-        <a class="dropdown-button"
-           href="https://gloriacitizen00-dev.github.io/Tarot_guide/"
-           target="_blank">
-
-           Maneko Neko Tarot
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- GALLERY -->
-    <div class="menu-item">
-
-      <button class="menu-button">
-        Gallery
-      </button>
-
-      <div class="dropdown">
-
-        <a class="dropdown-button"
-           href="https://gloriacitizen00-dev.github.io/green_circles/"
-           target="_blank">
-
-           Generative Art
-
-        </a>
-
-        <a class="dropdown-button"
-           href="https://gloriacitizen00-dev.github.io/Portafolio_interfaces/"
-           target="_blank">
-
-           Experimental Interfaces
-
-        </a>
-
-        <a class="dropdown-button"
-           href="https://gloriacitizen00-dev.github.io/Visuales-Python/"
-           target="_blank">
-
-           Python Visuals
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- MANGA -->
-    <div class="menu-item">
-
-      <button class="menu-button">
-        Manga
-      </button>
-
-      <div class="dropdown">
-
-        <a class="dropdown-button"
-           href="https://gloriacitizen00-dev.github.io/living-storybook/"
-           target="_blank">
-
-           Nacimos para ser Héroes
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- COSTA RICA -->
-    <div class="menu-item">
-
-      <button class="menu-button">
-        Costa Rican Artisan Crafts
-      </button>
-
-      <div class="dropdown">
-
-        <a class="dropdown-button"
-           href="https://gloriacitizen00-dev.github.io/macrame/"
-           target="_blank">
-
-           Handmade Macrame Catalog
-
-        </a>
-
-        <a class="dropdown-button"
-           href="https://gloriacitizen00-dev.github.io/Docs/"
-           target="_blank">
-
-           Atlas Costa Rica
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- NORMAL LINKS -->
-    <a class="menu-link" href="#about">
-      About
-    </a>
-
-    <a class="menu-link" href="#news">
-      News
-    </a>
-
-  </nav>
-
-</header>
-
-<!-- MAIN -->
-<main class="desktop">
-
-  <!-- HERO -->
-  <section class="hero">
-
-    <h1>
-      Welcome to SkyCortex OS
-    </h1>
-
-    <p>
-      Creative Systems · Generative Art · Interactive Design · Digital Experiments
-    </p>
-
-  </section>
-
-  <!-- STATUS -->
-  <section class="status">
-
-    <div class="status-box">
-
-      <h3>System Status</h3>
-
-      <br>
-
-      <p>🟢 Workspace Online</p>
-      <p>🟢 Gallery Online</p>
-      <p>🟢 Manga Studio Online</p>
-      <p>🟢 Costa Rica Projects Online</p>
-
-    </div>
-
-  </section>
-
-  <!-- NEWS -->
-  <section class="news" id="news">
-
-    <h2>Latest News</h2>
-
-    <div class="card">
-
-      <p>🧠 SkyCortex OS beta structure deployed</p>
-
-      <br>
-
-      <p>🎮 Tarot Game updated</p>
-
-      <br>
-
-      <p>🎨 New generative collection added</p>
-
-    </div>
-
-  </section>
-
-  <!-- ABOUT -->
-  <section class="news" id="about">
-
-    <h2>About</h2>
-
-    <div class="card">
-
-      <p>
-        SkyCortex OS is a creative digital ecosystem combining
-        art, storytelling, generative systems and interactive design.
-      </p>
-
-    </div>
-
-  </section>
-
-</main>
 
 </body>
 </html>
+
+
+“defend [city]”
+status [city]
+spy
