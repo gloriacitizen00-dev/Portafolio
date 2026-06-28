@@ -8,23 +8,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="SkyCortex OS is a creative digital system by Gloria Martínez featuring generative art, interactive systems, experimental interfaces, original manga, and digital experiences.">
-
-<meta name="keywords" content="SkyCortex, Creative Coding, Generative Art, Interactive Design, Python Visuals, Experimental Interfaces, Costa Rica, Macrame">
-
-<meta name="author" content="Gloria Martínez">
-
-<meta name="robots" content="index, follow">
-
-<meta name="theme-color" content="#d4af37">
-
-<link rel="canonical" href="https://gloriacitizen00-dev.github.io/">
-
-<link rel="icon" href="favicon.png">
+<meta name="description" content="SkyCortex OS is a creative digital system featuring generative art, interactive systems, manga, experimental interfaces and digital experiences.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Bodoni+Moda:wght@400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -37,8 +25,8 @@
 
 body{
   background:#f5f5f5;
-  color:#111;
   font-family:Arial,sans-serif;
+  color:#111;
 }
 
 /* TOPBAR */
@@ -48,21 +36,27 @@ body{
   left:0;
   width:100%;
   height:70px;
+
   background:#fff;
-  border-bottom:1px solid #eee;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:0 24px;
+
+  padding:0 25px;
+
+  border-bottom:1px solid #eee;
+
   z-index:1000;
 }
 
+/* BRAND */
 .brand{
-  color:#d4af37;
-  font-size:20px;
-  font-weight:700;
-  letter-spacing:2px;
   font-family:"Cinzel", serif;
+  font-size:22px;
+  font-weight:bold;
+  color:#d4af37;
+  letter-spacing:2px;
 }
 
 /* MENU */
@@ -72,64 +66,101 @@ body{
   gap:20px;
 }
 
+/* MENU ITEM */
 .menu-item{
   position:relative;
 }
 
-.menu-button,
-.menu-link{
+/* BUTTONS */
+.menu-button{
   background:none;
   border:none;
   cursor:pointer;
-  text-decoration:none;
-  color:#111;
+
   font-size:14px;
+  font-weight:bold;
+
+  color:#111;
+
+  padding:10px;
+
   transition:0.3s;
 }
 
-.menu-button:hover,
-.menu-link:hover{
+.menu-button:hover{
   color:#d4af37;
 }
 
 /* DROPDOWN */
 .dropdown{
-  display:none;
   position:absolute;
-  top:42px;
+
+  top:100%;
   left:0;
+
+  display:none;
+  flex-direction:column;
+
+  gap:10px;
+
   min-width:250px;
+
+  padding:12px;
+
   background:#fff;
+
   border:1px solid #eee;
   border-radius:14px;
-  padding:12px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.12);
-  flex-direction:column;
-  gap:12px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+
   z-index:999;
 }
 
+/* SHOW DROPDOWN */
 .menu-item:hover .dropdown{
   display:flex;
 }
 
-/* DROPDOWN BUTTONS */
+/* DROPDOWN BUTTON */
 .dropdown-button{
   display:block;
+
   width:100%;
+
   padding:12px 16px;
+
   background:#333;
-  color:#fff;
+
+  color:white;
+
   text-decoration:none;
+
   border-radius:10px;
-  font-weight:700;
+
+  font-weight:bold;
+
   text-align:center;
+
   transition:0.3s;
 }
 
 .dropdown-button:hover{
   background:#555;
   transform:translateY(-2px);
+}
+
+/* NORMAL LINKS */
+.menu-link{
+  text-decoration:none;
+  color:#111;
+  font-size:14px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.menu-link:hover{
+  color:#d4af37;
 }
 
 /* MAIN */
@@ -146,15 +177,14 @@ body{
 }
 
 .hero h1{
+  font-family:"Cinzel", serif;
   font-size:48px;
   color:#d4af37;
-  font-family:"Cinzel", serif;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 .hero p{
-  font-size:16px;
-  opacity:0.75;
+  opacity:0.7;
 }
 
 /* GRID */
@@ -168,9 +198,13 @@ body{
 /* CARDS */
 .card{
   background:#fff;
+
   padding:24px;
+
   border-radius:14px;
+
   border:1px solid #eee;
+
   transition:0.3s;
 }
 
@@ -184,20 +218,19 @@ body{
 }
 
 /* SECTIONS */
-.status,
-.news{
+.news,
+.status{
   margin-top:50px;
 }
 
 .status-box{
   background:#fff;
-  padding:24px;
-  border-radius:14px;
-  border:1px solid #eee;
-}
 
-.news h2{
-  margin-bottom:16px;
+  padding:24px;
+
+  border-radius:14px;
+
+  border:1px solid #eee;
 }
 
 /* MOBILE */
@@ -206,8 +239,8 @@ body{
   .topbar{
     flex-direction:column;
     height:auto;
-    padding:16px;
-    gap:14px;
+    padding:15px;
+    gap:15px;
   }
 
   .menu{
@@ -216,7 +249,7 @@ body{
   }
 
   .desktop{
-    padding-top:170px;
+    padding-top:180px;
   }
 
   .hero h1{
@@ -226,7 +259,6 @@ body{
   .dropdown{
     position:static;
     margin-top:10px;
-    width:100%;
   }
 }
 
@@ -244,83 +276,120 @@ body{
 
     <!-- GAME -->
     <div class="menu-item">
-      <button class="menu-button">Game</button>
+
+      <button class="menu-button">
+        Game
+      </button>
 
       <div class="dropdown">
+
         <a class="dropdown-button"
            href="https://gloriacitizen00-dev.github.io/Tarot_guide/"
            target="_blank">
+
            Maneko Neko Tarot
+
         </a>
+
       </div>
+
     </div>
 
     <!-- GALLERY -->
     <div class="menu-item">
-      <button class="menu-button">Gallery</button>
+
+      <button class="menu-button">
+        Gallery
+      </button>
 
       <div class="dropdown">
 
         <a class="dropdown-button"
            href="https://gloriacitizen00-dev.github.io/green_circles/"
            target="_blank">
+
            Generative Art
+
         </a>
 
         <a class="dropdown-button"
            href="https://gloriacitizen00-dev.github.io/Portafolio_interfaces/"
            target="_blank">
+
            Experimental Interfaces
+
         </a>
 
         <a class="dropdown-button"
            href="https://gloriacitizen00-dev.github.io/Visuales-Python/"
            target="_blank">
+
            Python Visuals
+
         </a>
 
       </div>
+
     </div>
 
     <!-- MANGA -->
     <div class="menu-item">
-      <button class="menu-button">Manga</button>
+
+      <button class="menu-button">
+        Manga
+      </button>
 
       <div class="dropdown">
 
         <a class="dropdown-button"
            href="https://gloriacitizen00-dev.github.io/living-storybook/"
            target="_blank">
+
            Nacimos para ser Héroes
+
         </a>
 
       </div>
+
     </div>
 
     <!-- COSTA RICA -->
     <div class="menu-item">
-      <button class="menu-button">Costa Rican Artisan Crafts</button>
+
+      <button class="menu-button">
+        Costa Rican Artisan Crafts
+      </button>
 
       <div class="dropdown">
 
         <a class="dropdown-button"
            href="https://gloriacitizen00-dev.github.io/macrame/"
            target="_blank">
+
            Handmade Macrame Store
+
         </a>
 
         <a class="dropdown-button"
            href="https://gloriacitizen00-dev.github.io/Docs/"
            target="_blank">
+
            Atlas Costa Rica
+
         </a>
 
       </div>
+
     </div>
 
-    <!-- LINKS -->
-    <a class="menu-link" href="#about">About</a>
-    <a class="menu-link" href="#news">News</a>
+    <!-- NORMAL LINKS -->
+    <a class="menu-link" href="#about">
+      About
+    </a>
+
+    <a class="menu-link" href="#news">
+      News
+    </a>
 
   </nav>
 
@@ -332,7 +401,9 @@ body{
   <!-- HERO -->
   <section class="hero">
 
-    <h1>Welcome to SkyCortex OS</h1>
+    <h1>
+      Welcome to SkyCortex OS
+    </h1>
 
     <p>
       Creative Systems · Generative Art · Interactive Design · Digital Experiments
@@ -345,22 +416,22 @@ body{
 
     <div class="card">
       <h3>Game Systems</h3>
-      <p>Interactive narrative experiences and experimental gameplay.</p>
+      <p>Interactive narrative systems and experimental gameplay.</p>
     </div>
 
     <div class="card">
       <h3>Digital Gallery</h3>
-      <p>Generative visuals, creative coding and interface experiments.</p>
+      <p>Generative visuals and creative coding experiments.</p>
     </div>
 
     <div class="card">
       <h3>Manga Studio</h3>
-      <p>Original storytelling systems and illustrated worlds.</p>
+      <p>Original storytelling and illustrated projects.</p>
     </div>
 
     <div class="card">
       <h3>Costa Rican Crafts</h3>
-      <p>Macrame, artisan projects and cultural explorations.</p>
+      <p>Macrame, artisan work and cultural projects.</p>
     </div>
 
   </section>
@@ -371,6 +442,8 @@ body{
     <div class="status-box">
 
       <h3>System Status</h3>
+
+      <br>
 
       <p>🟢 Workspace Online</p>
       <p>🟢 Gallery Online</p>
@@ -389,9 +462,11 @@ body{
     <div class="card">
 
       <p>🧠 SkyCortex OS beta structure deployed</p>
+
       <br>
 
       <p>🎮 Tarot Game updated</p>
+
       <br>
 
       <p>🎨 New generative collection added</p>
@@ -408,9 +483,8 @@ body{
     <div class="card">
 
       <p>
-        SkyCortex OS is a creative digital ecosystem built by Gloria Martínez,
-        combining generative art, interactive systems, experimental design,
-        storytelling and creative coding.
+        SkyCortex OS is a creative digital ecosystem combining
+        art, storytelling, generative systems and interactive design.
       </p>
 
     </div>
