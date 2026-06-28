@@ -151,16 +151,38 @@ body {
   padding-top: 40px;
 }
 
-.hero-logo {
-  width: 260px;
-  max-width: 80vw;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  background: #fff;
-  padding: 10px;
+   .hero-logo-container{
+    width:320px;
+    height:320px;
+
+    margin:0 auto 30px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    border:4px solid #d4af37;
+
+    box-shadow:
+        0 0 0 8px rgba(212,175,55,.12),
+        0 25px 60px rgba(0,0,0,.12);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.hero-logo{
+    width:85%;
+    height:auto;
+    display:block;
+    transition:.35s;
+}
+
+.hero-logo:hover{
+    transform:scale(1.05);
 }
 
 .hero h1 {
@@ -325,9 +347,10 @@ body {
     font-size: 34px;
   }
 
-  .hero-logo {
-    width: 200px;
-  }
+.hero-logo-container{
+    width:220px;
+    height:220px;
+}
 
   .news-card {
     flex: 0 0 85%;
@@ -491,7 +514,9 @@ body {
 
   <!-- HERO -->
   <section class="hero">
-<img src="skylogo1.png" alt="SkyCortex logo" class="hero-logo">
+<div class="hero-logo-container">
+    <img src="skylogo1.png" alt="SkyCortex logo" class="hero-logo">
+</div>
     <h1>
       Welcome to SkyCortex OS
     </h1>
