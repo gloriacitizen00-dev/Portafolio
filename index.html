@@ -232,6 +232,13 @@ body {
   display: flex;
   gap: 20px;
   width: max-content;
+
+  animation: scrollGallery 30s linear infinite;
+  animation-play-state: paused;
+}
+
+.game-reel:hover .reel-track{
+    animation-play-state: running;
 }
 
 .reel-track img {
@@ -379,7 +386,21 @@ body {
   .desktop {
     padding-top: 180px;
   }
+
+   @keyframes scrollGallery {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
 }
+
+}
+   
 </style>
 </head>
 <body>
