@@ -420,93 +420,6 @@ body {
   .desktop {
     padding-top: 180px;
   }
-/* =========================
-   SYSTEM DASHBOARD HERO
-========================= */
-
-.system-dashboard{
-  padding-top: 60px;
-  padding-bottom: 80px;
-}
-
-.dashboard{
-  position: relative;
-  width: 100%;
-  height: 520px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* CORE CENTER */
-.core{
-  text-align: center;
-  z-index: 2;
-}
-
-/* LOGO más protagonista */
-.hero-logo-container{
-  width: 260px;
-  height: 260px;
-  margin: 0 auto 20px;
-}
-
-/* MODULES */
-.module{
-  position: absolute;
-  padding: 14px 20px;
-  border-radius: 12px;
-
-  background: #fff;
-  border: 1px solid #eee;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-
-  font-family: "Cinzel", serif;
-  color: #111;
-  font-weight: bold;
-  letter-spacing: 1px;
-
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.module:hover{
-  transform: scale(1.05);
-  border-color: #d4af37;
-}
-
-/* POSITIONS */
-.module.game{
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.module.news{
-  left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.module.gallery{
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* TEXT */
-.core h1{
-  font-family: "Cinzel", serif;
-  font-size: 42px;
-  color: #d4af37;
-  margin-top: 10px;
-}
-
-.core p{
-  opacity: 0.7;
-  margin-top: 10px;
-}
 } 
 </style>
 </head>
@@ -644,37 +557,17 @@ body {
 <main class="desktop">
 
   <!-- HERO -->
- <section class="hero system-dashboard">
+ <section class="hero">
 
-  <div class="dashboard">
-
-    <!-- TOP MODULE -->
-    <a class="module game" href="https://gloriacitizen00-dev.github.io/Tarot_guide/" target="_blank">
-      Game
-    </a>
-
-    <!-- LEFT MODULE -->
-    <div class="module news">
-      News
-    </div>
-
-    <!-- CENTER CORE -->
-    <div class="core">
-      <div class="hero-logo-container">
-        <img src="skylogo1.png" class="hero-logo">
-      </div>
-
-      <h1>SkyCortex OS</h1>
-
-      <p>Creative Systems · Generative Art · Interactive Design</p>
-    </div>
-
-    <!-- RIGHT MODULE -->
-    <div class="module gallery">
-      Gallery
-    </div>
-
+  <div class="hero-logo-container">
+    <img src="skylogo1.png" class="hero-logo">
   </div>
+
+  <h1>Welcome to SkyCortex OS</h1>
+
+  <p>
+    Creative Systems · Generative Art · Interactive Design · Digital Experiments
+  </p>
 
 </section>
 
