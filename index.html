@@ -449,6 +449,21 @@ body {
   color:#333;
 }
 
+  .topbar-left{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  line-height:1.2;
+}
+
+.projects-header{
+  font-family:"Cinzel", serif;
+  font-size:12px;
+  letter-spacing:3px;
+  color:#888;
+  margin-top:2px;
+  text-transform:uppercase;
+}
 /* =========================
    MOBILE
 ========================= */
@@ -530,7 +545,10 @@ section {
 <!-- TOPBAR -->
 <header class="topbar">
 
-  <div class="brand">SKYCORTEX OS</div>
+  <div class="topbar-left">
+    <div class="brand">SKYCORTEX OS</div>
+    <div class="projects-header">Projects</div>
+  </div>
 
   <nav class="menu">
 
