@@ -30,12 +30,44 @@ body{
 }
 
 /* CARD (same style as main page) */
-.card{
-  background:#fff;
-  padding:30px;
-  border-radius:14px;
-  border:1px solid #eee;
-  box-shadow:0 20px 50px rgba(0,0,0,0.05);
+.card {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.card p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.social-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-links h3 {
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 16px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #ff1a1a;
+  transform: scale(1.05);
 }
 
 /* TITLE */
@@ -75,23 +107,31 @@ p{
 
   <section class="card">
 
-    <h2>Let’s Work Together</h2>
+  <h2>Let’s Work Together</h2>
 
-    <p>
-      I am a Full Stack Java Developer focused on building scalable web applications and API-driven systems.
-      I work with Java, Spring Boot, React, JavaScript, HTML, CSS, and PostgreSQL to develop clean, maintainable, and performance-oriented software.
-      <br><br>
+  <p>
+    I am a Full Stack Java Developer focused on building scalable web applications and API-driven systems.
+    I work with Java, Spring Boot, React, JavaScript, HTML, CSS, and PostgreSQL.
+  </p>
 
-      I specialize in designing and implementing CRUD systems, RESTful APIs, and interactive web interfaces, with a strong focus on architecture, usability, and long-term scalability.
-      <br><br>
+  <p>
+    I specialize in CRUD systems, RESTful APIs, and interactive web interfaces, with a focus on architecture and scalability.
+  </p>
 
-      I am open to freelance opportunities and full-time roles where I can contribute to real-world projects, improve system quality, and deliver reliable software solutions.
-    
-      <strong>Email:</strong> gloriacitizen.00@gmail.com
-    </p>
+  <p>
+    I am open to freelance opportunities and full-time roles where I can contribute to real-world projects and deliver reliable software solutions.
+  </p>
 
-  </section>
+  <p><strong>Email:</strong> gloriacitizen.00@gmail.com</p>
 
+  <div class="social-links">
+    <h3>Let’s connect</h3>
+
+    <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/gloriacitizen00-dev" target="_blank">GitHub</a>
+  </div>
+
+</section>
 </div>
 
 </body>
