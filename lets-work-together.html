@@ -6,27 +6,93 @@
 
 <title>Let’s Work Together | SkyCortex OS</title>
 
-<link rel="stylesheet" href="style.css">
+<!-- Fonts (same as main page) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+<style>
+
+/* BASE */
+body{
+  margin:0;
+  padding:0;
+  background:#ffffff;
+  font-family: Arial, sans-serif;
+  color:#111;
+}
+
+/* PAGE WRAPPER */
+.page{
+  max-width:900px;
+  margin:auto;
+  padding:120px 20px;
+}
+
+/* CARD (same style as main page) */
+.card{
+  background:#fff;
+  padding:30px;
+  border-radius:14px;
+  border:1px solid #eee;
+  box-shadow:0 20px 50px rgba(0,0,0,0.05);
+}
+
+/* TITLE */
+h2{
+  font-family:"Cinzel", serif;
+  font-size:36px;
+  color:#d4af37;
+  margin-bottom:20px;
+  letter-spacing:1px;
+}
+
+/* TEXT */
+p{
+  font-size:16px;
+  line-height:1.7;
+  color:#333;
+}
+
+/* GOLD ACCENT LINES (optional visual consistency) */
+.card::before{
+  content:"";
+  display:block;
+  width:80px;
+  height:3px;
+  background:#d4af37;
+  margin-bottom:20px;
+  border-radius:10px;
+}
+
+</style>
 
 </head>
 
 <body>
 
-<section class="card">
-  <h2>Let’s Work Together</h2>
+<div class="page">
 
-  <p>
-I am a Full Stack Java Developer focused on building scalable web applications and API-driven systems. I work with Java, Spring Boot, React, JavaScript, HTML, CSS, and PostgreSQL to develop clean, maintainable, and performance-oriented software.
-<br><br>
-I specialize in designing and implementing CRUD systems, RESTful APIs, and interactive web interfaces, with an emphasis on solid architecture, usability, and long-term maintainability.
-<br><br>
-I am open to freelance opportunities and full-time roles where I can contribute to real-world projects, improve system quality, and deliver reliable software solutions.
-</p>
+  <section class="card">
 
-  <a href="mailto:gloriacitizen.00@gmail.com" class="btn-yellow">
-    Contact Me
-  </a>
-</section>
+    <h2>Let’s Work Together</h2>
+
+    <p>
+      I am a Full Stack Java Developer focused on building scalable web applications and API-driven systems.
+      I work with Java, Spring Boot, React, JavaScript, HTML, CSS, and PostgreSQL to develop clean, maintainable, and performance-oriented software.
+      <br><br>
+
+      I specialize in designing and implementing CRUD systems, RESTful APIs, and interactive web interfaces, with a strong focus on architecture, usability, and long-term scalability.
+      <br><br>
+
+      I am open to freelance opportunities and full-time roles where I can contribute to real-world projects, improve system quality, and deliver reliable software solutions.
+    
+      <strong>Email:</strong> gloriacitizen.00@gmail.com
+    </p>
+
+  </section>
+
+</div>
 
 </body>
 </html>
