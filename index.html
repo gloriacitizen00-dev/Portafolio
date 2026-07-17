@@ -769,7 +769,9 @@ body {
 ========================= */
 .code-preview{
 
-    margin:0 auto 30px;
+    max-width:1200px;
+
+    margin:20px auto 40px;
 
     display:flex;
 
@@ -777,10 +779,11 @@ body {
 
     align-items:center;
 
-    gap:25px;
+    gap:40px;
+
+    flex-wrap:wrap;
 
 }
-
 
 .code-image{
 
@@ -803,6 +806,27 @@ body {
 
 }
 
+  .phone-screen{
+
+    width:420px;
+
+    height:600px;
+
+    object-fit:contain;
+
+    display:block;
+
+    transition:.3s ease;
+
+}
+
+.build-title{
+    margin-bottom:15px;
+}
+
+.build-preview{
+    gap:25px;
+}
 /* =========================
    ABOUT
 ========================= */
@@ -1207,11 +1231,11 @@ body {
 
 </section>
 
-<section class="game-reel">
+<section class="game-reel build section">
 
-    <h3 class="reel-title">Build With Code</h3>
+    <h3 class="reel-title build-title">Build With Code</h3>
 
-    <section class="code-preview">
+     <div class="build-preview">
 
         <img
             src="laboratory/Digital-laboratory.png"
@@ -1223,7 +1247,7 @@ body {
             alt="Digital Laboratory Creative Coding"
             class="phone-screen">
 
-    </section>
+    </div>
 
 
     <a href="https://gloriacitizen00-dev.github.io/green_circles/"
