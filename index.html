@@ -766,106 +766,53 @@ body {
 
 }
 
-/* =========================
-   NEWS SECTION (HORIZONTAL CARDS)
-========================= */
-.about-section {
-  padding: 60px 20px;
-}
-  
-  .news-section {
-  padding: 60px 20px;
-}
+  /* News */
+  .news-card{
 
-.news-title {
-  font-family: "Cinzel", serif;
-  font-size: 2.5rem;
-  color: #111;
-  margin-bottom: 30px;
-}
-
-.news-carousel {
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  display: flex;
-  padding-bottom: 20px;
-}
-
-.news-carousel::-webkit-scrollbar {
-  display: none;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.news-track {
-  display: flex;
-  gap: 30px;
-  width: max-content;
-  padding-left: 40px;  
-  padding-right: 40px;  
-}
-
-.news-card{
     flex:0 0 45%;
 
-    display:flex;
-    flex-direction:column;
-
     background:#fff;
+
     border-radius:18px;
+
+    overflow:hidden;
+
     padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
 
     box-shadow:0 20px 50px rgba(0,0,0,.08);
 
-    transition:.3s ease;
+    transition:.3s;
 }
 
-.news-card:hover {
-  transform: scale(1.02);
-}
+ .news-card img{
 
-.news-card img{
-    display:block;
     width:100%;
-    height:260px;
+
+    height:280px;
+
     object-fit:contain;
-    border-radius:14px;
-    margin:15px 0 20px;
+
     background:#f7f7f7;
-}
 
-.news-label {
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: #888;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
+    border-radius:14px;
 
-.news-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-}
-
-.news-card p {
-    color:#666;
-
-    line-height:1.6;
+    margin-top:20px;
 
     margin-bottom:20px;
 
-    flex-grow:1;
-}
+} 
 
-.news-button{
+  .news-button{
 
     display:block;
 
     width:100%;
 
     padding:14px;
-
-    margin-top:auto;
 
     background:#111;
 
@@ -876,7 +823,11 @@ body {
     text-decoration:none;
 
     border-radius:12px;
+
+    margin-top:20px;
+
 }
+
 
    .btn-yellow{
     display:inline-block;
@@ -1549,207 +1500,34 @@ body {
 
 </section>
 
+<div class="news-card">
 
- <section class="news-section">
-
-  <h2 class="news-title">
-    What's New in SkyCortex
-  </h2>
-
-  <p class="news-hint">
-    Latest experiments · Scroll to explore →
-  </p>
-
-
-  <div class="news-carousel">
-
-    <div class="news-track">
-
-
-      <!-- CARD 1 -->
-      <div class="news-card">
-
-        <div class="news-label">
-          NEW DIGITAL SYSTEM
-        </div>
-
-        <h3>
-          Northern Light Research Station
-        </h3>
-
-        <img 
-        src="news/northern-lights.GIF"
-        loading="lazy"
-        alt="Northern Light Research Station Aurora monitoring dashboard">
-
-
-        <p>
-          A new digital system added to the Tarot universe.
-          This interactive Aurora monitoring station connects cosmic symbolism,
-          Earth observation, and real space weather exploration.
-        </p>
-
-
-        <a href="https://gloriacitizen00-dev.github.io/Northern-Station/"
-        target="_blank"
-        class="news-button">
-
-          Explore Station
-
-        </a>
-
-      </div>
-
-
-
-      <!-- CARD 2 -->
-      <div class="news-card">
-
-        <div class="news-label">
-          GLOBAL CALENDAR
-        </div>
-
-        <h3>
-          A Hybrid Cosmic Calendar
-        </h3>
-
-        <img 
-        src="news/globalcalendar.jpg"
-        loading="lazy"
-        alt="Global calendar sky phenomena">
-
-
-        <p>
-          Meteor showers, eclipses, auroras, and lunar phenomena
-          are mapped across the year.
-        </p>
-
-
-        <a href="#"
-        class="news-button">
-
-          View Calendar
-
-        </a>
-
-      </div>
-
-
-
-      <!-- CARD 3 -->
-      <div class="news-card">
-
-        <div class="news-label">
-          ORIGINAL MANGA
-        </div>
-
-        <h3>
-          Nacimos para ser Héroes
-        </h3>
-
-        <img 
-        src="news/mangabook.jpg"
-        loading="lazy"
-        alt="Original manga story">
-
-
-        <p>
-          An evolving manga universe with new worlds,
-          identities, and powers in development.
-        </p>
-
-
-        <a href="https://gloriacitizen00-dev.github.io/living-storybook/"
-        target="_blank"
-        class="news-button">
-
-          Read Story
-
-        </a>
-
-      </div>
-
-
-
-      <!-- CARD 4 -->
-      <div class="news-card">
-
-        <div class="news-label">
-          HANDMADE ART
-        </div>
-
-        <h3>
-          Macramé Digital Collection
-        </h3>
-
-
-        <img 
-        src="news/macramestore.jpg"
-        loading="lazy"
-        alt="Macrame digital catalog">
-
-
-        <p>
-          Handmade textile designs created in Costa Rica,
-          crafted with unique artistic techniques.
-        </p>
-
-
-        <a href="https://gloriacitizen00-dev.github.io/macrame/"
-        target="_blank"
-        class="news-button">
-
-          Visit Collection
-
-        </a>
-
-      </div>
-
-
-
-      <!-- CARD 5 -->
-      <div class="news-card">
-
-        <div class="news-label">
-          TAROT GUIDE UPDATE
-        </div>
-
-
-        <h3>
-          Curiosity Spread Redesigned
-        </h3>
-
-
-        <img 
-        src="curiosity-file.GIF"
-        loading="lazy"
-        alt="Tarot Guide Curiosity Spread redesign">
-
-
-        <p>
-          New enhanced version with reversed cards,
-          deeper interpretations, and improved reading logic.
-        </p>
-
-
-        <a href="https://gloriacitizen00-dev.github.io/Tarot_guide/"
-        target="_blank"
-        class="news-button">
-
-          Open Tarot System
-
-        </a>
-
-      </div>
-
-
+    <div class="news-label">
+        NEW DIGITAL SYSTEM
     </div>
 
-  </div>
+    <h3>
+        Northern Light Research Station
+    </h3>
 
+    <p>
+        A new digital system added to the Tarot universe...
+    </p>
 
-</section>
-   <!-- ABOUT -->
+    <img
+        src="news/northern-lights.GIF"
+        loading="lazy"
+        alt="Northern Light Research Station">
+
+    <a href="..."
+       class="news-button">
+       Explore Station
+    </a>
+
+</div>
+
+  
+  <!-- ABOUT -->
 <section id="about" class="about-section">
 
   <div class="about-wrapper">
