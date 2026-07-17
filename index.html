@@ -452,6 +452,38 @@ body {
 
 }
 
+  .right-column{
+
+    display:grid;
+
+    grid-template-rows:auto 1fr;
+
+    gap:18px;
+
+}
+
+.right-images{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+  .bolton-gif{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+}
+
 /* =========================
    GAME REEL (NO ANIMATION)
 ========================= */
@@ -1011,16 +1043,30 @@ body {
 
             </div>
 
-            <!-- Columna 3 -->
-   <img
-    src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-cr.jpg"
-    class="manga-img manga-full"
-    alt="Manga Original CR">
+           
+  <!-- Columns 3 and 4 -->
+<div class="right-column">
 
-  <img
-    src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-del-norte.jpg"
-    class="manga-img manga-full"
-    alt="Manga Original del Norte">
+    <div class="right-images">
+
+        <img
+            src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-cr.jpg"
+            class="manga-img manga-full"
+            alt="Manga Original CR">
+
+        <img
+            src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-del-norte.jpg"
+            class="manga-img manga-full"
+            alt="Manga Original del Norte">
+
+    </div>
+
+    <img
+        src="https://gloriacitizen00-dev.github.io/living-storybook/manga-original-bolton-army.GIF"
+        class="manga-img bolton-gif"
+        alt="Bolton Army">
+
+</div>
   
    </div>
 
