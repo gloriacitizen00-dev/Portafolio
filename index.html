@@ -352,9 +352,9 @@ body {
 
 .phone-screen{
 
-    width:350px;
+    width:380px;
 
-    height:525px;
+    height:570px;
 
     object-fit:contain;
 
@@ -493,19 +493,19 @@ body {
 
 }
 
-/*=========================
-        LIGHTBOX
-=========================*/
+  /* =========================
+   IMAGE ZOOM MODAL
+========================= */
 
-#lightbox{
+.image-modal{
+
+    display:none;
 
     position:fixed;
 
     inset:0;
 
     background:rgba(0,0,0,.9);
-
-    display:none;
 
     justify-content:center;
 
@@ -515,13 +515,8 @@ body {
 
 }
 
-#lightbox.active{
 
-    display:flex;
-
-}
-
-#lightbox-img{
+.modal-image{
 
     max-width:90%;
 
@@ -533,7 +528,8 @@ body {
 
 }
 
-#close-lightbox{
+
+.close-modal{
 
     position:absolute;
 
@@ -547,10 +543,7 @@ body {
 
     cursor:pointer;
 
-    user-select:none;
-
 }
-
 /* =========================
    GAME REEL (NO ANIMATION)
 ========================= */
@@ -1104,17 +1097,11 @@ body {
 
 </section>
 
-  <div id="lightbox">
-
-    <span id="close-lightbox">&times;</span>
-
-    <img id="lightbox-img" src="" alt="Preview">
-
-</div>
-
-    <button class="reel-button">
-        Read Manga
-    </button>
+<a href="https://gloriacitizen00-dev.github.io/living-storybook/"
+   target="_blank"
+   class="btn-yellow">
+   Read Manga
+</a>
 
 </section>
 
