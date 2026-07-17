@@ -264,42 +264,7 @@ body {
 
 }
 
-  .game-reel {
-  text-align: center;
-  margin: 40px auto;
-  padding: 20px;
-  background: #fdf6e3; /* dorado claro */
-  border: 1px solid #d4af37;
-  border-radius: 12px;
-  max-width: 900px;
-  box-shadow: 0 6px 16px rgba(212,175,55,0.2);
-}
-
-.reel-title {
-  font-family: "Cinzel", serif;
-  font-size: 24px;
-  color: #d4af37;
-  margin-bottom: 20px;
-}
-
-.reel-button {
-  background: #d4af37;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.reel-button:hover {
-  background: #b38e2f;
-  transform: translateY(-2px);
-}
-
-  .manga-container {
+.manga-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2px;              /* separación mínima */
@@ -308,17 +273,36 @@ body {
 }
 
 .manga-img {
-  object-fit: cover;     /* mantiene proporción */
   border-radius: 6px;
-  transition: transform 0.4s ease;
-  cursor: pointer;
+  object-fit: cover;
 }
 
-/* Zoom al pasar el mouse */
-.manga-img:hover {
-  transform: scale(1.1); /* se agranda un poco */
-  z-index: 2;
+/* Tamaños exactos */
+.manga-img.tall {
+  width: 220px;
+  height: 350px;
 }
+
+.manga-img.wide {
+  width: 400px;
+  height: 250px;
+}
+
+.manga-img.large {
+  width: 300px;
+  height: 400px;
+}
+
+.manga-img.medium {
+  width: 250px;
+  height: 300px;
+}
+
+.manga-img.small {
+  width: 180px;
+  height: 250px;
+}
+
 
 
 
