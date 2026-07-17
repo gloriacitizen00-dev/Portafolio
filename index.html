@@ -944,6 +944,109 @@ body {
     height:420px;
 
 }
+
+  /* =========================
+   NEWS HEADER
+========================= */
+
+.news-title{
+
+  font-family:"Cinzel", serif;
+
+  font-size:2.5rem;
+
+  color:#d4af37;
+
+  text-align:center;
+
+  margin-bottom:10px;
+
+}
+
+
+.news-hint{
+
+  text-align:center;
+
+  font-size:14px;
+
+  letter-spacing:1px;
+
+  color:#888;
+
+  margin-bottom:35px;
+
+}
+
+
+/* =========================
+   NEWS BUTTON
+========================= */
+
+.news-button{
+
+  display:block;
+
+  width:100%;
+
+  padding:12px 20px;
+
+  background:#111;
+
+  color:white;
+
+  text-decoration:none;
+
+  text-align:center;
+
+  font-weight:bold;
+
+  border-radius:12px;
+
+  margin-top:auto;
+
+  transition:.3s ease;
+
+}
+
+
+.news-button:hover{
+
+  background:#d4af37;
+
+  color:white;
+
+  transform:translateY(-3px);
+
+}
+
+
+/* Make cards align buttons */
+
+.news-card{
+
+  display:flex;
+
+  flex-direction:column;
+
+}
+
+
+/* Image position */
+
+.news-card img{
+
+  width:100%;
+
+  height:260px;
+
+  object-fit:cover;
+
+  border-radius:14px;
+
+  margin:20px 0;
+
+}
 /* =========================
    ABOUT
 ========================= */
@@ -1423,77 +1526,205 @@ body {
 </section>
 
 
-  <section class="news-section">
+ <section class="news-section">
+
+  <h2 class="news-title">
+    What's New in SkyCortex
+  </h2>
+
+  <p class="news-hint">
+    Latest experiments · Scroll to explore →
+  </p>
+
+
   <div class="news-carousel">
 
     <div class="news-track">
 
+
       <!-- CARD 1 -->
-<div class="news-card">
-    <div class="news-label">
-        NEW TAROT SYSTEM
-    </div>
-    <h3>
-        Northern Light Research Station
-    </h3>
-    <p>
-        A new digital system added to the Tarot universe.
-        This interactive Aurora monitoring station connects cosmic symbolism,
-        Earth observation, and real space weather exploration to expand the
-        game's celestial experience.
-    </p>
-    <img 
+      <div class="news-card">
+
+        <div class="news-label">
+          NEW DIGITAL SYSTEM
+        </div>
+
+        <h3>
+          Northern Light Research Station
+        </h3>
+
+        <img 
         src="news/northern-lights.GIF"
         loading="lazy"
         alt="Northern Light Research Station Aurora monitoring dashboard">
-</div>
+
+
+        <p>
+          A new digital system added to the Tarot universe.
+          This interactive Aurora monitoring station connects cosmic symbolism,
+          Earth observation, and real space weather exploration.
+        </p>
+
+
+        <a href="https://gloriacitizen00-dev.github.io/Northern-Station/"
+        target="_blank"
+        class="news-button">
+
+          Explore Station
+
+        </a>
+
+      </div>
+
+
 
       <!-- CARD 2 -->
       <div class="news-card">
-        <div class="news-label">Global Calendar</div>
-        <h3>A hybrid cosmic calendar </h3>
-        <p>Meteor showers, eclipses, auroras, and lunar phenomena are mapped across the year.</p>
-        <img src="news/globalcalendar.jpg" loading="lazy" alt="global calendar sky phenomena">
+
+        <div class="news-label">
+          GLOBAL CALENDAR
+        </div>
+
+        <h3>
+          A Hybrid Cosmic Calendar
+        </h3>
+
+        <img 
+        src="news/globalcalendar.jpg"
+        loading="lazy"
+        alt="Global calendar sky phenomena">
+
+
+        <p>
+          Meteor showers, eclipses, auroras, and lunar phenomena
+          are mapped across the year.
+        </p>
+
+
+        <a href="#"
+        class="news-button">
+
+          View Calendar
+
+        </a>
+
       </div>
 
-      <!-- EXTRA (hidden off-screen, scrollable) -->
+
+
+      <!-- CARD 3 -->
       <div class="news-card">
-        <div class="news-label">Manga Original</div>
-        <h3>Nacimos para ser Héroes</h3>
-        <p>Un universo de manga vivo con episodios semanales. Nuevos mundos, identidades y poderes en evolución.
-La historia apenas comienza.</p>
-        <img src="news/mangabook.jpg" loading="lazy" alt="manga story original book">
+
+        <div class="news-label">
+          ORIGINAL MANGA
+        </div>
+
+        <h3>
+          Nacimos para ser Héroes
+        </h3>
+
+        <img 
+        src="news/mangabook.jpg"
+        loading="lazy"
+        alt="Original manga story">
+
+
+        <p>
+          An evolving manga universe with new worlds,
+          identities, and powers in development.
+        </p>
+
+
+        <a href="https://gloriacitizen00-dev.github.io/living-storybook/"
+        target="_blank"
+        class="news-button">
+
+          Read Story
+
+        </a>
+
       </div>
 
+
+
+      <!-- CARD 4 -->
       <div class="news-card">
-        <div class="news-label">Artesanías Cola Blanca</div>
-        <h3>Catálogo digital de Macramé </h3>
-        <p> Tienda online de diseños en macramé hechos a mano, 100% artesanales y únicos.
-    Arte textil creado en Costa Rica.</p>
-        <img src="news/macramestore.jpg" loading="lazy" alt="macrame digital catalog">
+
+        <div class="news-label">
+          HANDMADE ART
+        </div>
+
+        <h3>
+          Macramé Digital Collection
+        </h3>
+
+
+        <img 
+        src="news/macramestore.jpg"
+        loading="lazy"
+        alt="Macrame digital catalog">
+
+
+        <p>
+          Handmade textile designs created in Costa Rica,
+          crafted with unique artistic techniques.
+        </p>
+
+
+        <a href="https://gloriacitizen00-dev.github.io/macrame/"
+        target="_blank"
+        class="news-button">
+
+          Visit Collection
+
+        </a>
+
       </div>
 
+
+
+      <!-- CARD 5 -->
       <div class="news-card">
-    <div class="news-label">Tarot Guide Update</div>
-    <h3>Curiosity Spread Redesigned</h3>
-    <p>
-        New enhanced version of the Curiosity Spread with a redesigned experience 
-        and a new reverse card feature. The system now interprets both upright and 
-        reversed cards, creating deeper and more accurate readings.
-        <br><br>
-        Includes an advanced final lecture integration combining machine learning 
-        concepts and data structures to generate a more complex and personalized 
-        interpretation.
-    </p>
-    <img src="curiosity-file.GIF" loading="lazy" alt="Tarot Guide Curiosity Spread redesign">
-</div>
+
+        <div class="news-label">
+          TAROT GUIDE UPDATE
+        </div>
+
+
+        <h3>
+          Curiosity Spread Redesigned
+        </h3>
+
+
+        <img 
+        src="curiosity-file.GIF"
+        loading="lazy"
+        alt="Tarot Guide Curiosity Spread redesign">
+
+
+        <p>
+          New enhanced version with reversed cards,
+          deeper interpretations, and improved reading logic.
+        </p>
+
+
+        <a href="https://gloriacitizen00-dev.github.io/Tarot_guide/"
+        target="_blank"
+        class="news-button">
+
+          Open Tarot System
+
+        </a>
+
+      </div>
+
 
     </div>
 
   </div>
 
-</section>
 
+</section>
    <!-- ABOUT -->
 <section id="about" class="about-section">
 
