@@ -264,51 +264,113 @@ body {
 
 }
 
-/* ==========================================
-   MANGA COLLAGE
-========================================== */
+/*==========================
+        MANGA GRID
+===========================*/
 
 .manga-grid{
 
-    width:min(1200px,95%);
-    margin:0 auto;
+    max-width:1100px;
+
+    margin:40px auto;
 
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
-
-    grid-auto-rows:180px;
+    grid-template-columns:1.3fr .8fr .9fr .9fr;
 
     gap:16px;
 
+    align-items:stretch;
+
 }
+
+/*==========================
+      IMAGES
+===========================*/
 
 .manga-img{
 
     width:100%;
-    height:100%;
 
     display:block;
 
+    border-radius:16px;
+
     object-fit:cover;
 
-    border-radius:18px;
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
 
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
-
-    transition:transform .35s ease,
-               box-shadow .35s ease;
+    transition:.35s;
 
 }
 
 .manga-img:hover{
 
-    transform:scale(1.03);
-
-    box-shadow:0 18px 40px rgba(0,0,0,.18);
+    transform:scale(1.02);
 
 }
 
+/*==========================
+     MAGIC
+===========================*/
+
+.magic{
+
+    height:620px;
+
+}
+
+/*==========================
+   MIDDLE COLUMN
+===========================*/
+
+.middle-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.middle-column img{
+
+    height:302px;
+
+}
+
+/*==========================
+     VERTICALS
+===========================*/
+
+.vertical{
+
+    height:620px;
+
+}
+
+/*==========================
+      MOBILE
+===========================*/
+
+@media(max-width:900px){
+
+.manga-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.magic,
+.vertical,
+.middle-column img{
+
+    height:auto;
+
+}
+
+}
 /* ===========================
    HERO IMAGE
 =========================== */
@@ -922,7 +984,7 @@ body {
 
 </section>
 
- <section class="game-reel">
+<section class="game-reel">
 
     <h3 class="reel-title">Read the Original Manga</h3>
 
@@ -931,31 +993,35 @@ body {
         <div class="manga-grid">
 
             <img src="https://gloriacitizen00-dev.github.io/living-storybook/magic1.jpg"
-                 class="manga-img magic"
-                 alt="Magic 1">
+                class="manga-img magic"
+                alt="Magic 1">
 
-            <img src="https://gloriacitizen00-dev.github.io/living-storybook/mariposa.jpg"
-                 class="manga-img mariposa"
-                 alt="Mariposa">
+            <div class="middle-column">
 
-            <img src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-costa-rica.jpg"
-                 class="manga-img costa"
-                 alt="Manga Original Costa Rica">
+                <img src="https://gloriacitizen00-dev.github.io/living-storybook/mariposa.jpg"
+                    class="manga-img"
+                    alt="Mariposa">
+
+                <img src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-costa-rica.jpg"
+                    class="manga-img"
+                    alt="Manga Original Costa Rica">
+
+            </div>
 
             <img src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-cr.jpg"
-                 class="manga-img cr"
-                 alt="Manga Original CR">
+                class="manga-img vertical"
+                alt="Manga Original CR">
 
             <img src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-del-norte.jpg"
-                 class="manga-img norte"
-                 alt="Manga Original del Norte">
+                class="manga-img vertical"
+                alt="Manga Original del Norte">
 
         </div>
 
     </section>
 
     <button class="reel-button">
-        Read Manga
+        Enter Manga
     </button>
 
 </section>
