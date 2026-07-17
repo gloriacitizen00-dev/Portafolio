@@ -779,13 +779,19 @@ body {
 
 /* IMAGE */
 
+/* IMAGE */
+
 .news-card img{
 
     width:100%;
 
-    height:260px;
+    height:auto;
 
-    object-fit:cover;
+    max-height:320px;
+
+    object-fit:contain;
+
+    display:block;
 
     border-radius:16px;
 
@@ -887,13 +893,6 @@ body {
 
     }
 
-
-    .news-card img{
-
-        height:230px;
-
-    }
-
 }
 
 
@@ -931,13 +930,6 @@ body {
         flex-basis:88vw;
 
         padding:18px;
-
-    }
-
-
-    .news-card img{
-
-        height:210px;
 
     }
 
