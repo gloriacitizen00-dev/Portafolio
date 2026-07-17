@@ -264,43 +264,61 @@ body {
 
 }
 
-/*==========================
-        MANGA GRID
-===========================*/
+/*=========================
+      MANGA GALLERY
+=========================*/
 
 .manga-grid{
 
-    max-width:1100px;
+    max-width:1200px;
 
     margin:40px auto;
 
     display:grid;
 
-    grid-template-columns:1.3fr .8fr .9fr .9fr;
+    grid-template-columns:1.2fr .7fr .7fr .7fr;
 
-    gap:16px;
+    gap:18px;
 
-    align-items:stretch;
+    height:620px;
 
 }
 
-/*==========================
-      IMAGES
-===========================*/
+/*=========================
+      MIDDLE COLUMN
+=========================*/
+
+.middle-column{
+
+    display:grid;
+
+    grid-template-rows:1fr 1fr;
+
+    gap:18px;
+
+    height:100%;
+
+}
+
+/*=========================
+        IMAGES
+=========================*/
 
 .manga-img{
 
     width:100%;
 
-    display:block;
+    height:100%;
 
-    border-radius:16px;
+    display:block;
 
     object-fit:cover;
 
-    box-shadow:0 8px 18px rgba(0,0,0,.12);
+    border-radius:18px;
 
-    transition:.35s;
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+
+    transition:.3s ease;
 
 }
 
@@ -310,65 +328,33 @@ body {
 
 }
 
-/*==========================
-     MAGIC
-===========================*/
+/*=========================
+      RESPONSIVE
+=========================*/
 
-.magic{
+@media (max-width:900px){
 
-    height:620px;
+    .manga-grid{
 
-}
+        grid-template-columns:1fr;
 
-/*==========================
-   MIDDLE COLUMN
-===========================*/
+        height:auto;
 
-.middle-column{
+    }
 
-    display:flex;
+    .middle-column{
 
-    flex-direction:column;
+        grid-template-rows:auto;
 
-    gap:16px;
+        height:auto;
 
-}
+    }
 
-.middle-column img{
+    .manga-img{
 
-    height:302px;
+        height:auto;
 
-}
-
-/*==========================
-     VERTICALS
-===========================*/
-
-.vertical{
-
-    height:620px;
-
-}
-
-/*==========================
-      MOBILE
-===========================*/
-
-@media(max-width:900px){
-
-.manga-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.magic,
-.vertical,
-.middle-column img{
-
-    height:auto;
-
-}
+    }
 
 }
 /* ===========================
@@ -992,28 +978,37 @@ body {
 
         <div class="manga-grid">
 
-            <img src="https://gloriacitizen00-dev.github.io/living-storybook/magic1.jpg"
-                class="manga-img magic"
+            <!-- Columna 1 -->
+            <img
+                src="https://gloriacitizen00-dev.github.io/living-storybook/magic1.jpg"
+                class="manga-img"
                 alt="Magic 1">
 
+            <!-- Columna 2 -->
             <div class="middle-column">
 
-                <img src="https://gloriacitizen00-dev.github.io/living-storybook/mariposa.jpg"
+                <img
+                    src="https://gloriacitizen00-dev.github.io/living-storybook/mariposa.jpg"
                     class="manga-img"
                     alt="Mariposa">
 
-                <img src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-costa-rica.jpg"
+                <img
+                    src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-costa-rica.jpg"
                     class="manga-img"
-                    alt="Manga Original Costa Rica">
+                    alt="Manga Costa Rica">
 
             </div>
 
-            <img src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-cr.jpg"
-                class="manga-img vertical"
+            <!-- Columna 3 -->
+            <img
+                src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-cr.jpg"
+                class="manga-img"
                 alt="Manga Original CR">
 
-            <img src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-del-norte.jpg"
-                class="manga-img vertical"
+            <!-- Columna 4 -->
+            <img
+                src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-del-norte.jpg"
+                class="manga-img"
                 alt="Manga Original del Norte">
 
         </div>
@@ -1021,7 +1016,7 @@ body {
     </section>
 
     <button class="reel-button">
-        Enter Manga
+        Read Manga
     </button>
 
 </section>
