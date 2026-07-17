@@ -328,6 +328,47 @@ body {
 
 }
 
+  /*=========================
+      MANGA PREVIEW
+=========================*/
+
+.manga-preview{
+
+    max-width:1200px;
+
+    margin:60px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.phone-screen{
+
+    width:250px;
+
+    height:375px;
+
+    object-fit:contain;
+
+    display:block;
+
+    transition:.3s ease;
+
+}
+
+.phone-screen:hover{
+
+    transform:translateY(-8px);
+
+}
 /*=========================
       RESPONSIVE
 =========================*/
@@ -1017,6 +1058,25 @@ body {
 <section class="game-reel">
 
     <h3 class="reel-title">Read the Original Manga</h3>
+
+  <section class="manga-preview">
+
+    <img
+        src="book-screen-1.png"
+        alt="Manga Screen 1"
+        class="phone-screen">
+
+    <img
+        src="book-screen-2.png"
+        alt="Manga Screen 2"
+        class="phone-screen">
+
+    <img
+        src="book-screen-3.png"
+        alt="Manga Screen 3"
+        class="phone-screen">
+
+</section>
 
     <section id="manga-gallery">
 
