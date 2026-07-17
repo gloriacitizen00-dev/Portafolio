@@ -696,7 +696,7 @@ body {
 }
 
 /* =========================
-   NEWS SECTION FINAL
+   NEWS SECTION
 ========================= */
 
 .news-section{
@@ -722,14 +722,13 @@ body {
 }
 
 
-/* HORIZONTAL SCROLL */
+/* CONTAINER */
 
 .news-carousel{
+
     overflow-x:auto;
-    overflow-y:hidden;
-    scroll-snap-type:x mandatory;
     scrollbar-width:none;
-    -webkit-overflow-scrolling:touch;
+
 }
 
 
@@ -738,15 +737,34 @@ body {
 }
 
 
+/* TRACK */
+
 .news-track{
 
     display:flex;
-
     gap:30px;
-
-    width:max-content;
-
     padding:0 20px;
+
+}
+
+
+/* CARD */
+
+.news-card{
+
+    flex:0 0 420px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,.08);
+
+    display:flex;
+    flex-direction:column;
 
 }
 
@@ -757,17 +775,13 @@ body {
 
     width:100%;
 
-    height:auto;
-
-    max-height:320px;
+    height:260px;
 
     object-fit:contain;
 
-    display:block;
-
     border-radius:16px;
 
-    margin:18px 0 22px;
+    margin:18px 0;
 
 }
 
@@ -777,11 +791,7 @@ body {
 .news-label{
 
     font-size:12px;
-
     letter-spacing:1px;
-
-    text-transform:uppercase;
-
     color:#888;
 
     margin-bottom:10px;
@@ -797,14 +807,12 @@ body {
 
     font-size:1.5rem;
 
-    color:#111;
-
     margin-bottom:12px;
 
 }
 
 
-/* TEXT */
+/* DESCRIPTION */
 
 .news-card p{
 
@@ -812,7 +820,9 @@ body {
 
     line-height:1.7;
 
-    margin-bottom:20px;
+    margin-bottom:25px;
+
+    flex-grow:1;
 
 }
 
@@ -821,11 +831,9 @@ body {
 
 .news-button{
 
-    display:block;
-
     width:100%;
 
-    padding:14px;
+    padding:14px 20px;
 
     background:#111;
 
@@ -839,7 +847,7 @@ body {
 
     border-radius:12px;
 
-    transition:.3s ease;
+    display:block;
 
 }
 
@@ -848,59 +856,55 @@ body {
 
     background:#d4af37;
 
-    transform:translateY(-3px);
-
 }
+
 
 
 /* TABLET */
 
 @media(max-width:1024px){
 
-    .news-card{
+.news-card{
 
-        width:360px;
+    flex-basis:360px;
 
-        flex-basis:360px;
-
-    }
+}
 
 }
 
 
-/* PHONE */
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-    .news-section{
 
-        padding:50px 15px;
+.news-section{
 
-    }
+    padding:50px 15px;
 
-
-    .news-title{
-
-        font-size:2rem;
-
-    }
-
-    .news-card{
-
-        width:88vw;
-
-        flex-basis:88vw;
-
-        padding:18px;
-
-    }
+}
 
 
-    .news-card h3{
+.news-card{
 
-        font-size:1.3rem;
+    flex-basis:88vw;
 
-    }
+}
+
+
+.news-card img{
+
+    height:210px;
+
+}
+
+
+.news-title{
+
+    font-size:2rem;
+
+}
 
 }
 
@@ -918,48 +922,6 @@ body {
 .btn-yellow:hover{
     background:#111;
     transform:translateY(-2px);
-}
-
-  /* =========================
-   BUILD WITH CODE
-========================= */
-.code-preview{
-
-    max-width:1200px;
-
-    margin:20px auto 40px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:40px;
-
-    flex-wrap:wrap;
-
-}
-
-.code-image{
-
-    width:420px;
-
-    height:420px;
-
-    object-fit:contain;
-
-}
-
-  .code-preview + .btn-yellow{
-    margin-top:10px;
-}
-
-
-.code-image:hover{
-
-    transform:scale(1.05);
-
 }
 
 /* =========================
@@ -995,155 +957,6 @@ body {
 
 }
 
-/* =========================
-   NEWS BUTTON
-========================= */
-
-
-.news-button:hover{
-
-  background:#d4af37;
-
-  color:white;
-
-  transform:translateY(-3px);
-
-}
-
-
-/* Make cards align buttons */
-
-.news-card{
-
-  display:flex;
-
-  flex-direction:column;
-
-}
-
-
-/* =========================
-   NEWS SECTION
-========================= */
-    text-align:center;
-    color:#888;
-    font-size:14px;
-    letter-spacing:1px;
-    margin-bottom:40px;
-}
-
-/* =========================
-   CARD
-========================= */
-
-.news-card{
-
-    flex:0 0 420px;
-
-    display:flex;
-    flex-direction:column;
-
-    background:#fff;
-
-    border-radius:20px;
-
-    padding:22px;
-
-    box-shadow:0 18px 45px rgba(0,0,0,.08);
-
-    transition:.3s ease;
-
-    scroll-snap-align:start;
-}
-
-.news-card:hover{
-    transform:translateY(-6px);
-}
-
-/* =========================
-   TEXT
-========================= */
-
-.news-label{
-
-    font-size:12px;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
-
-    color:#888;
-
-    margin-bottom:10px;
-
-}
-
-.news-card h3{
-
-    font-family:"Cinzel", serif;
-
-    font-size:1.5rem;
-
-    color:#111;
-
-    margin-bottom:12px;
-
-}
-
-.news-card p{
-
-    color:#666;
-
-    line-height:1.7;
-
-    margin-bottom:24px;
-
-}
-
-/* =========================
-   BUTTON
-========================= */
-
-.news-button{
-
-    display:block;
-
-    width:100%;
-
-    padding:14px;
-
-    background:#111;
-
-    color:#fff;
-
-    text-decoration:none;
-
-    text-align:center;
-
-    font-weight:bold;
-
-    border-radius:12px;
-
-    transition:.3s ease;
-
-}
-
-.news-button:hover{
-
-    background:#d4af37;
-
-    transform:translateY(-3px);
-
-}
-
-
-    .news-card h3{
-
-        font-size:1.3rem;
-
-    }
-
-}
 
 /* =========================
    ABOUT
