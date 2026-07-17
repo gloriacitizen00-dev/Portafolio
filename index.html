@@ -299,6 +299,28 @@ body {
   transform: translateY(-2px);
 }
 
+  .manga-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;              /* separación mínima */
+  justify-content: center;
+  width: 100%;           /* ocupa todo el ancho */
+}
+
+.manga-img {
+  object-fit: cover;     /* mantiene proporción */
+  border-radius: 6px;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+/* Zoom al pasar el mouse */
+.manga-img:hover {
+  transform: scale(1.1); /* se agranda un poco */
+  z-index: 2;
+}
+
+
 
 /* =========================
    GAME REEL (NO ANIMATION)
@@ -844,6 +866,7 @@ body {
     </div>
   </section>
 
+  
   <button class="reel-button">Enter Manga</button>
 </section>
 
