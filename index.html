@@ -267,26 +267,20 @@ body {
 .manga-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;              /* separación mínima */
+  gap: 6px;
   justify-content: center;
-  width: 100%;           /* ocupa todo el ancho */
+  width: 100%;
 }
 
 .manga-img {
   border-radius: 6px;
-  object-fit: cover;     /* recorta sin deformar */
+  object-fit: cover;
 }
 
-/* Bloques según proporción */
-.manga-img.square {
-  width: 280px;
-  height: 280px;
-}
-
-.manga-img.tall {
-  width: 240px;
-  height: 340px;
-}
+/* Bloques */
+.manga-img.square { width: 280px; height: 280px; }
+.manga-img.tall   { width: 240px; height: 340px; }
+.manga-img.wide   { width: 360px; height: 240px; }
 
 /* =========================
    GAME REEL (NO ANIMATION)
@@ -822,13 +816,13 @@ body {
   <h3 class="reel-title">Read the Original Manga</h3>
 
   <section id="manga-gallery">
-    <div class="manga-container">
-      <img src="https://gloriacitizen00-dev.github.io/living-storybook/magic1.jpg" alt="Magic 1" class="manga-img square">
-      <img src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-costa-rica.jpg" alt="Manga Costa Rica" class="manga-img square">
-      <img src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-cr.jpg" alt="Manga CR" class="manga-img tall">
-      <img src="https://gloriacitizen00-dev.github.io/living-storybook/images/manga-original-del-norte.jpg" alt="Manga del Norte" class="manga-img tall">
-      <img src="https://gloriacitizen00-dev.github.io/living-storybook/mariposa.jpg" alt="Mariposa" class="manga-img square">
-    </div>
+<div class="manga-container">
+  <img src="magic1.jpg" class="manga-img square" alt="Magic 1">
+  <img src="manga-original-costa-rica.jpg" class="manga-img square" alt="Manga Costa Rica">
+  <img src="manga-original-cr.jpg" class="manga-img tall" alt="Manga CR">
+  <img src="manga-original-del-norte.jpg" class="manga-img tall" alt="Manga del Norte">
+  <img src="mariposa.jpg" class="manga-img square" alt="Mariposa">
+</div>
   </section>
 
   <button class="reel-button">Enter Manga</button>
