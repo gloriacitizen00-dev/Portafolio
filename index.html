@@ -957,59 +957,118 @@ body {
 
 }
 
+/* =========================
+   ABOUT PROFILE IMAGE
+========================= */
+
+
+.about-photo{
+
+    width:220px;
+
+    height:220px;
+
+    margin:30px auto 40px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:5px solid #d4af37;
+
+    background:white;
+
+    box-shadow:
+    0 0 0 10px rgba(212,175,55,.12),
+    0 20px 50px rgba(0,0,0,.15);
+
+}
+
+
+.about-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
 
 /* =========================
-   ABOUT
+   ABOUT CARD IMPROVED
 ========================= */
-.card {
-  background: #fff;
-  padding: 24px;
-  border-radius: 14px;
-  border: 1px solid #eee;
-}
 
-  .about-wrapper{
-  max-width:900px;
-  margin:auto;
-}
-
-.about-title{
-  font-family:"Cinzel", serif;
-  font-size:36px;
-  color:#d4af37;
-  margin-bottom:25px;
-  text-align:left;
-}
 
 .about-card{
-  background:#fff;
-  padding:30px;
-  border-radius:14px;
-  border:1px solid #eee;
-  box-shadow:0 20px 50px rgba(0,0,0,0.05);
-  line-height:1.7;
+
+    background:#fffdf7;
+
+    padding:45px;
+
+    border-radius:24px;
+
+    border:1px solid rgba(212,175,55,.35);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+
+    line-height:1.8;
+
 }
+
 
 .about-card p{
-  font-size:16px;
-  color:#333;
+
+    font-size:17px;
+
+    color:#333;
+
+    margin-bottom:22px;
+
 }
 
-  .topbar-left{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  line-height:1.2;
+
+.about-card strong{
+
+    color:#111;
+
 }
 
-.projects-header{
-  font-family:"Cinzel", serif;
-  font-size:12px;
-  letter-spacing:3px;
-  color:#888;
-  margin-top:2px;
-  text-transform:uppercase;
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+
+    .about-photo{
+
+        width:170px;
+
+        height:170px;
+
+    }
+
+
+    .about-card{
+
+        padding:25px;
+
+    }
+
+
+    .about-card p{
+
+        font-size:15px;
+
+    }
+
 }
+
+  
 /* =========================
    MOBILE
 ========================= */
