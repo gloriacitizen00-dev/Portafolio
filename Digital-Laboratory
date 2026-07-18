@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<!-- ======================================
+     SEO META TAGS
+====================================== -->
+
+<title>
+Digital Laboratory | Creative Coding, UX Experiments & Interactive Projects | SkyCortex OS
+</title>
+
+
+<meta name="description" content="
+Explore the SkyCortex OS Digital Laboratory, a collection of creative coding experiments,
+interactive web applications, UX design concepts, data visualizations, astronomy tools,
+and digital projects developed in Costa Rica.
+">
+
+
+<meta name="keywords" content="
+Digital Laboratory,
+SkyCortex OS,
+creative coding projects,
+front-end developer portfolio,
+UX design experiments,
+interactive web applications,
+JavaScript projects,
+HTML CSS projects,
+Python visualization projects,
+data visualization,
+creative technology,
+digital experiments,
+open source projects,
+GitHub projects,
+web development Costa Rica,
+Costa Rica developer,
+interactive experiences,
+astronomy web applications,
+aurora monitoring project,
+Moon Observatory,
+creative developer portfolio
+">
+
+
+<meta name="author" content="Gloria Martinez">
+
+
+<meta name="robots" content="index, follow">
+
+
+<link rel="canonical" href="https://gloriacitizen00-dev.github.io/Digital-Laboratory/">
+
+<!-- ======================================
+     SOCIAL SHARING SEO
+====================================== -->
+
+
+<meta property="og:title" content="
+Digital Laboratory | SkyCortex OS
+">
+
+
+<meta property="og:description" content="
+Explore creative coding experiments, UX concepts,
+interactive applications, astronomy tools, and digital
+projects created inside SkyCortex OS.
+">
+
+
+<meta property="og:type" content="website">
+
+
+<meta property="og:url" content="
+https://gloriacitizen00-dev.github.io/Digital-Laboratory/
+">
+
+
+<meta property="og:image" content="
+https://gloriacitizen00-dev.github.io/Digital-Laboratory/images/laboratory-preview.jpg
+">
+
+<meta name="twitter:card" content="summary_large_image">
+
+
+<meta name="twitter:title" content="
+Digital Laboratory | SkyCortex OS
+">
+
+
+<meta name="twitter:description" content="
+A creative laboratory exploring coding,
+UX design, interactive experiences, and technology.
+">
+
+
+<meta name="twitter:image" content="
+https://gloriacitizen00-dev.github.io/Digital-Laboratory/images/laboratory-preview.jpg
+">
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "SkyCortex OS Digital Laboratory",
+  "author": {
+    "@type": "Person",
+    "name": "Gloria Martinez"
+  },
+  "description": "A digital laboratory featuring creative coding experiments, UX design concepts, interactive applications, astronomy tools, and technology projects.",
+  "keywords": [
+    "creative coding",
+    "UX design",
+    "front-end development",
+    "JavaScript projects",
+    "Python visualization",
+    "interactive experiences",
+    "digital laboratory"
+  ],
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Costa Rica"
+  }
+}
+
+</script>
+
+<style>
+
+/*=========================
+RESET
+=========================*/
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+body{
+
+font-family:Arial, sans-serif;
+
+background:#fff;
+
+color:#111;
+
+line-height:1.7;
+
+}
+
+/*=========================
+TOPBAR
+=========================*/
+
+.topbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:72px;
+
+background:#fff;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 40px;
+
+border-bottom:1px solid #eee;
+
+z-index:999;
+
+}
+
+.brand{
+
+font-family:"Cinzel",serif;
+
+font-size:24px;
+
+color:#d4af37;
+
+font-weight:bold;
+
+letter-spacing:2px;
+
+text-decoration:none;
+
+}
+
+.menu{
+
+display:flex;
+
+gap:35px;
+
+}
+
+.menu a{
+
+text-decoration:none;
+
+color:#111;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:#d4af37;
+
+}
+
+/*=========================
+MAIN
+=========================*/
+
+main{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:130px 25px 80px;
+
+}
+
+/*=========================
+HERO
+=========================*/
+
+.lab-hero{
+
+text-align:center;
+
+margin-bottom:80px;
+
+}
+
+.lab-hero h1{
+
+font-family:"Cinzel",serif;
+
+font-size:56px;
+
+color:#d4af37;
+
+margin-bottom:20px;
+
+}
+
+.lab-subtitle{
+
+font-size:22px;
+
+color:#111;
+
+margin-bottom:30px;
+
+font-weight:600;
+
+}
+
+.lab-description{
+
+max-width:900px;
+
+margin:auto;
+
+font-size:18px;
+
+color:#666;
+
+}
+
+/*=========================
+DIVIDER
+=========================*/
+
+.gold-divider{
+
+width:420px;
+
+height:2px;
+
+background:#d4af37;
+
+margin:45px auto;
+
+}
+
+/*=========================
+STATS
+=========================*/
+
+.lab-stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+margin-top:60px;
+
+}
+
+.stat{
+
+background:#fff;
+
+padding:30px;
+
+border-radius:18px;
+
+border:1px solid rgba(212,175,55,.25);
+
+box-shadow:0 15px 40px rgba(0,0,0,.06);
+
+}
+
+.stat h2{
+
+font-family:"Cinzel",serif;
+
+font-size:42px;
+
+color:#d4af37;
+
+margin-bottom:10px;
+
+}
+
+.stat p{
+
+color:#666;
+
+font-size:15px;
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
+}
+
+@media(max-width:900px){
+
+.lab-stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.lab-hero h1{
+
+font-size:42px;
+
+}
+
+.lab-subtitle{
+
+font-size:20px;
+
+}
+
+.lab-description{
+
+font-size:16px;
+
+}
+
+.lab-stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* ======================================
+   LAB CATEGORIES
+====================================== */
+
+.lab-category{
+
+    margin:90px 0;
+
+}
+
+.category-title{
+
+    font-family:"Cinzel", serif;
+
+    font-size:38px;
+
+    color:#d4af37;
+
+    margin-bottom:18px;
+
+}
+
+.category-description{
+
+    max-width:900px;
+
+    color:#666;
+
+    margin-bottom:45px;
+
+    line-height:1.8;
+
+}
+
+
+/* ======================================
+   GRID
+====================================== */
+
+.lab-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:35px;
+
+}
+
+
+/* ======================================
+   CARD
+====================================== */
+
+.lab-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    box-shadow:0 20px 55px rgba(0,0,0,.08);
+
+    transition:.35s ease;
+
+}
+
+.lab-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
+
+}
+
+
+/* IMAGE */
+
+.lab-card img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+}
+
+
+/* CONTENT */
+
+.lab-content{
+
+    padding:28px;
+
+}
+
+.lab-content h3{
+
+    font-family:"Cinzel", serif;
+
+    color:#111;
+
+    margin-bottom:16px;
+
+    font-size:28px;
+
+}
+
+.lab-content p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+}
+
+
+/* BUTTONS */
+
+.lab-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.btn-dark{
+
+    display:block;
+
+    padding:14px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:#111;
+
+    color:white;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.btn-dark:hover{
+
+    background:#333;
+
+}
+
+/* ======================================
+   DEVELOPER NOTES
+====================================== */
+
+.developer-notes{
+
+    margin:100px auto;
+
+}
+
+.notes-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:45px;
+
+    background:#111;
+
+    color:#fff;
+
+    border-radius:22px;
+
+    border:1px solid rgba(212,175,55,.35);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+}
+
+.notes-box h2{
+
+    font-family:"Cinzel", serif;
+
+    color:#d4af37;
+
+    font-size:34px;
+
+    margin-bottom:25px;
+
+}
+
+.notes-box p{
+
+    line-height:1.9;
+
+    color:#ddd;
+
+    margin-bottom:20px;
+
+}
+
+.notes-box strong{
+
+    color:#d4af37;
+
+}
+
+/* ======================================
+   ROADMAP
+====================================== */
+
+.roadmap{
+
+    margin:100px 0;
+
+}
+
+.roadmap-title{
+
+    font-family:"Cinzel", serif;
+
+    font-size:38px;
+
+    color:#d4af37;
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+}
+
+.roadmap-intro{
+
+    max-width:820px;
+
+    margin:0 auto 50px;
+
+    text-align:center;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.roadmap-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.roadmap-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.roadmap-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.roadmap-status{
+
+    display:inline-block;
+
+    background:#d4af37;
+
+    color:#111;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    margin-bottom:18px;
+
+    text-transform:uppercase;
+
+}
+
+.roadmap-card h3{
+
+    font-family:"Cinzel", serif;
+
+    margin-bottom:15px;
+
+    color:#111;
+
+}
+
+.roadmap-card p{
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+/* ======================================
+   FINAL CTA
+====================================== */
+
+.lab-cta{
+
+    max-width:900px;
+
+    margin:120px auto 80px;
+
+    text-align:center;
+
+    padding:60px 40px;
+
+    background:#fff;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    border-radius:25px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+.lab-cta h2{
+
+    font-family:"Cinzel", serif;
+
+    font-size:42px;
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+.lab-cta p{
+
+    max-width:650px;
+
+    margin:0 auto 35px;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.lab-cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ======================================
+   CURRENT LABORATORY STATUS
+====================================== */
+
+.lab-status{
+
+    max-width:1200px;
+
+    margin:70px auto 90px;
+
+    text-align:center;
+
+}
+
+.lab-status-title{
+
+    font-family:"Cinzel", serif;
+
+    font-size:40px;
+
+    color:#d4af37;
+
+    margin-bottom:15px;
+
+}
+
+.lab-status-subtitle{
+
+    max-width:760px;
+
+    margin:0 auto 45px;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.status-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.status-card{
+
+    background:#fff;
+
+    padding:28px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.3s ease;
+
+}
+
+.status-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 22px 55px rgba(0,0,0,.12);
+
+}
+
+.status-label{
+
+    display:block;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:#888;
+
+    margin-bottom:12px;
+
+}
+
+.status-value{
+
+    display:block;
+
+    font-family:"Cinzel", serif;
+
+    font-size:22px;
+
+    color:#111;
+
+    line-height:1.5;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .lab-status-title{
+
+        font-size:32px;
+
+    }
+
+    .status-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<a href="https://gloriacitizen00-dev.github.io/Portafolio/"
+class="brand">
+
+SkyCortex Labs
+
+</a>
+
+<nav class="menu">
+
+<a href="https://gloriacitizen00-dev.github.io/Portafolio/">
+Home
+</a>
+
+<a href="#">
+Projects
+</a>
+
+<a href="https://github.com/Gloriacitizen00-dev"
+target="_blank">
+GitHub
+</a>
+
+<a href="https://gloriacitizen00-dev.github.io/Portafolio/lets-work-together.html">
+Contact
+</a>
+
+</nav>
+
+</header>
+
+<main>
+
+<section class="lab-hero">
+
+<h1>
+
+Digital Laboratory
+
+</h1>
+
+<p class="lab-subtitle">
+
+A creative technology space where coding, design,
+data visualization, and imagination become interactive experiences.
+
+</p>
+
+<p class="lab-description">
+
+Welcome to the Digital Laboratory.
+
+This space brings together coding experiments,
+creative prototypes, data visualizations,
+UX concepts and interactive applications
+developed as part of SkyCortex OS.
+
+Select any project below to explore the live
+experience or discover how it was built through
+its source code.
+
+</p>
+
+<div class="gold-divider"></div>
+
+<div class="lab-stats">
+
+<div class="stat">
+
+<h2>04</h2>
+
+<p>Projects</p>
+
+</div>
+
+<div class="stat">
+
+<h2>04</h2>
+
+<p>Technologies</p>
+
+</div>
+
+<div class="stat">
+
+<h2>07</h2>
+
+<p>Repositories</p>
+
+</div>
+
+<div class="stat">
+
+<h2>Active</h2>
+
+<p>Status</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================
+     CURRENT LABORATORY STATUS
+====================================== -->
+
+<section class="lab-status">
+
+    <h2 class="lab-status-title">
+        🟢 Current Laboratory Status
+    </h2>
+
+    <p class="lab-status-subtitle">
+        SkyCortex OS is continuously evolving. New experiments, creative tools,
+        and interactive applications are added as new ideas become reality.
+    </p>
+
+    <div class="status-grid">
+
+        <div class="status-card">
+
+            <span class="status-label">Projects</span>
+
+            <span class="status-value">8 Active</span>
+
+        </div>
+
+        <div class="status-card">
+
+            <span class="status-label">Technologies</span>
+
+            <span class="status-value">HTML • CSS • JavaScript • Python</span>
+
+        </div>
+
+        <div class="status-card">
+
+            <span class="status-label">Repository</span>
+
+            <span class="status-value">Public on GitHub</span>
+
+        </div>
+
+        <div class="status-card">
+
+            <span class="status-label">Development</span>
+
+            <span class="status-value">Active</span>
+
+        </div>
+
+        <div class="status-card">
+
+            <span class="status-label">Latest Update</span>
+
+            <span class="status-value">July 2026</span>
+
+        </div>
+
+        <div class="status-card">
+
+            <span class="status-label">Mission</span>
+
+            <span class="status-value">
+                Build. Learn. Explore.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+     CREATIVE CODING
+====================================== -->
+
+<section class="lab-category">
+
+    <h2 class="category-title">🧪 Creative Coding</h2>
+
+    <p class="category-description">
+        Interactive coding experiments that combine mathematics, animation,
+        creativity, and modern web technologies to create engaging visual experiences.
+    </p>
+
+    <div class="lab-grid">
+
+        <!-- Green Circles -->
+
+        <article class="lab-card">
+
+            <img src="images/green-circles-preview.jpg"
+                 alt="Green Circles Preview">
+
+            <div class="lab-content">
+
+                <h3>Green Circles</h3>
+
+                <p>
+                    A creative coding experiment that transforms mathematics,
+                    animation, and procedural motion into an interactive visual
+                    experience built with HTML, CSS, and JavaScript.
+                </p>
+
+                <div class="lab-buttons">
+
+                    <a href="https://gloriacitizen00-dev.github.io/green_circles/"
+                       target="_blank"
+                       class="btn-yellow">
+                        🚀 Open Project
+                    </a>
+
+                    <a href="https://github.com/Gloriacitizen00-dev/green_circles"
+                       target="_blank"
+                       class="btn-dark">
+                        📂 View Source Code
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================
+     ASTRONOMY & SPACE
+====================================== -->
+
+<section class="lab-category">
+
+    <h2 class="category-title">🌌 Astronomy & Space</h2>
+
+    <p class="category-description">
+        Interactive astronomy tools designed to explore the Moon,
+        auroras, eclipses, and celestial events through modern web applications.
+    </p>
+
+    <div class="lab-grid">
+
+        <!-- Moon Observatory -->
+
+        <article class="lab-card">
+
+            <img src="images/moon-preview.jpg"
+                 alt="Moon Observatory">
+
+            <div class="lab-content">
+
+                <h3>Moon Observatory</h3>
+
+                <p>
+                    Explore lunar phases, eclipses, meteor showers,
+                    seasonal changes, and astronomical events through
+                    an interactive observatory designed for everyone.
+                </p>
+
+                <div class="lab-buttons">
+
+                    <a href="TU-LINK"
+                       target="_blank"
+                       class="btn-yellow">
+                        🚀 Open Project
+                    </a>
+
+                    <a href="TU-GITHUB"
+                       target="_blank"
+                       class="btn-dark">
+                        📂 GitHub Repository
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Northern Light Research Station -->
+
+        <article class="lab-card">
+
+            <img src="images/northern-preview.jpg"
+                 alt="Northern Light Research Station">
+
+            <div class="lab-content">
+
+                <h3>Northern Light Research Station</h3>
+
+                <p>
+                    Monitor real-time aurora activity using NOAA data,
+                    solar wind measurements, geomagnetic indexes,
+                    and interactive scientific visualizations.
+                </p>
+
+                <div class="lab-buttons">
+
+                    <a href="TU-LINK"
+                       target="_blank"
+                       class="btn-yellow">
+                        🚀 Open Project
+                    </a>
+
+                    <a href="TU-GITHUB"
+                       target="_blank"
+                       class="btn-dark">
+                        📂 GitHub Repository
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+     DEVELOPER NOTES
+====================================== -->
+
+<section class="developer-notes">
+
+    <div class="notes-box">
+
+        <h2>Developer Notes</h2>
+
+        <p>
+            The Digital Laboratory is an evolving collection of experiments,
+            applications, and creative technologies developed as part of
+            <strong>SkyCortex OS</strong>.
+        </p>
+
+        <p>
+            Every project begins as an idea. Some become complete web
+            applications, others remain prototypes that explore new concepts,
+            user experiences, algorithms, data visualization, or creative coding.
+        </p>
+
+        <p>
+            This laboratory continues to grow as I learn new technologies,
+            improve existing projects, and transform curiosity into interactive
+            digital experiences.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+     PROJECT ROADMAP
+====================================== -->
+
+<section class="roadmap">
+
+    <h2 class="roadmap-title">What's Coming Next</h2>
+
+    <p class="roadmap-intro">
+        The Digital Laboratory continues to expand with new ideas, experiments,
+        and interactive applications. Here's a glimpse of what is currently in
+        development.
+    </p>
+
+    <div class="roadmap-grid">
+
+        <article class="roadmap-card">
+
+            <span class="roadmap-status">In Progress</span>
+
+            <h3>Interactive Data Visualizations</h3>
+
+            <p>
+                New visual experiences combining real-time data,
+                animations, and interactive dashboards.
+            </p>
+
+        </article>
+
+
+        <article class="roadmap-card">
+
+            <span class="roadmap-status">Research</span>
+
+            <h3>Artificial Intelligence Experiments</h3>
+
+            <p>
+                Exploring AI-assisted tools, creative workflows,
+                and intelligent user experiences.
+            </p>
+
+        </article>
+
+
+        <article class="roadmap-card">
+
+            <span class="roadmap-status">Planned</span>
+
+            <h3>Python Projects</h3>
+
+            <p>
+                Scientific visualizations, automation scripts,
+                and interactive desktop applications.
+            </p>
+
+        </article>
+
+
+        <article class="roadmap-card">
+
+            <span class="roadmap-status">Future</span>
+
+            <h3>Open Source Tools</h3>
+
+            <p>
+                More projects will become available with complete
+                documentation and source code on GitHub.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+     FINAL CALL TO ACTION
+====================================== -->
+
+<section class="lab-cta">
+
+    <h2>Ready to Explore?</h2>
+
+    <p>
+        Every experiment begins with curiosity.
+        Explore the projects, discover the source code,
+        and follow the evolution of SkyCortex OS as new
+        technologies and ideas continue to take shape.
+    </p>
+
+    <div class="lab-cta-buttons">
+
+        <a href="https://gloriacitizen00-dev.github.io/Portafolio/"
+           class="btn-yellow">
+
+            ← Back to SkyCortex OS
+
+        </a>
+
+        <a href="https://github.com/Gloriacitizen00-dev"
+           target="_blank"
+           class="btn-dark">
+
+            GitHub Profile
+
+        </a>
+
+    </div>
+
+</section>
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div>
+
+            <h3>SkyCortex OS</h3>
+
+            <p>
+                Digital Laboratory for creative coding,
+                UX design, astronomy, interactive experiences,
+                and software development.
+            </p>
+
+        </div>
+
+        <div>
+
+            <p>© 2026 Gloria Martinez</p>
+
+            <p>Designed and developed in Costa Rica 🇨🇷</p>
+
+        </div>
+
+    </div>
+
+</footer>
+</body>
+
+</html>
