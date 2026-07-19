@@ -1,5 +1,3 @@
-<img src="skycortex.GIF" alt="SkyCortex" width="600">
-
 # 🚀 SkyCortex OS Portfolio
 
 Welcome to **SkyCortex OS**, my digital creative laboratory.
@@ -7,6 +5,8 @@ Welcome to **SkyCortex OS**, my digital creative laboratory.
 This portfolio showcases a growing collection of interactive projects that combine programming, creative coding, artificial intelligence, digital art, scientific visualization, and storytelling. Every project is designed, developed, and continuously expanded as part of an evolving ecosystem of original ideas.
 
 ---
+
+<img src="skycortex.GIF" alt="SkyCortex" width="600">
 
 # 🌌 What You'll Discover
 
