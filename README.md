@@ -120,7 +120,14 @@ Explore the live SkyCortex Portfolio and discover the complete collection of pro
 
 ---
 
-<img src="skycortex.GIF" alt="SkyCortex" width="600">
+<div align="center">
+
+<img src="skycortex.GIF"
+     alt="SkyCortex Creative Laboratory"
+     width="450">
+
+<br>
+
 
 © 2026 Gloria Martinez
 
