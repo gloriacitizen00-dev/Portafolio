@@ -1,4 +1,4 @@
-<img src="skycortex.GIF" alt="SkyCortex" width="600">
+<img src="skylogo1.png" alt="SkyCortex" width="600">
 
 # 🚀 SkyCortex OS Portfolio
 
@@ -110,7 +110,7 @@ Explore the live SkyCortex Portfolio and discover the complete collection of pro
 
 ---
 
-<img src="skycortex.GIF" alt="SkyCortex" width="600">
+<img src="skylogo1.png" alt="SkyCortex" width="600">
 
 © 2026 Gloria Martinez
 
