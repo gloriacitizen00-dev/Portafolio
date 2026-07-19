@@ -796,6 +796,18 @@ grid-template-columns:1fr;
 
 }
 
+.lab-category-moon {
+    width:100%;
+    margin-top:60px;
+}
+
+
+.lab-category-moon .lab-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:30px;
+}
+
 /* ======================================
    CURRENT LABORATORY STATUS
 ====================================== */
@@ -1212,7 +1224,8 @@ its source code.
 
 </section>
 
-<section class="lab-category">     
+<section class="lab-category-moon">
+     
 <!-- Lunar Visualization Lab -->
 
 <article class="lab-card">
