@@ -6,7 +6,17 @@ This portfolio showcases a growing collection of interactive projects that combi
 
 ---
 
-<img src="skycortex.GIF" alt="SkyCortex" width="600">
+<div align="center">
+
+<img src="skycortex.GIF"
+     alt="SkyCortex Creative Laboratory"
+     width="350">
+
+<br>
+
+**SkyCortex**
+
+</div>
 
 # 🌌 What You'll Discover
 
