@@ -1,30 +1,117 @@
-# Portafolio
+<img src="skycortex.GIF" alt="SkyCortex" width="600">
 
-🚀 What’s New
+# 🚀 SkyCortex OS Portfolio
 
-I’m currently developing a project focused on building a smart game system designed to improve how information is interpreted and understood.
+Welcome to **SkyCortex OS**, my digital creative laboratory.
 
-At its core, this project explores:
+This portfolio showcases a growing collection of interactive projects that combine programming, creative coding, artificial intelligence, digital art, scientific visualization, and storytelling. Every project is designed, developed, and continuously expanded as part of an evolving ecosystem of original ideas.
 
-Learning how to classify cards intelligently
-Enhancing reading and interpretation based on the correct meaning of each card
-Creating a system that adapts and improves over time
+---
 
-This project is especially important to me because it’s my first fully original creation—from the idea itself to the art, everything has been created as part of this vision.
+# 🌌 What You'll Discover
 
-🎮 Beta & Community Involvement
+Inside SkyCortex you'll find projects across multiple disciplines:
 
-The platform is already hosting beta pre-launch games, where users can:
+* 🌙 Astronomy and space visualization
+* 🧪 Creative coding experiments
+* 🎨 Interactive digital art
+* 📊 Data visualization
+* 🐱 Interactive game systems
+* 🤖 AI-assisted development
+* 💻 Web applications
+* 📖 Digital storytelling
 
-Try early versions of the game
-Share their experiences directly through the site
-Help shape the evolution of the project
-🤝 Looking for Collaborators & Support
+Each project represents a step in my journey as both a creative technologist and an independent developer.
 
-I’m looking to connect with:
+---
 
-People interested in innovative game concepts
-Collaborators who want to be part of the development process
-Potential investors who see value in this idea
+# 🚀 Featured Projects
 
-If this resonates with you, feel free to reach out or get involved early.
+Current projects include:
+
+* 🌌 Northern Light Research Station
+* 🌙 Lunar Visualization Lab
+* 🌕 Moon Calendar
+* 🐱 Maneko Neki Universe
+* 🧪 Green Circles
+* 🎨 Creative Coding Experiments
+* 📊 Interactive Data Visualizations
+* 💻 Web Development Projects
+
+The laboratory continues to expand as new ideas become fully interactive experiences.
+
+---
+
+# 🎮 Current Development
+
+One of my main ongoing projects is **Maneko Neki Universe**, an original interactive platform that combines tarot, storytelling, and custom game systems.
+
+The project currently includes:
+
+* Custom Tarot Engine
+* Five interactive tarot spreads
+* Oraculum system
+* Dynamic reading generation
+* Upright and reversed interpretations
+* Interactive astronomical tools
+* Lunar calendar integration
+* Live Moon Phase visualization
+* NOAA-powered Northern Light Research Station
+
+The long-term vision is to create an intelligent system capable of generating increasingly personalized interactive experiences.
+
+---
+
+# 🧪 SkyCortex Philosophy
+
+SkyCortex is built around experimentation.
+
+Some ideas become complete applications.
+Others remain prototypes that explore new technologies, creative concepts, or interface design.
+
+Every experiment contributes to learning, improving, and discovering new possibilities through software.
+
+---
+
+# 🤝 Collaboration
+
+I'm always interested in connecting with:
+
+* Creative developers
+* Researchers
+* Designers
+* Artists
+* Open-source contributors
+* Technology enthusiasts
+* Potential collaborators
+
+If you enjoy creative technology, interactive systems, or experimental software, I'd love to connect.
+
+---
+
+# 🛠 Technologies
+
+* HTML5
+* CSS3
+* JavaScript
+* Python
+* JSON
+* GitHub Pages
+* Creative Coding
+* Canvas API
+* Data Visualization
+* Responsive Design
+
+---
+
+# 🌐 Portfolio
+
+Explore the live SkyCortex Portfolio and discover the complete collection of projects.
+
+---
+
+<img src="skycortex.GIF" alt="SkyCortex" width="600">
+
+© 2026 Gloria Martinez
+
+All projects, source code, illustrations, designs, software architecture, and interactive experiences presented in SkyCortex are original creations by the author.
